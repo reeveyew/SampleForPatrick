@@ -12,6 +12,7 @@
 		CAFCD9B61D3383650089315E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAFCD9B41D3383650089315E /* Main.storyboard */; };
 		CAFCD9B81D3383650089315E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAFCD9B71D3383650089315E /* Assets.xcassets */; };
 		CAFCD9BB1D3383650089315E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAFCD9B91D3383650089315E /* LaunchScreen.storyboard */; };
+		CAFCD9C51D3384130089315E /* NewsfeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFCD9C41D3384130089315E /* NewsfeedTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		CAFCD9B71D3383650089315E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAFCD9BA1D3383650089315E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAFCD9BC1D3383650089315E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAFCD9C41D3384130089315E /* NewsfeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsfeedTableViewCell.swift; path = ../NewsfeedTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				CAFCD9B01D3383650089315E /* AppDelegate.swift */,
+				CAFCD9C41D3384130089315E /* NewsfeedTableViewCell.swift */,
 				CAFCD9B21D3383650089315E /* ViewController.swift */,
 				CAFCD9B41D3383650089315E /* Main.storyboard */,
 				CAFCD9B71D3383650089315E /* Assets.xcassets */,
@@ -137,6 +140,7 @@
 			files = (
 				CAFCD9B31D3383650089315E /* ViewController.swift in Sources */,
 				CAFCD9B11D3383650089315E /* AppDelegate.swift in Sources */,
+				CAFCD9C51D3384130089315E /* NewsfeedTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

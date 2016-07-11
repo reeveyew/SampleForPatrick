@@ -8,12 +8,36 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+let x = UIScreen.mainScreen().bounds.size.width
+let y = UIScreen.mainScreen().bounds.size.height
 
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
+    var tableView = UITableView()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        tableView = UITableView(frame: CGRectMake(0, 0, x, y))
+        tableView.delegate = self
+        tableView.dataSource = self
+        self.view.addSubview(tableView)
+        
+        tableView.registerClass(NewsfeedTableViewCell.self, forCellReuseIdentifier: "NewsfeedCell")
     }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("NewsfeedCell", forIndexPath: indexPath)
+        cell.textLabel?.text = "halo"
+        return cell
+    }
+    
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
