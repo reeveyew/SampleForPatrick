@@ -20,6 +20,7 @@ class NewsfeedTableViewCell: UITableViewCell {
         self.addSubview(imageView_CoverPhoto)
         
 //a
+        //b
         
     }
     
