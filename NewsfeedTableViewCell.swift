@@ -7,19 +7,28 @@
 //
 
 import UIKit
+import PureLayout
 
 class NewsfeedTableViewCell: UITableViewCell {
 
     let imageView_CoverPhoto = UIImageView()
+    let imageSlider = UISlider()
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String!) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        imageView_CoverPhoto.frame = CGRectMake(0, 0, x, 200)
+        //setup cover photo
         imageView_CoverPhoto.backgroundColor = UIColor.yellowColor()
         self.addSubview(imageView_CoverPhoto)
         
-
+        imageView_CoverPhoto.autoSetDimension(.Height, toSize: 150)
+        imageView_CoverPhoto.autoPinEdgeToSuperviewEdge(.Left, withInset: 0)
+        imageView_CoverPhoto.autoPinEdgeToSuperviewEdge(.Top, withInset: 0)
+        imageView_CoverPhoto.autoPinEdgeToSuperviewEdge(.Right, withInset: 0)
+        imageView_CoverPhoto.autoPinEdgeToSuperviewEdge(.Bottom, withInset: 0)
+        
+        //setup uislider
+        
         
     }
     
