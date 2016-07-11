@@ -28,7 +28,7 @@ class NewsfeedTableViewCell: UITableViewCell {
         imageView_CoverPhoto.autoPinEdgeToSuperviewEdge(.Bottom, withInset: 0)
         
         //setup uislider
-        
+        //
         
     }
     
