@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0159FC02F3ECBA2768675EAC /* Pods_SampleForPatrick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A574BD0A9B88FF9E8C2CA588 /* Pods_SampleForPatrick.framework */; };
 		CAFCD9B11D3383650089315E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFCD9B01D3383650089315E /* AppDelegate.swift */; };
 		CAFCD9B31D3383650089315E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFCD9B21D3383650089315E /* ViewController.swift */; };
 		CAFCD9B61D3383650089315E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAFCD9B41D3383650089315E /* Main.storyboard */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7195089142FFF745DEA26EDB /* Pods-SampleForPatrick.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleForPatrick.release.xcconfig"; path = "Pods/Target Support Files/Pods-SampleForPatrick/Pods-SampleForPatrick.release.xcconfig"; sourceTree = "<group>"; };
+		917D856BAB5115A41FF3053B /* Pods-SampleForPatrick.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleForPatrick.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SampleForPatrick/Pods-SampleForPatrick.debug.xcconfig"; sourceTree = "<group>"; };
+		A574BD0A9B88FF9E8C2CA588 /* Pods_SampleForPatrick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleForPatrick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAFCD9AD1D3383650089315E /* SampleForPatrick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleForPatrick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAFCD9B01D3383650089315E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAFCD9B21D3383650089315E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0159FC02F3ECBA2768675EAC /* Pods_SampleForPatrick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				CAFCD9AF1D3383650089315E /* SampleForPatrick */,
 				CAFCD9AE1D3383650089315E /* Products */,
+				E9FD128FD500B8ECC6570827 /* Pods */,
+				FF540B7EABCF46C196E0DA6B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = SampleForPatrick;
 			sourceTree = "<group>";
 		};
+		E9FD128FD500B8ECC6570827 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				917D856BAB5115A41FF3053B /* Pods-SampleForPatrick.debug.xcconfig */,
+				7195089142FFF745DEA26EDB /* Pods-SampleForPatrick.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FF540B7EABCF46C196E0DA6B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A574BD0A9B88FF9E8C2CA588 /* Pods_SampleForPatrick.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CAFCD9BF1D3383650089315E /* Build configuration list for PBXNativeTarget "SampleForPatrick" */;
 			buildPhases = (
+				C842F462BD1A1C5C32291613 /* 📦 Check Pods Manifest.lock */,
 				CAFCD9A91D3383650089315E /* Sources */,
 				CAFCD9AA1D3383650089315E /* Frameworks */,
 				CAFCD9AB1D3383650089315E /* Resources */,
+				C29D39EBC7CEF57A9EEB5F70 /* 📦 Embed Pods Frameworks */,
+				70A758C6DBE11567E1691B74 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		70A758C6DBE11567E1691B74 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SampleForPatrick/Pods-SampleForPatrick-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C29D39EBC7CEF57A9EEB5F70 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SampleForPatrick/Pods-SampleForPatrick-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C842F462BD1A1C5C32291613 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CAFCD9A91D3383650089315E /* Sources */ = {
@@ -251,6 +326,7 @@
 		};
 		CAFCD9C01D3383650089315E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 917D856BAB5115A41FF3053B /* Pods-SampleForPatrick.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SampleForPatrick/Info.plist;
@@ -262,6 +338,7 @@
 		};
 		CAFCD9C11D3383650089315E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7195089142FFF745DEA26EDB /* Pods-SampleForPatrick.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SampleForPatrick/Info.plist;
@@ -290,6 +367,7 @@
 				CAFCD9C11D3383650089315E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
