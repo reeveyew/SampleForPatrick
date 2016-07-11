@@ -19,7 +19,7 @@ class NewsfeedTableViewCell: UITableViewCell {
         imageView_CoverPhoto.backgroundColor = UIColor.yellowColor()
         self.addSubview(imageView_CoverPhoto)
         
-
+//a
         
     }
     
