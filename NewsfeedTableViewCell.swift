@@ -21,6 +21,7 @@ class NewsfeedTableViewCell: UITableViewCell {
         imageView_CoverPhoto.backgroundColor = UIColor.yellowColor()
         self.addSubview(imageView_CoverPhoto)
         
+
         imageView_CoverPhoto.autoSetDimension(.Height, toSize: 150)
         imageView_CoverPhoto.autoPinEdgeToSuperviewEdge(.Left, withInset: 0)
         imageView_CoverPhoto.autoPinEdgeToSuperviewEdge(.Top, withInset: 0)
@@ -29,6 +30,7 @@ class NewsfeedTableViewCell: UITableViewCell {
         
         //setup uislider
         //
+
         
     }
     
