@@ -29,7 +29,52 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         configureTableView()
     
+        let label_center = UILabel(frame: CGRectMake(x,y,x,y))
+        label_center.textAlignment = NSTextAlignment.Center
+        label_center.text = "PARIS, FRANCE"
+        label_center.textColor = UIColor.whiteColor()
+        self.view.addSubview(label_center)
+        label_center.autoCenterInSuperview()
         
+        
+        let imageView_Avatar : UIImageView
+        imageView_Avatar = UIImageView(frame: CGRectMake(x,y,x,y));
+        imageView_Avatar.image = UIImage(named:"avatar.jpg")
+        self.view.addSubview(imageView_Avatar)
+        imageView_Avatar.autoPinEdgeToSuperviewEdge(.Left, withInset: 20)
+        imageView_Avatar.autoPinEdgeToSuperviewEdge(.Top, withInset: 35)
+        imageView_Avatar.autoSetDimension(.Height, toSize: 80)
+        imageView_Avatar.autoSetDimension(.Width, toSize: 65)
+        
+        
+        let buttonView_Like : UIButton
+        buttonView_Like = UIButton(frame: CGRectMake(x,y,x,y))
+        buttonView_Like.setTitle ("Like", forState: .Normal)
+        buttonView_Like.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        buttonView_Like.frame = CGRectMake(x,y,x,y)
+        self.view.addSubview(buttonView_Like)
+        buttonView_Like.autoPinEdgeToSuperviewEdge(.Top, withInset: 30)
+        buttonView_Like.autoPinEdgeToSuperviewEdge(.Right, withInset: 20)
+        
+        
+        let imageView_LocationIcon : UIImageView
+        imageView_LocationIcon = UIImageView(frame: CGRectMake(x,y,x,y));
+        imageView_LocationIcon.image = UIImage(named:"location-icon.png")
+        self.view.addSubview(imageView_LocationIcon)
+        imageView_LocationIcon.autoPinEdgeToSuperviewEdge(.Left, withInset: 20)
+        imageView_LocationIcon.autoPinEdgeToSuperviewEdge(.Bottom, withInset: 200)
+        imageView_LocationIcon.autoSetDimension(.Height, toSize: 80)
+        imageView_LocationIcon.autoSetDimension(.Width, toSize: 70)
+//        imageView_LocationIcon.autoPinEdge(.Top, toEdge: .Bottom, ofView:collectionView(collectionView), numberOfItemsInSection: 1) )
+        
+        
+        let label_Location = UILabel(frame: CGRectMake(x,y,x,y))
+        label_Location.textAlignment = NSTextAlignment.Center
+        label_Location.text = "10"
+        label_Location.textColor = UIColor.whiteColor()
+        self.view.addSubview(label_Location)
+        label_Location.autoAlignAxis(.Horizontal, toSameAxisOfView: imageView_LocationIcon, withOffset: -8)
+        label_Location.autoAlignAxis(.Vertical, toSameAxisOfView: imageView_LocationIcon)
         
     }
     
@@ -48,8 +93,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
  
+    //number of main cell within the table
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 2
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -57,7 +103,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
         cell.collectionView.delegate = self
         cell.collectionView.dataSource = self
-        cell.collectionView.backgroundColor = UIColor.greenColor()
+        cell.collectionView.backgroundColor = UIColor.clearColor()
         
         
         return cell
@@ -67,6 +113,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return 1
     }
     
+    //number of collection view contents
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
         return 10
     }

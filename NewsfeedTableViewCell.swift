@@ -21,15 +21,18 @@ class NewsfeedTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         //setup cover photo
-        imageView_CoverPhoto.backgroundColor = UIColor.yellowColor()
+        imageView_CoverPhoto.backgroundColor = UIColor.clearColor()
+        
         self.addSubview(imageView_CoverPhoto)
         
-
-        imageView_CoverPhoto.autoSetDimension(.Height, toSize: 150)
+        imageView_CoverPhoto.image = UIImage(named:"paris.jpg")
+        
+        imageView_CoverPhoto.autoSetDimension(.Height, toSize: 500)
         imageView_CoverPhoto.autoPinEdgeToSuperviewEdge(.Left, withInset: 0)
         imageView_CoverPhoto.autoPinEdgeToSuperviewEdge(.Top, withInset: 0)
         imageView_CoverPhoto.autoPinEdgeToSuperviewEdge(.Right, withInset: 0)
-       
+        
+    
         
         //setup uislider
         //
@@ -41,22 +44,27 @@ class NewsfeedTableViewCell: UITableViewCell {
         
         let frame = CGRectMake(0, 100, x, 100)
         collectionView = UICollectionView(frame: frame, collectionViewLayout: layout)
-        
+        self.addSubview(collectionView)
         collectionView.autoSetDimension(.Height, toSize: 100)
         collectionView.autoPinEdgeToSuperviewEdge(.Left, withInset: 0)
-        collectionView.autoPinEdgeToSuperviewEdge(.Right, withInset: 0)
+        collectionView.autoPinEdgeToSuperviewEdge(.Right, withInset: 3)
         collectionView.autoPinEdgeToSuperviewEdge(.Bottom, withInset: 0)
         collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         collectionView.backgroundColor = UIColor.clearColor()
         
-        self.addSubview(collectionView)
+        
         imageView_CoverPhoto.autoPinEdge(.Bottom, toEdge: .Top, ofView: collectionView)
+        
+        
+        collectionView.autoPinEdge(.Top, toEdge: .Bottom, ofView: imageView_CoverPhoto, withOffset: 5.0)
     
         self.collectionView.collectionViewLayout = layout
 //        self.collectionView.scrollEnabled = true
         self.collectionView.userInteractionEnabled = true
         print(collectionView.frame)
 
+        
+        
         
     }
     
