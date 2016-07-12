@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CollectionView: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UIScrollViewDelegate{
+class NewsfeedViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UIScrollViewDelegate{
 
     var collectionView : UICollectionView!
     var scrollView: UIScrollView!
@@ -23,7 +23,8 @@ class CollectionView: UIViewController, UICollectionViewDelegateFlowLayout, UICo
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
-        collectionView.backgroundColor = UIColor.whiteColor()
+        collectionView.backgroundColor = UIColor.clearColor()
+        
         self.view.addSubview(collectionView)
         
         
@@ -32,8 +33,6 @@ class CollectionView: UIViewController, UICollectionViewDelegateFlowLayout, UICo
         self.collectionView.userInteractionEnabled = true
         print(collectionView.frame)
 
-        
-        
     }
     
     
@@ -48,7 +47,7 @@ class CollectionView: UIViewController, UICollectionViewDelegateFlowLayout, UICo
 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath)
-        cell .backgroundColor = UIColor.blueColor()
+        cell .backgroundColor = UIColor.randomColor()
         return cell
     }
     
@@ -56,5 +55,21 @@ class CollectionView: UIViewController, UICollectionViewDelegateFlowLayout, UICo
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         return CGSize(width: 100, height: 100) // The size of one cell
+    }
+    
+}
+
+extension CGFloat {
+    static func random() -> CGFloat {
+        return CGFloat(arc4random()) / CGFloat(UInt32.max)
+    }
+}
+
+extension UIColor {
+    static func randomColor() -> UIColor {
+        return UIColor(red:   .random(),
+                       green: .random(),
+                       blue:  .random(),
+                       alpha: 1.0)
     }
 }

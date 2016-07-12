@@ -11,7 +11,7 @@ import UIKit
 let x = UIScreen.mainScreen().bounds.size.width
 let y = UIScreen.mainScreen().bounds.size.height
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var tableView = UITableView()
     
