@@ -18,7 +18,7 @@ class CollectionView: UIViewController, UICollectionViewDelegateFlowLayout, UICo
         layout.scrollDirection = UICollectionViewScrollDirection.Horizontal
         layout.itemSize = CGSize(width: 100, height: 100)
         
-        let frame = CGRectMake(0, 100, self.view.frame.size.width * 3, 100)
+        let frame = CGRectMake(0, 100, self.view.frame.size.width, 100)
         collectionView = UICollectionView(frame: frame, collectionViewLayout: layout)
         collectionView.dataSource = self
         collectionView.delegate = self
