@@ -27,7 +27,6 @@ class NewsfeedViewController: UIViewController, UICollectionViewDelegateFlowLayo
         
         self.view.addSubview(collectionView)
         
-        
         self.collectionView.collectionViewLayout = layout
         self.collectionView.scrollEnabled = true
         self.collectionView.userInteractionEnabled = true
@@ -44,10 +43,13 @@ class NewsfeedViewController: UIViewController, UICollectionViewDelegateFlowLayo
         return 10
     }
     
+    
 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath)
         cell .backgroundColor = UIColor.randomColor()
+        
+        
         return cell
     }
     
