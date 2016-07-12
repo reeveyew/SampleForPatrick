@@ -13,6 +13,9 @@ class NewsfeedTableViewCell: UITableViewCell {
 
     let imageView_CoverPhoto = UIImageView()
     let imageSlider = UISlider()
+    var collectionView :UICollectionView!
+    
+    
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String!) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -26,13 +29,38 @@ class NewsfeedTableViewCell: UITableViewCell {
         imageView_CoverPhoto.autoPinEdgeToSuperviewEdge(.Left, withInset: 0)
         imageView_CoverPhoto.autoPinEdgeToSuperviewEdge(.Top, withInset: 0)
         imageView_CoverPhoto.autoPinEdgeToSuperviewEdge(.Right, withInset: 0)
-        imageView_CoverPhoto.autoPinEdgeToSuperviewEdge(.Bottom, withInset: 0)
+       
         
         //setup uislider
         //
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.scrollDirection = UICollectionViewScrollDirection.Horizontal
+        layout.itemSize = CGSize(width: 100, height: 100)
+        
+        
+        
+        let frame = CGRectMake(0, 100, x, 100)
+        collectionView = UICollectionView(frame: frame, collectionViewLayout: layout)
+        
+        collectionView.autoSetDimension(.Height, toSize: 100)
+        collectionView.autoPinEdgeToSuperviewEdge(.Left, withInset: 0)
+        collectionView.autoPinEdgeToSuperviewEdge(.Right, withInset: 0)
+        collectionView.autoPinEdgeToSuperviewEdge(.Bottom, withInset: 0)
+        collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.backgroundColor = UIColor.clearColor()
+        
+        self.addSubview(collectionView)
+        imageView_CoverPhoto.autoPinEdge(.Bottom, toEdge: .Top, ofView: collectionView)
+    
+        self.collectionView.collectionViewLayout = layout
+//        self.collectionView.scrollEnabled = true
+        self.collectionView.userInteractionEnabled = true
+        print(collectionView.frame)
 
         
     }
+    
+    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
