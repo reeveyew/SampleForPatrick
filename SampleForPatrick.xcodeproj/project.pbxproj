@@ -18,6 +18,10 @@
 		ED8D5E451D357161002D60FD /* paris.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED8D5E441D357161002D60FD /* paris.jpg */; };
 		ED8D5E491D35B226002D60FD /* location-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = ED8D5E481D35B226002D60FD /* location-icon.png */; };
 		EDC583AE1D35421C00B96083 /* avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDC583AD1D35421C00B96083 /* avatar.jpg */; };
+		EDE25ADA1D35E214004B4E69 /* beach.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDE25AD91D35E214004B4E69 /* beach.jpg */; };
+		EDE25ADC1D35E2B3004B4E69 /* mountain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDE25ADB1D35E2B3004B4E69 /* mountain.jpg */; };
+		EDE25AE21D35E6B2004B4E69 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE25AE11D35E6B2004B4E69 /* HomeTableView.swift */; };
+		EDE25AE41D35EA1D004B4E69 /* CollectionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE25AE31D35EA1D004B4E69 /* CollectionTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		ED8D5E441D357161002D60FD /* paris.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paris.jpg; sourceTree = "<group>"; };
 		ED8D5E481D35B226002D60FD /* location-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location-icon.png"; sourceTree = "<group>"; };
 		EDC583AD1D35421C00B96083 /* avatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatar.jpg; sourceTree = "<group>"; };
+		EDE25AD91D35E214004B4E69 /* beach.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beach.jpg; sourceTree = "<group>"; };
+		EDE25ADB1D35E2B3004B4E69 /* mountain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mountain.jpg; sourceTree = "<group>"; };
+		EDE25AE11D35E6B2004B4E69 /* HomeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
+		EDE25AE31D35EA1D004B4E69 /* CollectionTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,16 +80,14 @@
 			isa = PBXGroup;
 			children = (
 				CAFCD9B01D3383650089315E /* AppDelegate.swift */,
-				CAFCD9C41D3384130089315E /* NewsfeedTableViewCell.swift */,
-				ED8D5E441D357161002D60FD /* paris.jpg */,
-				EDC583AD1D35421C00B96083 /* avatar.jpg */,
-				ED8D5E481D35B226002D60FD /* location-icon.png */,
-				CAFCD9B21D3383650089315E /* HomeViewController.swift */,
+				EDE25AE61D35EF4E004B4E69 /* HomeTableViewCell */,
+				EDE25AE71D35EF69004B4E69 /* Pictures */,
+				EDE25AE51D35EF40004B4E69 /* HomeViewController */,
 				CAFCD9B41D3383650089315E /* Main.storyboard */,
 				CAFCD9B71D3383650089315E /* Assets.xcassets */,
 				CAFCD9B91D3383650089315E /* LaunchScreen.storyboard */,
 				CAFCD9BC1D3383650089315E /* Info.plist */,
-				ED2B7E801D34A67400361B6A /* NewsfeedViewController.swift */,
+				EDE25AE81D35EF87004B4E69 /* Obsolete */,
 			);
 			path = SampleForPatrick;
 			sourceTree = "<group>";
@@ -93,6 +99,44 @@
 				7195089142FFF745DEA26EDB /* Pods-SampleForPatrick.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		EDE25AE51D35EF40004B4E69 /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CAFCD9B21D3383650089315E /* HomeViewController.swift */,
+				EDE25AE11D35E6B2004B4E69 /* HomeTableView.swift */,
+				EDE25AE31D35EA1D004B4E69 /* CollectionTableView.swift */,
+			);
+			name = HomeViewController;
+			sourceTree = "<group>";
+		};
+		EDE25AE61D35EF4E004B4E69 /* HomeTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CAFCD9C41D3384130089315E /* NewsfeedTableViewCell.swift */,
+			);
+			name = HomeTableViewCell;
+			sourceTree = "<group>";
+		};
+		EDE25AE71D35EF69004B4E69 /* Pictures */ = {
+			isa = PBXGroup;
+			children = (
+				EDE25ADB1D35E2B3004B4E69 /* mountain.jpg */,
+				EDE25AD91D35E214004B4E69 /* beach.jpg */,
+				ED8D5E441D357161002D60FD /* paris.jpg */,
+				EDC583AD1D35421C00B96083 /* avatar.jpg */,
+				ED8D5E481D35B226002D60FD /* location-icon.png */,
+			);
+			name = Pictures;
+			sourceTree = "<group>";
+		};
+		EDE25AE81D35EF87004B4E69 /* Obsolete */ = {
+			isa = PBXGroup;
+			children = (
+				ED2B7E801D34A67400361B6A /* NewsfeedViewController.swift */,
+			);
+			name = Obsolete;
 			sourceTree = "<group>";
 		};
 		FF540B7EABCF46C196E0DA6B /* Frameworks */ = {
@@ -169,6 +213,8 @@
 				EDC583AE1D35421C00B96083 /* avatar.jpg in Resources */,
 				CAFCD9B81D3383650089315E /* Assets.xcassets in Resources */,
 				CAFCD9B61D3383650089315E /* Main.storyboard in Resources */,
+				EDE25ADA1D35E214004B4E69 /* beach.jpg in Resources */,
+				EDE25ADC1D35E2B3004B4E69 /* mountain.jpg in Resources */,
 				ED8D5E451D357161002D60FD /* paris.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,6 +278,8 @@
 				CAFCD9B11D3383650089315E /* AppDelegate.swift in Sources */,
 				ED2B7E811D34A67400361B6A /* NewsfeedViewController.swift in Sources */,
 				CAFCD9C51D3384130089315E /* NewsfeedTableViewCell.swift in Sources */,
+				EDE25AE21D35E6B2004B4E69 /* HomeTableView.swift in Sources */,
+				EDE25AE41D35EA1D004B4E69 /* CollectionTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
