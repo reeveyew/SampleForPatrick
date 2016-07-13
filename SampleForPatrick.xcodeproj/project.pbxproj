@@ -22,7 +22,7 @@
 		EDE25AE21D35E6B2004B4E69 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE25AE11D35E6B2004B4E69 /* HomeTableView.swift */; };
 		EDE25AE41D35EA1D004B4E69 /* CollectionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE25AE31D35EA1D004B4E69 /* CollectionTableView.swift */; };
 		EDE25AED1D361B6C004B4E69 /* beach.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDE25AEC1D361B6C004B4E69 /* beach.jpg */; };
-		EDE25AEF1D3626A9004B4E69 /* HomeTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE25AEE1D3626A9004B4E69 /* HomeTimeline.swift */; };
+		EDE25AEF1D3626A9004B4E69 /* DetailTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE25AEE1D3626A9004B4E69 /* DetailTimeline.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +45,7 @@
 		EDE25AE11D35E6B2004B4E69 /* HomeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
 		EDE25AE31D35EA1D004B4E69 /* CollectionTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTableView.swift; sourceTree = "<group>"; };
 		EDE25AEC1D361B6C004B4E69 /* beach.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beach.jpg; sourceTree = "<group>"; };
-		EDE25AEE1D3626A9004B4E69 /* HomeTimeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTimeline.swift; sourceTree = "<group>"; };
+		EDE25AEE1D3626A9004B4E69 /* DetailTimeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTimeline.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,7 +145,7 @@
 		EDE25AE91D35F86F004B4E69 /* Detail Timeline */ = {
 			isa = PBXGroup;
 			children = (
-				EDE25AEE1D3626A9004B4E69 /* HomeTimeline.swift */,
+				EDE25AEE1D3626A9004B4E69 /* DetailTimeline.swift */,
 			);
 			name = "Detail Timeline";
 			sourceTree = "<group>";
@@ -290,7 +290,7 @@
 				ED2B7E811D34A67400361B6A /* NewsfeedViewController.swift in Sources */,
 				CAFCD9C51D3384130089315E /* NewsfeedTableViewCell.swift in Sources */,
 				EDE25AE21D35E6B2004B4E69 /* HomeTableView.swift in Sources */,
-				EDE25AEF1D3626A9004B4E69 /* HomeTimeline.swift in Sources */,
+				EDE25AEF1D3626A9004B4E69 /* DetailTimeline.swift in Sources */,
 				EDE25AE41D35EA1D004B4E69 /* CollectionTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
