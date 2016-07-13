@@ -35,7 +35,7 @@ class NewsfeedTableViewCell: UITableViewCell {
         //setup cover photo
         imageView_CoverPhoto.backgroundColor = UIColor.clearColor()
         self.addSubview(imageView_CoverPhoto)
-        imageView_CoverPhoto.image = UIImage(named:"mountain.jpg")
+        imageView_CoverPhoto.image = UIImage(named:"paris.jpg")
         imageView_CoverPhoto.autoSetDimension(.Height, toSize: 500)
         imageView_CoverPhoto.autoPinEdgeToSuperviewEdge(.Left, withInset: 0)
         imageView_CoverPhoto.autoPinEdgeToSuperviewEdge(.Top, withInset: 0)
@@ -74,12 +74,6 @@ class NewsfeedTableViewCell: UITableViewCell {
     func setupContentView()
     {
         
-        let label_center = UILabel(frame: CGRectMake(x,y,x,y))
-        label_center.textAlignment = NSTextAlignment.Center
-        label_center.text = "NATURE"
-        label_center.textColor = UIColor.whiteColor()
-        self.addSubview(label_center)
-        label_center.autoCenterInSuperview()
         
         
         let imageView_Avatar : UIImageView
