@@ -11,8 +11,10 @@ import PureLayout
 
 class DetailTimeline: UIViewController {
     let imageView_BackgroundPhoto = UIImageView()
-    let view_RightContainer = UIView()
-    let view_LeftContainer = UIView()
+    let view_UpperRightContainer = UIView()
+    let view_UpperLeftContainer = UIView()
+    let view_LowerRightContainer = UIView()
+    let view_LowerLeftContainer = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,12 +23,15 @@ class DetailTimeline: UIViewController {
     
     func display(){
         self.view .addSubview(imageView_BackgroundPhoto)
-        self.view .addSubview(view_RightContainer)
-        self.view .addSubview(view_LeftContainer)
+        self.view .addSubview(view_UpperRightContainer)
+        self.view .addSubview(view_UpperLeftContainer)
+        self.view .addSubview(view_LowerRightContainer)
+        self.view .addSubview(view_LowerLeftContainer)
         setupBackgroundPhoto()
-        setupLeftContainer()
-        setupRightContainer()
-        distributeContainers()
+        setupUpperRightContainer()
+        setupUpperLeftContainer()
+        setupLowerRightContainer()
+        setupLowerLeftContainer()
     }
     
     func setupBackgroundPhoto(){
@@ -35,39 +40,46 @@ class DetailTimeline: UIViewController {
         imageView_BackgroundPhoto.autoPinEdgeToSuperviewEdge(.Left, withInset: 0)
         imageView_BackgroundPhoto.autoPinEdgeToSuperviewEdge(.Right, withInset: 0)
         imageView_BackgroundPhoto.autoPinEdgeToSuperviewEdge(.Top, withInset: 0)
-        //autupinedge with containers (both left and right)
+        imageView_BackgroundPhoto.autoPinEdge(.Bottom, toEdge: .Top, ofView: view_UpperLeftContainer)
     }
     
-    func setupRightContainer(){
-        view_RightContainer.backgroundColor = UIColor.redColor()
-        view_RightContainer.autoPinEdgeToSuperviewEdge(.Right, withInset:0)
-        view_RightContainer.autoPinEdgeToSuperviewEdge(.Bottom, withInset: 0)
-        
-        view_RightContainer.autoPinEdge(.Top, toEdge: .Bottom, ofView: imageView_BackgroundPhoto)
-        
+    func setupLowerRightContainer(){
+        view_LowerRightContainer.backgroundColor = UIColor.blackColor()
+//        view_LowerRightContainer.autoSetDimension(.Height, toSize: 200)
+        view_LowerRightContainer.autoPinEdgeToSuperviewEdge(.Right, withInset: 0)
+        view_LowerRightContainer.autoPinEdgeToSuperviewEdge(.Bottom, withInset: 0)
+        view_LowerRightContainer.autoPinEdge(.Top, toEdge: .Bottom, ofView: view_UpperRightContainer)
+        view_LowerRightContainer.autoPinEdge(.Top, toEdge: .Top, ofView: view_LowerLeftContainer)
     }
     
-    func setupLeftContainer(){
-        view_LeftContainer.backgroundColor = UIColor.blueColor()
+    func setupLowerLeftContainer(){
+        view_LowerLeftContainer.backgroundColor = UIColor.yellowColor()
+        view_LowerLeftContainer.autoPinEdgeToSuperviewEdge(.Left, withInset: 0)
+        view_LowerLeftContainer.autoPinEdgeToSuperviewEdge(.Bottom, withInset: 0)
+        view_LowerLeftContainer.autoPinEdge(.Top, toEdge: .Bottom, ofView: view_UpperLeftContainer)
+        view_LowerLeftContainer.autoPinEdge(.Right, toEdge: .Left, ofView: view_LowerRightContainer)
+        view_LowerLeftContainer.autoMatchDimension(.Width, toDimension: .Width, ofView: view_UpperLeftContainer)
+    }
 
-        view_LeftContainer.autoPinEdgeToSuperviewEdge(.Left, withInset:0)
-        view_LeftContainer.autoPinEdgeToSuperviewEdge(.Bottom, withInset: 0)
-        
-        
-//        view_LeftContainer.autoPinEdge(.Top, toEdge: .Top, ofView: view_RightContainer)
-        
-       //view_LeftContainer.autoPinEdge(.Right, toEdge: .Left, ofView: view_RightContainer)
-    }
     
-    func distributeContainers(){
-        let views: NSArray = [view_RightContainer, view_LeftContainer]
-        views.autoAlignViewsToEdge(.Top)
-        views.autoDistributeViewsAlongAxis(.Horizontal, alignedTo: .Horizontal, withFixedSpacing: 0, insetSpacing: false, matchedSizes: true)
-        self.view_LeftContainer.autoAlignAxisToSuperviewAxis(.Horizontal)
-        views.autoDistributeViewsAlongAxis(.Horizontal, alignedTo: .Horizontal, withFixedSize: 100)
-        
+    func setupUpperRightContainer(){
+        view_UpperRightContainer.backgroundColor = UIColor.blueColor()
+        view_UpperRightContainer.autoPinEdge(.Top, toEdge: .Bottom, ofView: imageView_BackgroundPhoto)
+        view_UpperRightContainer.autoPinEdge(.Left, toEdge: .Right, ofView: view_UpperLeftContainer)
+        view_UpperRightContainer.autoPinEdgeToSuperviewEdge(.Right, withInset: 0)
+        view_UpperLeftContainer.autoPinEdge(.Top, toEdge: .Bottom, ofView: imageView_BackgroundPhoto)
+        view_UpperRightContainer.autoMatchDimension(.Height, toDimension: .Height, ofView: view_LowerRightContainer, withMultiplier: 0.3)
         
     }
     
+    func setupUpperLeftContainer(){
+        view_UpperLeftContainer.backgroundColor = UIColor.redColor()
+        view_UpperLeftContainer.autoPinEdge(.Top, toEdge: .Bottom, ofView: imageView_BackgroundPhoto)
+//        view_UpperLeftContainer.autoMatchDimension(.Height, toDimension: .Height, ofView: view_UpperRightContainer)
+        view_UpperLeftContainer.autoPinEdgeToSuperviewEdge(.Left, withInset: 0)
+//        view_UpperLeftContainer.autoPinEdge(.Top, toEdge: .Top, ofView: view_UpperRightContainer)
+       view_UpperLeftContainer.autoPinEdge(.Right, toEdge: .Left, ofView: view_UpperRightContainer)
+         view_UpperLeftContainer.autoMatchDimension(.Width, toDimension: .Width, ofView: imageView_BackgroundPhoto, withMultiplier: 0.4)
+    }
     
-}
+       }
