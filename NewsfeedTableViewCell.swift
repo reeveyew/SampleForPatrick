@@ -73,9 +73,6 @@ class NewsfeedTableViewCell: UITableViewCell {
     
     func setupContentView()
     {
-        
-        
-        
         let imageView_Avatar : UIImageView
         imageView_Avatar = UIImageView(frame: CGRectMake(x,y,x,y));
         imageView_Avatar.image = UIImage(named:"avatar.jpg")

@@ -12,12 +12,12 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        return 2
+        return 1
     }
     
     //number of collection view contents
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        return 10
+        return 2
     }
     
     
