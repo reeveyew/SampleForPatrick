@@ -25,14 +25,32 @@ extension DetailTimeline: UICollectionViewDataSource, UICollectionViewDelegateFl
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! DetailedTimelineCollectionViewCell
         cell.backgroundColor = UIColor.clearColor()
-//        cell.contentView.backgroundColor = UIColor.greenColor()
-//        cell.theImages.image = Images_CollectionView[indexPath.row]
+//        let con = CatService(test:"test")
+//        
+//        let temp = NSUserDefaults()
+//        let  number = temp.integerForKey("num_of_images")
+//        
+//        var title_array:Array<String> = con.imageNamesForCategoryAtIndex(number)
+//        
+//        var string:String = title_array[indexPath.row]
+//        
+//        print("indexPath.row \(indexPath.row)");
+//        print("string is \(string)")
+
+//        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("firstCollectionCell", forIndexPath: indexPath)
+        
+        let imageview:UIImageView=UIImageView(frame: CGRectMake(5, 5, 100, 100))
+        let image:UIImage = UIImage(named:"paris.jpg")!
+        imageview.image = image
+        self.view.addSubview(imageview)
+        cell.contentView.addSubview(imageview)
+        return cell
         
 //        let CollectionView_Image=UIView()
 //        CollectionView_Image.backgroundColor=UIColor(patternImage:UIImage(named:"world.png")!)
 //        cell.backgroundVi=CollectionView_Image
         
-        cell.theImages.image = self.imageArray [indexPath.row]
+//        cell.theImages.image = self.imageArray [indexPath.row]
         
         return cell
     }
@@ -41,24 +59,24 @@ extension DetailTimeline: UICollectionViewDataSource, UICollectionViewDelegateFl
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         
-        return CGSize(width: 100, height: 100)// The size of one cell
+        return CGSize(width: 80, height: 80)// The size of one cell
     }
     
     override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.All
     }
     
-//    func collectionView(collectionView: UICollectionView,
-//                        layout collectionViewLayout: UICollectionViewLayout,
-//                               minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
-//        return 20
-//    }
-//    
-//    func collectionView(collectionView: UICollectionView, layout
-//        collectionViewLayout: UICollectionViewLayout,
-//        minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
-//        return 20
-//    }
+    func collectionView(collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+        return 30
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout
+        collectionViewLayout: UICollectionViewLayout,
+        minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+        return 30
+    }
 
     
 //    func collectionViewSize(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {

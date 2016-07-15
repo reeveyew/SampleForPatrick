@@ -41,7 +41,7 @@ class DetailTimeline: UIViewController{
     }
     
     func setupBackgroundPhoto(){
-        imageView_BackgroundPhoto.image = UIImage(named: "paris.jpg")
+        imageView_BackgroundPhoto.image = UIImage(named: "beach.jpg")
         imageView_BackgroundPhoto.autoSetDimension(.Height, toSize: 300)
         imageView_BackgroundPhoto.autoPinEdgeToSuperviewEdge(.Left, withInset: 0)
         imageView_BackgroundPhoto.autoPinEdgeToSuperviewEdge(.Right, withInset: 0)
