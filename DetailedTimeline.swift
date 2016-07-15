@@ -15,9 +15,9 @@ class DetailTimeline: UIViewController{
     let view_UpperLeftContainer = UIView()
     let view_LowerRightContainer = UIView()
     let view_LowerLeftContainer = UIView()
+    var imageArray = [UIImage(named: "paris.jpg")!, UIImage(named: "mountain.jpg")!, UIImage(named: "beach.jpg")!]
     var collectionView : UICollectionView!
     var tableView = UITableView()
-    
     //MARK: halo
     //MARK:- COLLECTION VIEW
     //TODO: put in pictures for imageview
@@ -134,7 +134,7 @@ class DetailTimeline: UIViewController{
     {
         //setup uislider
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.scrollDirection = UICollectionViewScrollDirection.Horizontal
+        layout.scrollDirection = UICollectionViewScrollDirection.Vertical
         layout.itemSize = CGSize(width: 100, height: 100)
         //setup collectionview
         let frame = CGRectMake(0, 100, x, 100)
@@ -145,7 +145,7 @@ class DetailTimeline: UIViewController{
         collectionView.autoAlignAxis(.Horizontal, toSameAxisOfView: view_LowerRightContainer)
         collectionView.autoAlignAxis(.Vertical, toSameAxisOfView: view_LowerRightContainer)
         collectionView.registerClass(DetailedTimelineCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
-        collectionView.backgroundColor = UIColor.yellowColor()
+        collectionView.backgroundColor = UIColor.whiteColor()
         collectionView.dataSource = self
         collectionView.delegate = self
         self.collectionView.collectionViewLayout = layout

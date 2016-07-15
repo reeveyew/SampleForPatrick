@@ -10,4 +10,7 @@ import UIKit
 
 class DetailedTimelineCollectionViewCell: UICollectionViewCell {
     
+    var theImages:UIImageView!
+    
+    
 }
