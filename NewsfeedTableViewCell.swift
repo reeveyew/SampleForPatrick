@@ -35,7 +35,7 @@ class NewsfeedTableViewCell: UITableViewCell {
         //setup cover photo
         imageView_CoverPhoto.backgroundColor = UIColor.clearColor()
         self.addSubview(imageView_CoverPhoto)
-        imageView_CoverPhoto.image = UIImage(named:"paris.jpg")
+        imageView_CoverPhoto.image = UIImage(named:"mountain.jpg")
         imageView_CoverPhoto.autoSetDimension(.Height, toSize: 500)
         imageView_CoverPhoto.autoPinEdgeToSuperviewEdge(.Left, withInset: 0)
         imageView_CoverPhoto.autoPinEdgeToSuperviewEdge(.Top, withInset: 0)
@@ -73,24 +73,58 @@ class NewsfeedTableViewCell: UITableViewCell {
     
     func setupContentView()
     {
+        let Label_Location = UILabel(frame: CGRectMake(x,y,x,y))
+        Label_Location.textAlignment = NSTextAlignment.Center
+        Label_Location.text = "HIKING TIME"
+        Label_Location.font = UIFont.boldSystemFontOfSize(22)
+        Label_Location.textColor = UIColor.whiteColor()
+        self.addSubview(Label_Location)
+        Label_Location.autoCenterInSuperviewMargins()
+        
+        
         let imageView_Avatar : UIImageView
-        imageView_Avatar = UIImageView(frame: CGRectMake(x,y,x,y));
+        imageView_Avatar = UIImageView(frame: CGRectMake(0,0,100,100));
         imageView_Avatar.image = UIImage(named:"avatar.jpg")
         self.addSubview(imageView_Avatar)
+//        self.addSubview(imageView_Avatar)
         imageView_Avatar.autoPinEdgeToSuperviewEdge(.Left, withInset: 20)
         imageView_Avatar.autoPinEdgeToSuperviewEdge(.Top, withInset: 35)
-        imageView_Avatar.autoSetDimension(.Height, toSize: 80)
-        imageView_Avatar.autoSetDimension(.Width, toSize: 65)
+        imageView_Avatar.autoSetDimension(.Height, toSize: 70)
+        imageView_Avatar.autoSetDimension(.Width, toSize: 60)
+        imageView_Avatar.layer.borderWidth = 0.5
+        imageView_Avatar.layer.masksToBounds = true
+        imageView_Avatar.layer.borderColor = UIColor.clearColor().CGColor
+        imageView_Avatar.layer.cornerRadius = imageView_Avatar.frame.height/2
+        imageView_Avatar.clipsToBounds = true
+
+        
+        let upper_border = UIView()
+        upper_border.backgroundColor = UIColor.whiteColor()
+        self.addSubview(upper_border)
+        upper_border.autoPinEdge(.Bottom, toEdge: .Top, ofView: Label_Location)
+        upper_border.autoSetDimension(.Width, toSize: 200)
+        upper_border.autoSetDimension(.Height, toSize: 3)
+        upper_border.autoAlignAxis(.Vertical, toSameAxisOfView: Label_Location)
+        
+        
+        let lower_border = UIView()
+        lower_border.backgroundColor = UIColor.whiteColor()
+        self.addSubview(lower_border)
+        lower_border.autoPinEdge(.Top, toEdge: .Bottom, ofView: Label_Location)
+        lower_border.autoSetDimension(.Width, toSize: 200)
+        lower_border.autoSetDimension(.Height, toSize: 3)
+        lower_border.autoAlignAxis(.Vertical, toSameAxisOfView: Label_Location)
+        
         
         
         let label_Username = UILabel(frame: CGRectMake(x,y,x,y))
         label_Username.textAlignment = NSTextAlignment.Center
         label_Username.text = "Stephanie Chong"
-        label_Username.font.fontWithSize(10)
+        label_Username.font = UIFont.systemFontOfSize(12)
         label_Username.textColor = UIColor.whiteColor()
         self.addSubview(label_Username)
-        label_Username.autoAlignAxis(.Horizontal, toSameAxisOfView: imageView_Avatar, withOffset: -10)
-        label_Username.autoAlignAxis(.Vertical, toSameAxisOfView: imageView_Avatar, withOffset: 100)
+        label_Username.autoAlignAxis(.Horizontal, toSameAxisOfView: imageView_Avatar, withOffset: -5)
+        label_Username.autoAlignAxis(.Vertical, toSameAxisOfView: imageView_Avatar, withOffset: 80)
         
         
         let buttonView_Like : UIButton
