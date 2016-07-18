@@ -36,7 +36,7 @@ extension UIView {
     public func xPinTop(toBottomOfView: UIView, offset: CGFloat?){
         if let offset = offset {
             self.autoPinEdge(.Top, toEdge: .Bottom, ofView: toBottomOfView, withOffset: offset)
-        }
+        }//
         else {
             //comit
             self.autoPinEdge(.Top, toEdge: .Bottom, ofView: toBottomOfView)
