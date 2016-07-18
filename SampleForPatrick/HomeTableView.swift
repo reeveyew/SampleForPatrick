@@ -12,15 +12,16 @@ import UIKit
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func configureTableView(){
-        tableView = UITableView(frame: CGRectMake(0, 0, x, y))
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.registerClass(NewsfeedTableViewCell.self, forCellReuseIdentifier: "NewsfeedCell")
-        self.view.addSubview(tableView)
-        tableView.estimatedRowHeight = 60
-        tableView.rowHeight = UITableViewAutomaticDimension
+        let tableView_Newsfeed  = UITableView.newAutoLayoutView()
+        
+        tableView_Newsfeed.delegate = self
+        tableView_Newsfeed.dataSource = self
+        tableView_Newsfeed.registerClass(NewsfeedTableViewCell.self, forCellReuseIdentifier: "NewsfeedCell")
+        self.view.addSubview(tableView_Newsfeed)
+        tableView_Newsfeed.estimatedRowHeight = 60
+        tableView_Newsfeed.rowHeight = UITableViewAutomaticDimension
         self.automaticallyAdjustsScrollViewInsets = false
-        tableView.allowsSelection = false
+        tableView_Newsfeed.allowsSelection = false
         self.tableView.reloadData()
     }
     
