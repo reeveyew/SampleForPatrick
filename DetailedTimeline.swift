@@ -124,7 +124,7 @@ class DetailedTimeline: UIViewController{
         label_Location.textAlignment = NSTextAlignment.Center
         label_Location.text = "PARIS, France"
         label_Location.font = UIFont.boldSystemFontOfSize(15)
-        label_Location.textColor = UIColor.whiteColor()
+        label_Location.textColor = UIColor.blackColor()
         label_Location.autoAlignAxis(.Horizontal, toSameAxisOfView: view_UpperRightContainer, withOffset: -15)
         label_Location.autoAlignAxis(.Vertical, toSameAxisOfView: view_UpperRightContainer, withOffset: -52)
         
@@ -132,7 +132,7 @@ class DetailedTimeline: UIViewController{
         self.view .addSubview(textfield_Caption)
         textfield_Caption.textAlignment = NSTextAlignment.Left
         textfield_Caption.font = UIFont.systemFontOfSize(10)
-        textfield_Caption.attributedPlaceholder = NSAttributedString(string:"Caption goes here...",attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
+        textfield_Caption.attributedPlaceholder = NSAttributedString(string:"Caption goes here...",attributes:[NSForegroundColorAttributeName: UIColor.blackColor()])
         textfield_Caption.autoAlignAxis(.Horizontal, toSameAxisOfView: view_UpperRightContainer, withOffset: 5)
         textfield_Caption.autoAlignAxis(.Vertical, toSameAxisOfView: view_UpperRightContainer, withOffset: -52)
 }
@@ -142,7 +142,7 @@ class DetailedTimeline: UIViewController{
         let label_Day = UILabel(frame: CGRectMake(x,y,x,y))
         self.view .addSubview(label_Day)
         label_Day.textAlignment = NSTextAlignment.Center
-        label_Day.text = "Day"
+        label_Day.text = "day"
         label_Day.font = UIFont.systemFontOfSize(10)
         label_Day.textColor = UIColor.blackColor()
         label_Day.autoAlignAxis(.Horizontal, toSameAxisOfView: view_UpperLeftContainer, withOffset: -15)
