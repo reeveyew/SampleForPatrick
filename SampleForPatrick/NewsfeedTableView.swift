@@ -9,7 +9,7 @@
 
 import UIKit
 
-extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
+extension NewsfeedViewController: UITableViewDataSource, UITableViewDelegate {
     
     //setup the tablew view to be displayed
     func configureTableView(){
