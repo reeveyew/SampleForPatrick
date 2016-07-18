@@ -21,9 +21,11 @@ class DetailedTimelineViewController: UIViewController{
     //MARK:- COLLECTION VIEW
     //TODO: put in pictures for imageview
     //FIXME: collection delegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         display()
+        
     }
     
     func display(){
@@ -37,13 +39,15 @@ class DetailedTimelineViewController: UIViewController{
         setupUpperLeftContainer()
         setupLowerRightContainer()
         setupLowerLeftContainer()
+        
     }
     
+    
     func setupBackgroundPhoto(){
+        //setup the background picture for detaled timeline
         imageView_BackgroundPhoto.image = UIImage(named: "beach.jpg")
         imageView_BackgroundPhoto.autoSetDimension(.Height, toSize: 300)
         imageView_BackgroundPhoto.autoPinEdge(.Bottom, toEdge: .Top, ofView: view_UpperLeftContainer)
-        
         imageView_BackgroundPhoto.xPinEdgesToSuperview(top: 0, right: 0, bottom: nil, left: 0)
         
         
@@ -55,6 +59,7 @@ class DetailedTimelineViewController: UIViewController{
         button_back.autoSetDimension(.Width, toSize: 25)
         
         
+        //setup the edit button for detalied timeline page
         let button_edit = UIButton.newAutoLayoutView()
         button_edit.setImage(UIImage(named:"edit-button.png"), forState: .Normal)
         self.view .addSubview(button_edit)
@@ -62,6 +67,8 @@ class DetailedTimelineViewController: UIViewController{
         button_edit.autoSetDimension(.Height, toSize: 25)
         button_edit.autoSetDimension(.Width, toSize: 25)
         
+        
+        //setup the globe
         let button_globe : UIButton
         button_globe = UIButton.newAutoLayoutView()
         button_globe.setImage(UIImage(named:"world.png"), forState: .Normal)
@@ -118,18 +125,18 @@ class DetailedTimelineViewController: UIViewController{
         let label_Location = UILabel.newAutoLayoutView()
         self.view .addSubview(label_Location)
         label_Location.textAlignment = NSTextAlignment.Center
-        label_Location.text = "PARIS, France"
+        label_Location.text = "TRAVELING MALAYSIA"
         label_Location.font = UIFont.boldSystemFontOfSize(15)
         label_Location.textColor = UIColor.blackColor()
-        label_Location.autoAlignAxis(.Horizontal, toSameAxisOfView: view_UpperRightContainer, withOffset: -15)
-        label_Location.autoAlignAxis(.Vertical, toSameAxisOfView: view_UpperRightContainer, withOffset: -52)
+        label_Location.autoAlignAxis(.Horizontal, toSameAxisOfView: view_UpperRightContainer, withOffset: -8)
+        label_Location.autoAlignAxis(.Vertical, toSameAxisOfView: view_UpperRightContainer, withOffset: -22)
         
         let textfield_Caption = UITextField.newAutoLayoutView()
         self.view .addSubview(textfield_Caption)
         textfield_Caption.textAlignment = NSTextAlignment.Left
         textfield_Caption.font = UIFont.systemFontOfSize(10)
         textfield_Caption.attributedPlaceholder = NSAttributedString(string:"Caption goes here...",attributes:[NSForegroundColorAttributeName: UIColor.blackColor()])
-        textfield_Caption.autoAlignAxis(.Horizontal, toSameAxisOfView: view_UpperRightContainer, withOffset: 5)
+        textfield_Caption.autoAlignAxis(.Horizontal, toSameAxisOfView: view_UpperRightContainer, withOffset: 8)
         textfield_Caption.autoAlignAxis(.Vertical, toSameAxisOfView: view_UpperRightContainer, withOffset: -52)
 }
     

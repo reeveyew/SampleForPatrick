@@ -12,12 +12,12 @@ extension DetailedTimelineViewController: UICollectionViewDataSource, UICollecti
 
     //number of collection view contents horizontally
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        return 1
+        return 2
     }
     
     //number of collection view contents vertically
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        return 5
+        return 10
     }
     
     
@@ -26,11 +26,16 @@ extension DetailedTimelineViewController: UICollectionViewDataSource, UICollecti
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! DetailedTimelineCollectionViewCell
         cell.backgroundColor = UIColor.clearColor()
     
-        let imageview:UIImageView=UIImageView(frame: CGRectMake(5, 5, 100, 100))
-        let image:UIImage = UIImage(named:"paris.jpg")!
-        imageview.image = image
-        self.view.addSubview(imageview)
+        let imageview = UIImageView()
         cell.contentView.addSubview(imageview)
+        
+        imageview.xPinEdgesToSuperview(top: 0, right: 0, bottom: 0, left: 0)
+        imageview.backgroundColor = UIColor.greenColor()
+        let image:UIImage = UIImage(named:"beach1.jpg")!
+        imageview.image = image
+        
+        cell.backgroundColor = UIColor.blueColor()
+        
         return cell
     
     }
@@ -49,35 +54,14 @@ extension DetailedTimelineViewController: UICollectionViewDataSource, UICollecti
     func collectionView(collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return 30
+        return 2
     }
     
     func collectionView(collectionView: UICollectionView, layout
         collectionViewLayout: UICollectionViewLayout,
         minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return 30
+        return 2
     }
 
-    
-//    func collectionViewSize(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-//        return CGSize(width: 10, height: 500)
-//    }
-//    
-//    
-//}
 
-//extension CGFloat {
-//    static func random() -> CGFloat {
-//        return CGFloat(arc4random()) / CGFloat(UInt32.max)
-//    }
-//}
-//
-//extension UIColor {
-//    static func randomColor() -> UIColor {
-//        return UIColor(red:   .random(),
-//                       green: .random(),
-//                       blue:  .random(),
-//                       alpha: 1.0)
-//}
-//}
 }

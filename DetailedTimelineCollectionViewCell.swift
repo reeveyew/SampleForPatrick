@@ -10,6 +10,4 @@ import UIKit
 
 class DetailedTimelineCollectionViewCell: UICollectionViewCell {
     
-    var theImages = UIImageView (frame:CGRectMake(x,y,x,y))
-    
 }

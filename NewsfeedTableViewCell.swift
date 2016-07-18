@@ -48,6 +48,7 @@ class NewsfeedTableViewCell: UITableViewCell {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.scrollDirection = UICollectionViewScrollDirection.Horizontal
         layout.itemSize = CGSize(width: 100, height: 100)
+        
         //setup collectionview
         let frame = CGRectMake(0, 100, x, 100)
         collectionView = UICollectionView(frame: frame, collectionViewLayout: layout)
@@ -59,7 +60,6 @@ class NewsfeedTableViewCell: UITableViewCell {
         
         
         imageView_CoverPhoto.autoPinEdge(.Bottom, toEdge: .Top, ofView: collectionView)
-        
         collectionView.autoPinEdge(.Top, toEdge: .Bottom, ofView: imageView_CoverPhoto, withOffset: 5.0)
         
         self.collectionView.collectionViewLayout = layout
@@ -70,6 +70,7 @@ class NewsfeedTableViewCell: UITableViewCell {
     
     func setupContentView()
     {
+        //setup the label that's placed in the center of the page
         let label_locationCenter = UILabel.newAutoLayoutView()
         label_locationCenter.textAlignment = NSTextAlignment.Center
         label_locationCenter.text = "KUALA LUMPUR"
@@ -79,18 +80,20 @@ class NewsfeedTableViewCell: UITableViewCell {
         label_locationCenter.autoCenterInSuperviewMargins()
         
         
+        //setup the profile picture display (small circle)
         let imageView_Avatar = UIImageView.newAutoLayoutView()
         imageView_Avatar.image = UIImage(named:"avatar.jpg")
         self.addSubview(imageView_Avatar)
         imageView_Avatar.xPinEdgesToSuperview(top: 35, right: nil, bottom: nil, left: 20)
-        imageView_Avatar.xSize(width: 50, height: 55)
+        imageView_Avatar.xSize(width: 40, height: 42)
         imageView_Avatar.layer.borderWidth = 0.5
         imageView_Avatar.layer.masksToBounds = true
         imageView_Avatar.layer.borderColor = UIColor.clearColor().CGColor
-        imageView_Avatar.layer.cornerRadius = 25
+        imageView_Avatar.layer.cornerRadius = 20
         imageView_Avatar.clipsToBounds = true
 
-        
+       
+        //upper border displayed above the label in the center
         let view_borderTop = UIView()
         view_borderTop.backgroundColor = UIColor.whiteColor()
         self.addSubview(view_borderTop)
@@ -99,7 +102,7 @@ class NewsfeedTableViewCell: UITableViewCell {
         view_borderTop.autoAlignAxis(.Vertical, toSameAxisOfView: label_locationCenter)
         
         
-        
+        //lower border displayed below the label in the center
         let view_borderBottom = UIView()
         view_borderBottom.backgroundColor = UIColor.whiteColor()
         self.addSubview(view_borderBottom)
@@ -108,7 +111,7 @@ class NewsfeedTableViewCell: UITableViewCell {
         view_borderBottom.autoAlignAxis(.Vertical, toSameAxisOfView: label_locationCenter)
         
         
-        
+        //username displayed next to the profile picture
         let label_Username = UILabel.newAutoLayoutView()
         label_Username.textAlignment = NSTextAlignment.Center
         label_Username.text = "Stephanie Chong"
@@ -119,7 +122,7 @@ class NewsfeedTableViewCell: UITableViewCell {
         label_Username.autoAlignAxis(.Vertical, toSameAxisOfView: imageView_Avatar, withOffset: 80)
         
         
-        
+        //button like displayed on the upper right corner
         let buttonView_Like = UIButton.newAutoLayoutView()
         buttonView_Like.setImage(UIImage(named:"like-button.png"), forState: .Normal)
         self.addSubview(buttonView_Like)
@@ -128,6 +131,7 @@ class NewsfeedTableViewCell: UITableViewCell {
         buttonView_Like.xSize(width: 25, height: 25)
         
         
+        //location icon displayed in the lower left corner
         let imageView_LocationIcon = UIImageView.newAutoLayoutView()
         imageView_LocationIcon.image = UIImage(named:"location-icon.png")
         self.addSubview(imageView_LocationIcon)
@@ -135,6 +139,7 @@ class NewsfeedTableViewCell: UITableViewCell {
         imageView_LocationIcon.xSize(width: 50, height: 50)
         
         
+        //label around the location icon displayed
         let label_Location = UILabel.newAutoLayoutView()
         label_Location.textAlignment = NSTextAlignment.Center
         label_Location.text = "10"
@@ -142,8 +147,6 @@ class NewsfeedTableViewCell: UITableViewCell {
         self.addSubview(label_Location)
         label_Location.autoAlignAxis(.Horizontal, toSameAxisOfView: imageView_LocationIcon, withOffset: 30)
         label_Location.autoAlignAxis(.Vertical, toSameAxisOfView: imageView_LocationIcon, withOffset: -1)
-        
-        
     }
     
     override func awakeFromNib() {
