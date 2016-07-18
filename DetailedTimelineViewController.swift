@@ -43,10 +43,12 @@ class DetailedTimelineViewController: UIViewController{
     func setupBackgroundPhoto(){
         imageView_BackgroundPhoto.image = UIImage(named: "beach.jpg")
         imageView_BackgroundPhoto.autoSetDimension(.Height, toSize: 300)
-        imageView_BackgroundPhoto.autoPinEdgeToSuperviewEdge(.Left, withInset: 0)
-        imageView_BackgroundPhoto.autoPinEdgeToSuperviewEdge(.Right, withInset: 0)
-        imageView_BackgroundPhoto.autoPinEdgeToSuperviewEdge(.Top, withInset: 0)
+//        imageView_BackgroundPhoto.autoPinEdgeToSuperviewEdge(.Left, withInset: 0)
+//        imageView_BackgroundPhoto.autoPinEdgeToSuperviewEdge(.Right, withInset: 0)
+//        imageView_BackgroundPhoto.autoPinEdgeToSuperviewEdge(.Top, withInset: 0)
         imageView_BackgroundPhoto.autoPinEdge(.Bottom, toEdge: .Top, ofView: view_UpperLeftContainer)
+        
+        imageView_BackgroundPhoto.xPinEdgesToSuperview(top: 0, right: 0, bottom: nil, left: 0)
         
         
         let back_button : UIButton
