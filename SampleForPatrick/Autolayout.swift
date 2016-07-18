@@ -32,13 +32,32 @@ extension UIView {
         }
     }
     
-    public func xPinTop(toBottomOfView: UIView, offset: CGFloat?){
+    public func xPinEdges(toView toView: UIView){
+        
+        self.autoPinEdge(.Top, toEdge: .Top, ofView: toView)
+        self.autoPinEdge(.Right, toEdge: .Right, ofView: toView)
+        self.autoPinEdge(.Bottom, toEdge: .Bottom, ofView: toView)
+        self.autoPinEdge(.Left, toEdge: .Left, ofView: toView)
+    }
+    
+    public func xPinTop(toBottomOfView toBottomOfView: UIView, offset: CGFloat?){
         if let offset = offset {
             self.autoPinEdge(.Top, toEdge: .Bottom, ofView: toBottomOfView, withOffset: offset)
         }//
         else {
             //comit
             self.autoPinEdge(.Top, toEdge: .Bottom, ofView: toBottomOfView)
+        }
+        
+    }
+    
+    public func xPinBottom(toTopOfView toTopOfView: UIView, offset: CGFloat?){
+        if let offset = offset {
+            self.autoPinEdge(.Bottom, toEdge: .Top, ofView: toTopOfView, withOffset: offset)
+        }//
+        else {
+            //comit
+            self.autoPinEdge(.Bottom, toEdge: .Top, ofView: toTopOfView)
         }
         
     }
@@ -73,22 +92,37 @@ extension UIView {
     
     //MARK:- MATCHING
     //match height, default multiplier 1, with optional offset
-    public func xMatchHeight(toView toView: UIView, multiplier:CGFloat = 1, offset: CGFloat?=nil){
+    public func xMatchHeight(toView toView: UIView, multiplier:CGFloat?=nil, offset: CGFloat?=nil){
         
         if let offset = offset {
             self.autoMatchDimension(.Height, toDimension: .Height, ofView: toView, withOffset: offset)
-        } else {
+        }
+        
+        else if let multiplier = multiplier {
             self.autoMatchDimension(.Height, toDimension: .Height, ofView: toView, withMultiplier: multiplier)
+        }
+        
+        else {
+            self.autoMatchDimension(.Height, toDimension: .Height, ofView: toView, withMultiplier: 1)
+
         }
     }
     
     //match width, default multiplier 1, with optional offset
-    public func xMatchWidth(toView toView: UIView, multiplier:CGFloat = 1, offset: CGFloat? = nil){
+    public func xMatchWidth(toView toView: UIView, multiplier:CGFloat?=nil, offset: CGFloat? = nil){
         if let offset = offset {
             self.autoMatchDimension(.Width, toDimension: .Height, ofView: toView, withOffset: offset)
-        } else {
-            self.autoMatchDimension(.Width, toDimension: .Height, ofView: toView, withMultiplier: multiplier)
         }
+        
+        else if let multiplier = multiplier {
+            self.autoMatchDimension(.Width, toDimension: .Width, ofView: toView, withMultiplier: multiplier)
+        }
+            
+        else {
+            self.autoMatchDimension(.Width, toDimension: .Width, ofView: toView, withMultiplier: 1)
+            
+        }
+
     }
  
     //same size
@@ -121,7 +155,6 @@ extension UIView {
             self.autoAlignAxis(.Vertical, toSameAxisOfView: toView)
         }
     }
-    
 }
 
 class XLayout {

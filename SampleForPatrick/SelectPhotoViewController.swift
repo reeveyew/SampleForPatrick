@@ -41,7 +41,7 @@ class SelectPhotoViewController: UIViewController {
     func setupViewBottom(){
         view_bottom.backgroundColor = UIColor.greenColor()
         self.view.addSubview(view_bottom)
-        view_bottom.xPinTop(colletionView_SelectPhoto, offset: nil)
+        view_bottom.xPinTop(toBottomOfView: colletionView_SelectPhoto, offset: nil)
         view_bottom.xPinEdgesToSuperview(top: nil, right: 0, bottom: 0, left: 0)
     }
 }
