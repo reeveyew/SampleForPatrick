@@ -106,6 +106,7 @@ class DetailedTimelineViewController: UIViewController{
         view_LowerRightContainer.autoPinEdge(.Top, toEdge: .Bottom, ofView: view_UpperRightContainer)
         view_LowerRightContainer.autoPinEdge(.Top, toEdge: .Top, ofView: view_LowerLeftContainer)
         content_LowerRightContainer()
+        
     }
     
     func setupLowerLeftContainer(){
