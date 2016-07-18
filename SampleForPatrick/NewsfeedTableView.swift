@@ -36,7 +36,7 @@ extension NewsfeedViewController: UITableViewDataSource, UITableViewDelegate {
         cell.collectionView.delegate = self
         cell.collectionView.dataSource = self
         cell.collectionView.backgroundColor = UIColor.clearColor()
-
+        cell.collectionView.bounces = false
         
         return cell
     }
