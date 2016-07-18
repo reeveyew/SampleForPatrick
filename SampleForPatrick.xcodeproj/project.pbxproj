@@ -10,7 +10,6 @@
 		0159FC02F3ECBA2768675EAC /* Pods_SampleForPatrick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A574BD0A9B88FF9E8C2CA588 /* Pods_SampleForPatrick.framework */; };
 		CAFCD9B11D3383650089315E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFCD9B01D3383650089315E /* AppDelegate.swift */; };
 		CAFCD9B31D3383650089315E /* NewsfeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFCD9B21D3383650089315E /* NewsfeedViewController.swift */; };
-		CAFCD9B61D3383650089315E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAFCD9B41D3383650089315E /* Main.storyboard */; };
 		CAFCD9B81D3383650089315E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAFCD9B71D3383650089315E /* Assets.xcassets */; };
 		CAFCD9BB1D3383650089315E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAFCD9B91D3383650089315E /* LaunchScreen.storyboard */; };
 		CAFCD9C51D3384130089315E /* NewsfeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFCD9C41D3384130089315E /* NewsfeedTableViewCell.swift */; };
@@ -45,7 +44,6 @@
 		CAFCD9AD1D3383650089315E /* SampleForPatrick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleForPatrick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAFCD9B01D3383650089315E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAFCD9B21D3383650089315E /* NewsfeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedViewController.swift; sourceTree = "<group>"; };
-		CAFCD9B51D3383650089315E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CAFCD9B71D3383650089315E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAFCD9BA1D3383650089315E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAFCD9BC1D3383650089315E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,7 +89,6 @@
 			children = (
 				CAFCD9AF1D3383650089315E /* SampleForPatrick */,
 				CAFCD9AE1D3383650089315E /* Products */,
-				CAFCD9B41D3383650089315E /* Main.storyboard */,
 				E9FD128FD500B8ECC6570827 /* Pods */,
 				FF540B7EABCF46C196E0DA6B /* Frameworks */,
 			);
@@ -288,7 +285,6 @@
 				EDC3D3561D3C612900BB9A84 /* newsfeed-pic.png in Resources */,
 				ED1976301D37667A004496C4 /* world.png in Resources */,
 				CAFCD9B81D3383650089315E /* Assets.xcassets in Resources */,
-				CAFCD9B61D3383650089315E /* Main.storyboard in Resources */,
 				EDC3D35A1D3C615100BB9A84 /* back-button.png in Resources */,
 				EDE25ADC1D35E2B3004B4E69 /* mountain.jpg in Resources */,
 				EDC3D35E1D3C6DBC00BB9A84 /* location-icon.png in Resources */,
@@ -375,15 +371,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CAFCD9B41D3383650089315E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CAFCD9B51D3383650089315E /* Base */,
-			);
-			name = Main.storyboard;
-			path = SampleForPatrick;
-			sourceTree = "<group>";
-		};
 		CAFCD9B91D3383650089315E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
