@@ -34,10 +34,8 @@ class DetailedTimelineTableViewCell: UITableViewCell {
         imageView_SmallIcon.backgroundColor = UIColor.clearColor()
         self.addSubview(imageView_SmallIcon)
         imageView_SmallIcon.image = UIImage(named:"world.png")
-        imageView_SmallIcon.autoSetDimension(.Height, toSize: 10)
-        imageView_SmallIcon.autoSetDimension(.Width, toSize: 10)
-        imageView_SmallIcon.autoPinEdgeToSuperviewEdge(.Top, withInset: 15)
-        imageView_SmallIcon.autoPinEdgeToSuperviewEdge(.Left, withInset: 8)
+        imageView_SmallIcon.xSize(width: 10, height: 10)
+        imageView_SmallIcon.xPinEdgesToSuperview(top: 15, right: nil, bottom: nil, left: 8)
     }
     
     

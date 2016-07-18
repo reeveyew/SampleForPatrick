@@ -52,7 +52,7 @@ class NewsfeedTableViewCell: UITableViewCell {
         let frame = CGRectMake(0, 100, x, 100)
         collectionView = UICollectionView(frame: frame, collectionViewLayout: layout)
         self.addSubview(collectionView)
-        collectionView.autoSetDimension(.Height, toSize: 100)
+        collectionView.xSize(width: nil, height: 100)
         collectionView.xPinEdgesToSuperview(top: nil, right: 1.5, bottom: 75, left: 1.5)
         collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         collectionView.backgroundColor = UIColor.clearColor()
@@ -83,12 +83,11 @@ class NewsfeedTableViewCell: UITableViewCell {
         imageView_Avatar.image = UIImage(named:"avatar.jpg")
         self.addSubview(imageView_Avatar)
         imageView_Avatar.xPinEdgesToSuperview(top: 35, right: nil, bottom: nil, left: 20)
-        imageView_Avatar.autoSetDimension(.Height, toSize: 60)
-        imageView_Avatar.autoSetDimension(.Width, toSize: 50)
+        imageView_Avatar.xSize(width: 50, height: 55)
         imageView_Avatar.layer.borderWidth = 0.5
         imageView_Avatar.layer.masksToBounds = true
         imageView_Avatar.layer.borderColor = UIColor.clearColor().CGColor
-        imageView_Avatar.layer.cornerRadius = imageView_Avatar.frame.width/2
+        imageView_Avatar.layer.cornerRadius = 25
         imageView_Avatar.clipsToBounds = true
 
         
@@ -96,8 +95,7 @@ class NewsfeedTableViewCell: UITableViewCell {
         view_borderTop.backgroundColor = UIColor.whiteColor()
         self.addSubview(view_borderTop)
         view_borderTop.autoPinEdge(.Bottom, toEdge: .Top, ofView: label_locationCenter, withOffset: -10)
-        view_borderTop.autoSetDimension(.Width, toSize: 200)
-        view_borderTop.autoSetDimension(.Height, toSize: 3)
+        view_borderTop.xSize(width: 200, height: 3)
         view_borderTop.autoAlignAxis(.Vertical, toSameAxisOfView: label_locationCenter)
         
         
@@ -106,8 +104,7 @@ class NewsfeedTableViewCell: UITableViewCell {
         view_borderBottom.backgroundColor = UIColor.whiteColor()
         self.addSubview(view_borderBottom)
         view_borderBottom.autoPinEdge(.Top, toEdge: .Bottom, ofView: label_locationCenter, withOffset: 10)
-        view_borderBottom.autoSetDimension(.Width, toSize: 200)
-        view_borderBottom.autoSetDimension(.Height, toSize: 3)
+        view_borderBottom.xSize(width: 200, height: 3)
         view_borderBottom.autoAlignAxis(.Vertical, toSameAxisOfView: label_locationCenter)
         
         
@@ -122,21 +119,20 @@ class NewsfeedTableViewCell: UITableViewCell {
         label_Username.autoAlignAxis(.Vertical, toSameAxisOfView: imageView_Avatar, withOffset: 80)
         
         
+        
         let buttonView_Like = UIButton.newAutoLayoutView()
         buttonView_Like.setImage(UIImage(named:"like-button.png"), forState: .Normal)
         self.addSubview(buttonView_Like)
         buttonView_Like.autoAlignAxis(.Horizontal, toSameAxisOfView: label_Username)
         buttonView_Like.xPinEdgesToSuperview(top: nil, right: 20, bottom: nil, left: nil)
-        buttonView_Like.autoSetDimension(.Height, toSize: 25)
-        buttonView_Like.autoSetDimension(.Width, toSize: 25)
+        buttonView_Like.xSize(width: 25, height: 25)
         
         
         let imageView_LocationIcon = UIImageView.newAutoLayoutView()
         imageView_LocationIcon.image = UIImage(named:"location-icon.png")
         self.addSubview(imageView_LocationIcon)
         imageView_LocationIcon.xPinEdgesToSuperview(top: nil, right: nil, bottom: 200, left: 20)
-        imageView_LocationIcon.autoSetDimension(.Height, toSize: 50)
-        imageView_LocationIcon.autoSetDimension(.Width, toSize: 50)
+        imageView_LocationIcon.xSize(width: 50, height: 50)
         
         
         let label_Location = UILabel.newAutoLayoutView()
@@ -147,6 +143,11 @@ class NewsfeedTableViewCell: UITableViewCell {
         label_Location.autoAlignAxis(.Horizontal, toSameAxisOfView: imageView_LocationIcon, withOffset: 30)
         label_Location.autoAlignAxis(.Vertical, toSameAxisOfView: imageView_LocationIcon, withOffset: -1)
         
+        
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
         
     }
 }

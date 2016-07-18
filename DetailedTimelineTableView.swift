@@ -12,20 +12,19 @@ import UIKit
 extension DetailedTimelineViewController: UITableViewDataSource, UITableViewDelegate {
     
     func configureTableView(){
-        tableView = UITableView(frame: CGRectMake(0, 0, x, y))
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.registerClass(DetailedTimelineTableViewCell.self, forCellReuseIdentifier: "DetailTimelineCell")
-        self.view.addSubview(tableView)
-        tableView.estimatedRowHeight = 15
-        tableView.autoSetDimension(.Height, toSize: 290)
-        tableView.autoSetDimension(.Width, toSize: 140)
-        tableView.autoPinEdgeToSuperviewEdge(.Bottom, withInset: 10)
-        tableView.autoPinEdgeToSuperviewEdge(.Left, withInset: 5)
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView_DetailedTimeline = UITableView.newAutoLayoutView()
+        tableView_DetailedTimeline.delegate = self
+        tableView_DetailedTimeline.dataSource = self
+        tableView_DetailedTimeline.registerClass(DetailedTimelineTableViewCell.self, forCellReuseIdentifier: "DetailTimelineCell")
+        self.view.addSubview(tableView_DetailedTimeline)
+        tableView_DetailedTimeline.estimatedRowHeight = 15
+        tableView_DetailedTimeline.xSize(width: 140, height: 290)
+        tableView_DetailedTimeline.autoPinEdgeToSuperviewEdge(.Bottom, withInset: 10)
+        tableView_DetailedTimeline.autoPinEdgeToSuperviewEdge(.Left, withInset: 5)
+        tableView_DetailedTimeline.rowHeight = UITableViewAutomaticDimension
         self.automaticallyAdjustsScrollViewInsets = false
-        tableView.allowsSelection = false
-        self.tableView.reloadData()
+        tableView_DetailedTimeline.allowsSelection = false
+        self.tableView_DetailedTimeline.reloadData()
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

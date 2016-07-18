@@ -15,9 +15,8 @@ class DetailedTimelineViewController: UIViewController{
     let view_UpperLeftContainer = UIView()
     let view_LowerRightContainer = UIView()
     let view_LowerLeftContainer = UIView()
-    var imageArray = [UIImage(named: "paris.jpg")!, UIImage(named: "mountain.jpg")!, UIImage(named: "beach.jpg")!]
     var collectionView : UICollectionView!
-    var tableView = UITableView()
+    var tableView_DetailedTimeline = UITableView()
     //MARK: halo
     //MARK:- COLLECTION VIEW
     //TODO: put in pictures for imageview
@@ -154,6 +153,7 @@ class DetailedTimelineViewController: UIViewController{
         label_Number.textColor = UIColor.blackColor()
         label_Number.autoAlignAxis(.Horizontal, toSameAxisOfView: view_UpperLeftContainer, withOffset: 5)
         label_Number.autoAlignAxis(.Vertical, toSameAxisOfView: view_UpperLeftContainer)
+        
     }
     
     func content_LowerRightContainer()

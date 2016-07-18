@@ -15,7 +15,7 @@ let y = UIScreen.mainScreen().bounds.size.height
 
 class HomeViewController: UIViewController {
 
-    var tableView = UITableView()
+    var tableView_Newsfeed = UITableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +24,10 @@ class HomeViewController: UIViewController {
         
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+    }
     
     
     

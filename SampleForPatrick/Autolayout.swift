@@ -52,7 +52,7 @@ extension UIView {
     
     //MARK:- MATCHING
     //match height, default multiplier 1, with optional offset
-    public func xMatchHeight(with toView: UIView, multiplier:CGFloat = 1, offset: CGFloat?=nil){
+    public func xMatchHeight(toView toView: UIView, multiplier:CGFloat = 1, offset: CGFloat?=nil){
         
         if let offset = offset {
             self.autoMatchDimension(.Height, toDimension: .Height, ofView: toView, withOffset: offset)
@@ -62,7 +62,7 @@ extension UIView {
     }
     
     //match width, default multiplier 1, with optional offset
-    public func xMatchWidth(with toView: UIView, multiplier:CGFloat = 1, offset: CGFloat? = nil){
+    public func xMatchWidth(toView toView: UIView, multiplier:CGFloat = 1, offset: CGFloat? = nil){
         if let offset = offset {
             self.autoMatchDimension(.Width, toDimension: .Height, ofView: toView, withOffset: offset)
         } else {
@@ -71,13 +71,13 @@ extension UIView {
     }
  
     //same size
-    public func xSameSize(toView: UIView){
+    public func xSameSize(toView toView: UIView){
         self.autoMatchDimension(.Height, toDimension: .Height, ofView: toView)
         self.autoMatchDimension(.Width, toDimension: .Width, ofView: toView)
     }
     
     //MARK:- ALIGN
-    public func xAlignTop(with toView: UIView){
+    public func xAlignTop(toView toView: UIView){
         self.autoPinEdge(.Top, toEdge: .Top, ofView: toView)
     }
     
