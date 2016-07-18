@@ -128,7 +128,7 @@ extension NewsfeedTableViewCell {
         //location icon displayed in the lower left corner
         imageView_LocationIcon.image = UIImage(named:"location pin")
         imageView_LocationIcon.xPinEdgesToSuperview(top: nil, right: nil, bottom: nil, left: 20)
-        imageView_LocationIcon.autoPinEdge(.Bottom, toEdge: .Bottom, ofView: refContentContainer, withOffset: -30)
+        imageView_LocationIcon.autoPinEdge(.Bottom, toEdge: .Bottom, ofView: refContentContainer, withOffset: -20)
         imageView_LocationIcon.xSize(width: 50, height: 50)
         imageView_LocationIcon.contentMode = .ScaleAspectFit
         

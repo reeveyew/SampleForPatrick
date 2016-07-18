@@ -39,29 +39,9 @@ extension NewsfeedViewController: UICollectionViewDataSource, UICollectionViewDe
     
     
     
-    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
-        self.canCallScrollViewDidEndDragging = true
-        
-        if let animatedCollectionCell = self.animatedCollectionCell {
-            UIView.animateWithDuration(1) {
-                animatedCollectionCell.transform = CGAffineTransformIdentity
-                animatedCollectionCell.backgroundColor = UIColor.randomColor()
-            }
-        }
-
-        
-        
-    }
     
     
-    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        if decelerate == false && self.canCallScrollViewDidEndDragging == true {
-            animateCollectionCellToCenter(scrollView)
-        }
-    }
-    
-
-    
+    //MARK:- HIGHLIGHT IMAGE
     func animateCollectionCellToCenter(scrollView: UIScrollView){
         print("animateCollectionCellToCenter")
 //        print(scrollView.contentOffset)
@@ -71,7 +51,8 @@ extension NewsfeedViewController: UICollectionViewDataSource, UICollectionViewDe
         
         //get current table cell
         let tableCell = tableView_Newsfeed.cellForRowAtIndexPath(indexPath) as! NewsfeedTableViewCell
-        let images = tableCell.collectionView.indexPathsForVisibleItems()
+        let indexArray = tableCell.collectionView.indexPathsForVisibleItems()
+        let sortedIndexArray = indexArray.sort {$0.row < $1.row}
         
         //get center collectionview cell
         
@@ -80,9 +61,10 @@ extension NewsfeedViewController: UICollectionViewDataSource, UICollectionViewDe
         var centerImageCell: UICollectionViewCell!
         var closestX:CGFloat = 0
         var lastIndex = 0
-        for  var i = 0; i < images.count; i++ {
+        
+        for var i = 0; i < sortedIndexArray.count; i++ {
             
-            let imageCell = tableCell.collectionView.cellForItemAtIndexPath(images[i])! as UICollectionViewCell
+            let imageCell = tableCell.collectionView.cellForItemAtIndexPath(sortedIndexArray[i])! as UICollectionViewCell
             let cellFromCenterX = imageCell.center.x - centerX
             
             if i == 0 {
@@ -122,8 +104,8 @@ extension NewsfeedViewController: UICollectionViewDataSource, UICollectionViewDe
             lastIndex = i
             self.animatedCollectionCell = centerImageCell
             
-            if lastIndex == images.count - 1 {
-                UIView.animateWithDuration(1) {
+            if lastIndex == sortedIndexArray.count - 1 {
+                UIView.animateWithDuration(0.5) {
                     tableCell.collectionView.contentOffset.x = CGRectGetMinX(centerImageCell.frame) - (x/5*2)
                     let scale = CGAffineTransformMakeScale(1.1, 1.1)
                     centerImageCell.transform = CGAffineTransformTranslate(scale, 0, -2)
@@ -136,36 +118,15 @@ extension NewsfeedViewController: UICollectionViewDataSource, UICollectionViewDe
 
     }
     
-    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-        if self.canCallScrollViewDidEndDragging == true {
+    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if decelerate == false && self.canCallScrollViewDidEndDragging == true {
             animateCollectionCellToCenter(scrollView)
         }
     }
     
-    func scrollViewDidScroll(scrollView: UIScrollView) {
-        if scrollView.contentOffset.x == scrollView.contentSize.width - x {
-            print("SCROLLED TO THE END")
-            self.canCallScrollViewDidEndDragging = false
-            
-            let touchPoint: CGPoint = scrollView.convertPoint(CGPointMake(scrollView.contentOffset.x, 0), toView: self.tableView_Newsfeed)
-            let indexPath: NSIndexPath = self.tableView_Newsfeed.indexPathForRowAtPoint(touchPoint)!
-            
-            //get current table cell
-            let tableCell = tableView_Newsfeed.cellForRowAtIndexPath(indexPath) as! NewsfeedTableViewCell
-            let indexArray = tableCell.collectionView.indexPathsForVisibleItems()
-            
-            var sortedIndexArray = indexArray.sort {$0.row < $1.row}
-            
-            let last3CollectionCell = tableCell.collectionView.cellForItemAtIndexPath(sortedIndexArray[sortedIndexArray.count - 3])! as UICollectionViewCell
-            
-            self.animatedCollectionCell = last3CollectionCell
-            
-            UIView.animateWithDuration(1) {
-                tableCell.collectionView.contentOffset.x = scrollView.contentSize.width - x
-                let scale = CGAffineTransformMakeScale(1.1, 1.1)
-                last3CollectionCell.transform = CGAffineTransformTranslate(scale, 0, -2)
-                tableCell.collectionView.bringSubviewToFront(last3CollectionCell)
-            }
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        if self.canCallScrollViewDidEndDragging == true {
+            animateCollectionCellToCenter(scrollView)
         }
     }
     
@@ -175,10 +136,30 @@ extension NewsfeedViewController: UICollectionViewDataSource, UICollectionViewDe
         
         self.animatedCollectionCell = selectedItem
         
-        UIView.animateWithDuration(1) {
+        UIView.animateWithDuration(0.5) {
             let scale = CGAffineTransformMakeScale(1.1, 1.1)
             selectedItem.transform = CGAffineTransformTranslate(scale, 0, -2)
             collectionView.bringSubviewToFront(selectedItem)
         }
+    }
+    
+    //MARK:- UNHIGHLIGHT IMAGE
+    func unHighlightImage(){
+        self.canCallScrollViewDidEndDragging = true
+        
+        if let animatedCollectionCell = self.animatedCollectionCell {
+            UIView.animateWithDuration(1) {
+                animatedCollectionCell.transform = CGAffineTransformIdentity
+                animatedCollectionCell.backgroundColor = UIColor.randomColor()
+            }
+        }
+    }
+    
+    func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
+        unHighlightImage()
+    }
+    
+    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+        unHighlightImage()
     }
 }
