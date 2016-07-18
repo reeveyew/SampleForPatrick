@@ -77,7 +77,7 @@ class NewsfeedTableViewCell: UITableViewCell {
         Label_Location.textAlignment = NSTextAlignment.Center
         Label_Location.text = "KUALA LUMPUR"
         Label_Location.font = UIFont.boldSystemFontOfSize(25    )
-        Label_Location.textColor = UIColor.darkTextColor()
+        Label_Location.textColor = UIColor.whiteColor()
         self.addSubview(Label_Location)
         Label_Location.autoCenterInSuperviewMargins()
         
@@ -98,7 +98,7 @@ class NewsfeedTableViewCell: UITableViewCell {
 
         
         let upper_border = UIView()
-        upper_border.backgroundColor = UIColor.darkTextColor()
+        upper_border.backgroundColor = UIColor.whiteColor()
         self.addSubview(upper_border)
         upper_border.autoPinEdge(.Bottom, toEdge: .Top, ofView: Label_Location, withOffset: -10)
         upper_border.autoSetDimension(.Width, toSize: 200)
@@ -107,7 +107,7 @@ class NewsfeedTableViewCell: UITableViewCell {
         
         
         let lower_border = UIView()
-        lower_border.backgroundColor = UIColor.darkTextColor()
+        lower_border.backgroundColor = UIColor.whiteColor()
         self.addSubview(lower_border)
         lower_border.autoPinEdge(.Top, toEdge: .Bottom, ofView: Label_Location, withOffset: 10)
         lower_border.autoSetDimension(.Width, toSize: 200)
