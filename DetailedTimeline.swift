@@ -9,7 +9,7 @@
 import UIKit
 import PureLayout
 
-class DetailTimeline: UIViewController{
+class DetailedTimeline: UIViewController{
     let imageView_BackgroundPhoto = UIImageView()
     let view_UpperRightContainer = UIView()
     let view_UpperLeftContainer = UIView()
@@ -47,10 +47,38 @@ class DetailTimeline: UIViewController{
         imageView_BackgroundPhoto.autoPinEdgeToSuperviewEdge(.Right, withInset: 0)
         imageView_BackgroundPhoto.autoPinEdgeToSuperviewEdge(.Top, withInset: 0)
         imageView_BackgroundPhoto.autoPinEdge(.Bottom, toEdge: .Top, ofView: view_UpperLeftContainer)
+        
+        
+        let back_button : UIButton
+        back_button = UIButton(frame: CGRectMake(x,y,x,y))
+        back_button.setImage(UIImage(named:"back-button.png"), forState: .Normal)
+        self.view .addSubview(back_button)
+        back_button.autoPinEdgeToSuperviewEdge(.Left, withInset: 20)
+        back_button.autoPinEdgeToSuperviewEdge(.Top, withInset: 20)
+        back_button.autoSetDimension(.Height, toSize: 25)
+        back_button.autoSetDimension(.Width, toSize: 25)
+        
+        let edit_button : UIButton
+        edit_button = UIButton(frame: CGRectMake(x,y,x,y))
+        edit_button.setImage(UIImage(named:"edit-button.png"), forState: .Normal)
+        self.view .addSubview(edit_button)
+        edit_button.autoPinEdgeToSuperviewEdge(.Right, withInset: 20)
+        edit_button.autoPinEdgeToSuperviewEdge(.Top, withInset: 20)
+        edit_button.autoSetDimension(.Height, toSize: 25)
+        edit_button.autoSetDimension(.Width, toSize: 25)
+        
+        let globe_button : UIButton
+        globe_button = UIButton(frame: CGRectMake(x,y,x,y))
+        globe_button.setImage(UIImage(named:"world.png"), forState: .Normal)
+        self.view .addSubview(globe_button)
+        globe_button.autoPinEdgeToSuperviewEdge(.Left, withInset: 22)
+        globe_button.autoAlignAxis(.Horizontal, toSameAxisOfView: back_button, withOffset: 220)
+        globe_button.autoSetDimension(.Height, toSize: 25)
+        globe_button.autoSetDimension(.Width, toSize: 25)
     }
     
    func setupUpperRightContainer(){
-        view_UpperRightContainer.backgroundColor = UIColor.darkGrayColor()
+        view_UpperRightContainer.backgroundColor = UIColor.clearColor()
         view_UpperRightContainer.autoPinEdge(.Top, toEdge: .Bottom, ofView: imageView_BackgroundPhoto)
         view_UpperRightContainer.autoPinEdge(.Left, toEdge: .Right, ofView: view_UpperLeftContainer)
         view_UpperRightContainer.autoPinEdgeToSuperviewEdge(.Right, withInset: 0)
@@ -61,7 +89,7 @@ class DetailTimeline: UIViewController{
     }
     
     func setupUpperLeftContainer(){
-        view_UpperLeftContainer.backgroundColor = UIColor.whiteColor()
+        view_UpperLeftContainer.backgroundColor = UIColor.clearColor()
         view_UpperLeftContainer.autoPinEdge(.Top, toEdge: .Bottom, ofView: imageView_BackgroundPhoto)
         view_UpperLeftContainer.autoPinEdgeToSuperviewEdge(.Left, withInset: 0)
        view_UpperLeftContainer.autoPinEdge(.Right, toEdge: .Left, ofView: view_UpperRightContainer)
@@ -70,7 +98,7 @@ class DetailTimeline: UIViewController{
     }
     
     func setupLowerRightContainer(){
-        view_LowerRightContainer.backgroundColor = UIColor.darkTextColor()
+        view_LowerRightContainer.backgroundColor = UIColor.clearColor()
         view_LowerRightContainer.autoPinEdgeToSuperviewEdge(.Right, withInset: 0)
         view_LowerRightContainer.autoPinEdgeToSuperviewEdge(.Bottom, withInset: 0)
         view_LowerRightContainer.autoPinEdge(.Top, toEdge: .Bottom, ofView: view_UpperRightContainer)
@@ -79,13 +107,14 @@ class DetailTimeline: UIViewController{
     }
     
     func setupLowerLeftContainer(){
-        view_LowerLeftContainer.backgroundColor = UIColor.lightGrayColor()
+        view_LowerLeftContainer.backgroundColor = UIColor.clearColor()
         view_LowerLeftContainer.autoPinEdgeToSuperviewEdge(.Left, withInset: 0)
         view_LowerLeftContainer.autoPinEdgeToSuperviewEdge(.Bottom, withInset: 0)
         view_LowerLeftContainer.autoPinEdge(.Top, toEdge: .Bottom, ofView: view_UpperLeftContainer)
         view_LowerLeftContainer.autoPinEdge(.Right, toEdge: .Left, ofView: view_LowerRightContainer)
         view_LowerLeftContainer.autoMatchDimension(.Width, toDimension: .Width, ofView: view_UpperLeftContainer)
         configureTableView()
+        
     }
     
     

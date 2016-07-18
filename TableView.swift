@@ -9,13 +9,13 @@
 
 import UIKit
 
-extension DetailTimeline: UITableViewDataSource, UITableViewDelegate {
+extension DetailedTimeline: UITableViewDataSource, UITableViewDelegate {
     
     func configureTableView(){
         tableView = UITableView(frame: CGRectMake(0, 0, x, y))
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.registerClass(DetailTimelineTableViewCell.self, forCellReuseIdentifier: "DetailTimelineCell")
+        tableView.registerClass(DetailedTimelineTableViewCell.self, forCellReuseIdentifier: "DetailTimelineCell")
         self.view.addSubview(tableView)
         tableView.estimatedRowHeight = 15
         tableView.autoSetDimension(.Height, toSize: 290)
@@ -33,7 +33,7 @@ extension DetailTimeline: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("DetailTimelineCell", forIndexPath: indexPath) as! DetailTimelineTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("DetailTimelineCell", forIndexPath: indexPath) as! DetailedTimelineTableViewCell
         return cell
     }
     

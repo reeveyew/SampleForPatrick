@@ -9,7 +9,7 @@
 import UIKit
 import PureLayout
 
-class DetailTimelineTableViewCell: UITableViewCell {
+class DetailedTimelineTableViewCell: UITableViewCell {
     let imageView_SmallIcon = UIImageView()
     let imageSlider = UISlider()
     var tableView = UITableView()

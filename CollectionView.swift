@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension DetailTimeline: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+extension DetailedTimeline: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
 
     //number of collection view contents horizontally
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -45,14 +45,7 @@ extension DetailTimeline: UICollectionViewDataSource, UICollectionViewDelegateFl
         self.view.addSubview(imageview)
         cell.contentView.addSubview(imageview)
         return cell
-        
-//        let CollectionView_Image=UIView()
-//        CollectionView_Image.backgroundColor=UIColor(patternImage:UIImage(named:"world.png")!)
-//        cell.backgroundVi=CollectionView_Image
-        
-//        cell.theImages.image = self.imageArray [indexPath.row]
-        
-        return cell
+    
     }
     
     
