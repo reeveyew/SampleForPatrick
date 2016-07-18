@@ -25,20 +25,7 @@ extension DetailedTimelineViewController: UICollectionViewDataSource, UICollecti
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! DetailedTimelineCollectionViewCell
         cell.backgroundColor = UIColor.clearColor()
-//        let con = CatService(test:"test")
-//        
-//        let temp = NSUserDefaults()
-//        let  number = temp.integerForKey("num_of_images")
-//        
-//        var title_array:Array<String> = con.imageNamesForCategoryAtIndex(number)
-//        
-//        var string:String = title_array[indexPath.row]
-//        
-//        print("indexPath.row \(indexPath.row)");
-//        print("string is \(string)")
-
-//        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("firstCollectionCell", forIndexPath: indexPath)
-        
+    
         let imageview:UIImageView=UIImageView(frame: CGRectMake(5, 5, 100, 100))
         let image:UIImage = UIImage(named:"paris.jpg")!
         imageview.image = image
