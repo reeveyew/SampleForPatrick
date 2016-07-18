@@ -77,7 +77,7 @@ class NewsfeedTableViewCell: UITableViewCell {
         Label_Location.textAlignment = NSTextAlignment.Center
         Label_Location.text = "KUALA LUMPUR"
         Label_Location.font = UIFont.boldSystemFontOfSize(25    )
-        Label_Location.textColor = UIColor.whiteColor()
+        Label_Location.textColor = UIColor.darkTextColor()
         self.addSubview(Label_Location)
         Label_Location.autoCenterInSuperviewMargins()
         
@@ -98,7 +98,7 @@ class NewsfeedTableViewCell: UITableViewCell {
 
         
         let upper_border = UIView()
-        upper_border.backgroundColor = UIColor.whiteColor()
+        upper_border.backgroundColor = UIColor.darkTextColor()
         self.addSubview(upper_border)
         upper_border.autoPinEdge(.Bottom, toEdge: .Top, ofView: Label_Location, withOffset: -10)
         upper_border.autoSetDimension(.Width, toSize: 200)
@@ -107,7 +107,7 @@ class NewsfeedTableViewCell: UITableViewCell {
         
         
         let lower_border = UIView()
-        lower_border.backgroundColor = UIColor.whiteColor()
+        lower_border.backgroundColor = UIColor.darkTextColor()
         self.addSubview(lower_border)
         lower_border.autoPinEdge(.Top, toEdge: .Bottom, ofView: Label_Location, withOffset: 10)
         lower_border.autoSetDimension(.Width, toSize: 200)
@@ -143,8 +143,8 @@ class NewsfeedTableViewCell: UITableViewCell {
         self.addSubview(imageView_LocationIcon)
         imageView_LocationIcon.autoPinEdgeToSuperviewEdge(.Left, withInset: 20)
         imageView_LocationIcon.autoPinEdgeToSuperviewEdge(.Bottom, withInset: 200)
-        imageView_LocationIcon.autoSetDimension(.Height, toSize: 80)
-        imageView_LocationIcon.autoSetDimension(.Width, toSize: 70)
+        imageView_LocationIcon.autoSetDimension(.Height, toSize: 50)
+        imageView_LocationIcon.autoSetDimension(.Width, toSize: 50)
         
         
         let label_Location = UILabel(frame: CGRectMake(x,y,x,y))
@@ -152,7 +152,7 @@ class NewsfeedTableViewCell: UITableViewCell {
         label_Location.text = "10"
         label_Location.textColor = UIColor.blackColor()
         self.addSubview(label_Location)
-        label_Location.autoAlignAxis(.Horizontal, toSameAxisOfView: imageView_LocationIcon, withOffset: -10)
+        label_Location.autoAlignAxis(.Horizontal, toSameAxisOfView: imageView_LocationIcon, withOffset: 30)
         label_Location.autoAlignAxis(.Vertical, toSameAxisOfView: imageView_LocationIcon, withOffset: -1)
     }
 }
