@@ -30,6 +30,8 @@
 		EDC3D3601D3C76F000BB9A84 /* avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDC3D35F1D3C76F000BB9A84 /* avatar.jpg */; };
 		EDC5F8DB1D3CA8BF00CBF488 /* beach.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDC5F8DA1D3CA8BF00CBF488 /* beach.jpg */; };
 		EDC5F8DD1D3CABF700CBF488 /* beach1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDC5F8DC1D3CABF700CBF488 /* beach1.jpg */; };
+		EDC5F8DF1D3CB9EB00CBF488 /* SelectPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC5F8DE1D3CB9EB00CBF488 /* SelectPhotoViewController.swift */; };
+		EDC5F8E21D3CBC2400CBF488 /* SelectPhotoCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC5F8E11D3CBC2400CBF488 /* SelectPhotoCollectionView.swift */; };
 		EDE25ADC1D35E2B3004B4E69 /* mountain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDE25ADB1D35E2B3004B4E69 /* mountain.jpg */; };
 		EDE25AE21D35E6B2004B4E69 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE25AE11D35E6B2004B4E69 /* HomeTableView.swift */; };
 		EDE25AE41D35EA1D004B4E69 /* HomeCollectionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE25AE31D35EA1D004B4E69 /* HomeCollectionTableView.swift */; };
@@ -64,6 +66,8 @@
 		EDC3D35F1D3C76F000BB9A84 /* avatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatar.jpg; sourceTree = "<group>"; };
 		EDC5F8DA1D3CA8BF00CBF488 /* beach.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beach.jpg; sourceTree = "<group>"; };
 		EDC5F8DC1D3CABF700CBF488 /* beach1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beach1.jpg; sourceTree = "<group>"; };
+		EDC5F8DE1D3CB9EB00CBF488 /* SelectPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPhotoViewController.swift; sourceTree = "<group>"; };
+		EDC5F8E11D3CBC2400CBF488 /* SelectPhotoCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectPhotoCollectionView.swift; path = ../SelectPhotoCollectionView.swift; sourceTree = "<group>"; };
 		EDE25ADB1D35E2B3004B4E69 /* mountain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mountain.jpg; sourceTree = "<group>"; };
 		EDE25AE11D35E6B2004B4E69 /* HomeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
 		EDE25AE31D35EA1D004B4E69 /* HomeCollectionTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionTableView.swift; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 			children = (
 				CAFCD9AF1D3383650089315E /* SampleForPatrick */,
 				CAFCD9AE1D3383650089315E /* Products */,
+				CAFCD9B41D3383650089315E /* Main.storyboard */,
 				E9FD128FD500B8ECC6570827 /* Pods */,
 				FF540B7EABCF46C196E0DA6B /* Frameworks */,
 			);
@@ -108,12 +113,12 @@
 				EDE25AE91D35F86F004B4E69 /* DetailedTimeline */,
 				EDE25AE51D35EF40004B4E69 /* HomeViewController */,
 				EDE25AE61D35EF4E004B4E69 /* HomeTableViewCell */,
-				CAFCD9B41D3383650089315E /* Main.storyboard */,
 				CAFCD9B71D3383650089315E /* Assets.xcassets */,
 				CAFCD9B91D3383650089315E /* LaunchScreen.storyboard */,
 				CAFCD9BC1D3383650089315E /* Info.plist */,
 				EDE25AE81D35EF87004B4E69 /* Obsolete */,
 				CAFCF7631D3C825F00350464 /* Autolayout.swift */,
+				EDC5F8E01D3CB9F100CBF488 /* SelectPhoto */,
 			);
 			path = SampleForPatrick;
 			sourceTree = "<group>";
@@ -125,6 +130,15 @@
 				7195089142FFF745DEA26EDB /* Pods-SampleForPatrick.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		EDC5F8E01D3CB9F100CBF488 /* SelectPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				EDC5F8DE1D3CB9EB00CBF488 /* SelectPhotoViewController.swift */,
+				EDC5F8E11D3CBC2400CBF488 /* SelectPhotoCollectionView.swift */,
+			);
+			name = SelectPhoto;
 			sourceTree = "<group>";
 		};
 		EDE25AE51D35EF40004B4E69 /* HomeViewController */ = {
@@ -332,7 +346,9 @@
 				ED2B7E811D34A67400361B6A /* NewsfeedViewController.swift in Sources */,
 				CAFCD9C51D3384130089315E /* NewsfeedTableViewCell.swift in Sources */,
 				ED19762C1D373B46004496C4 /* DetailedTimelineTableView.swift in Sources */,
+				EDC5F8E21D3CBC2400CBF488 /* SelectPhotoCollectionView.swift in Sources */,
 				ED19762E1D373D34004496C4 /* DetailedTimelineTableViewCell.swift in Sources */,
+				EDC5F8DF1D3CB9EB00CBF488 /* SelectPhotoViewController.swift in Sources */,
 				EDE25AE21D35E6B2004B4E69 /* HomeTableView.swift in Sources */,
 				EDE25AEF1D3626A9004B4E69 /* DetailedTimelineViewController.swift in Sources */,
 				ED19762A1D372FE6004496C4 /* DetailedTimelineCollectionView.swift in Sources */,
@@ -349,6 +365,7 @@
 				CAFCD9B51D3383650089315E /* Base */,
 			);
 			name = Main.storyboard;
+			path = SampleForPatrick;
 			sourceTree = "<group>";
 		};
 		CAFCD9B91D3383650089315E /* LaunchScreen.storyboard */ = {

@@ -102,6 +102,26 @@ extension UIView {
         self.autoPinEdge(.Top, toEdge: .Top, ofView: toView)
     }
     
+    public func xAlignHorizontal(toView toView: UIView, offset: CGFloat?=nil){
+        if let offset = offset {
+            self.autoAlignAxis(.Horizontal, toSameAxisOfView: toView, withOffset: offset)
+        }
+            
+        else {
+            self.autoAlignAxis(.Horizontal, toSameAxisOfView: toView)
+        }
+    }
+    
+    public func xAlignVertical(toView toView: UIView, offset: CGFloat?=nil){
+        if let offset = offset {
+            self.autoAlignAxis(.Vertical, toSameAxisOfView: toView, withOffset: offset)
+        }
+            
+        else {
+            self.autoAlignAxis(.Vertical, toSameAxisOfView: toView)
+        }
+    }
+    
 }
 
 class XLayout {
