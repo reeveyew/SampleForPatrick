@@ -29,8 +29,8 @@ class SelectPhotoViewController: UIViewController {
         colletionView_SelectPhoto = UICollectionView(frame: frame, collectionViewLayout: layout)
         self.view .addSubview(colletionView_SelectPhoto)
         colletionView_SelectPhoto.xPinEdgesToSuperview(top: 0, right: 0, bottom: nil, left: 0)
-        colletionView_SelectPhoto.registerClass(DetailedTimelineCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
-        colletionView_SelectPhoto.backgroundColor = UIColor.whiteColor()
+        colletionView_SelectPhoto.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "selectphotocell")
+        colletionView_SelectPhoto.backgroundColor = UIColor.blackColor()
         colletionView_SelectPhoto.dataSource = self
         colletionView_SelectPhoto.delegate = self
         self.colletionView_SelectPhoto.collectionViewLayout = layout
