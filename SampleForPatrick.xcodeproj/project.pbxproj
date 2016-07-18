@@ -17,6 +17,9 @@
 		CAFCF76C1D3CC16C00350464 /* RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFCF76B1D3CC16C00350464 /* RandomColor.swift */; };
 		CAFCF7701D3CC95700350464 /* NewsfeedContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFCF76F1D3CC95700350464 /* NewsfeedContentView.swift */; };
 		CAFCF7721D3CC96300350464 /* NewsfeedCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFCF7711D3CC96300350464 /* NewsfeedCollectionView.swift */; };
+		CAFCF77C1D3CE20200350464 /* tw-cen-mt-condensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAFCF7791D3CE20200350464 /* tw-cen-mt-condensed.ttf */; };
+		CAFCF77D1D3CE20200350464 /* tw-cen-mt-condensed-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAFCF77A1D3CE20200350464 /* tw-cen-mt-condensed-bold.ttf */; };
+		CAFCF77E1D3CE20200350464 /* tw-cen-mt-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAFCF77B1D3CE20200350464 /* tw-cen-mt-regular.ttf */; };
 		ED19762A1D372FE6004496C4 /* DetailedTimelineCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1976291D372FE6004496C4 /* DetailedTimelineCollectionView.swift */; };
 		ED19762C1D373B46004496C4 /* DetailedTimelineTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED19762B1D373B46004496C4 /* DetailedTimelineTableView.swift */; };
 		ED19762E1D373D34004496C4 /* DetailedTimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED19762D1D373D34004496C4 /* DetailedTimelineTableViewCell.swift */; };
@@ -54,6 +57,9 @@
 		CAFCF76B1D3CC16C00350464 /* RandomColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomColor.swift; sourceTree = "<group>"; };
 		CAFCF76F1D3CC95700350464 /* NewsfeedContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsfeedContentView.swift; sourceTree = "<group>"; };
 		CAFCF7711D3CC96300350464 /* NewsfeedCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsfeedCollectionView.swift; sourceTree = "<group>"; };
+		CAFCF7791D3CE20200350464 /* tw-cen-mt-condensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tw-cen-mt-condensed.ttf"; sourceTree = "<group>"; };
+		CAFCF77A1D3CE20200350464 /* tw-cen-mt-condensed-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tw-cen-mt-condensed-bold.ttf"; sourceTree = "<group>"; };
+		CAFCF77B1D3CE20200350464 /* tw-cen-mt-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tw-cen-mt-regular.ttf"; sourceTree = "<group>"; };
 		ED1976291D372FE6004496C4 /* DetailedTimelineCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTimelineCollectionView.swift; sourceTree = "<group>"; };
 		ED19762B1D373B46004496C4 /* DetailedTimelineTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTimelineTableView.swift; sourceTree = "<group>"; };
 		ED19762D1D373D34004496C4 /* DetailedTimelineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTimelineTableViewCell.swift; sourceTree = "<group>"; };
@@ -190,6 +196,9 @@
 		EDE25AE71D35EF69004B4E69 /* Images Asset */ = {
 			isa = PBXGroup;
 			children = (
+				CAFCF7791D3CE20200350464 /* tw-cen-mt-condensed.ttf */,
+				CAFCF77A1D3CE20200350464 /* tw-cen-mt-condensed-bold.ttf */,
+				CAFCF77B1D3CE20200350464 /* tw-cen-mt-regular.ttf */,
 				ED19762F1D37667A004496C4 /* world.png */,
 				EDC3D35F1D3C76F000BB9A84 /* avatar.jpg */,
 				EDC3D3531D3C611A00BB9A84 /* like-button.png */,
@@ -297,6 +306,7 @@
 				CAFCD9BB1D3383650089315E /* LaunchScreen.storyboard in Resources */,
 				EDC5F8DD1D3CABF700CBF488 /* beach1.jpg in Resources */,
 				EDC3D3561D3C612900BB9A84 /* newsfeed-pic.png in Resources */,
+				CAFCF77C1D3CE20200350464 /* tw-cen-mt-condensed.ttf in Resources */,
 				ED1976301D37667A004496C4 /* world.png in Resources */,
 				CAFCD9B81D3383650089315E /* Assets.xcassets in Resources */,
 				EDC3D35A1D3C615100BB9A84 /* back-button.png in Resources */,
@@ -304,7 +314,9 @@
 				EDC3D35E1D3C6DBC00BB9A84 /* location-icon.png in Resources */,
 				ED8D5E451D357161002D60FD /* paris.jpg in Resources */,
 				EDC3D3541D3C611A00BB9A84 /* like-button.png in Resources */,
+				CAFCF77E1D3CE20200350464 /* tw-cen-mt-regular.ttf in Resources */,
 				EDC3D3601D3C76F000BB9A84 /* avatar.jpg in Resources */,
+				CAFCF77D1D3CE20200350464 /* tw-cen-mt-condensed-bold.ttf in Resources */,
 				EDC5F8DB1D3CA8BF00CBF488 /* beach.jpg in Resources */,
 				EDC3D3581D3C613800BB9A84 /* edit-button.png in Resources */,
 			);

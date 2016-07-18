@@ -54,24 +54,25 @@ extension NewsfeedTableViewCell {
         
         label_locationCenter.textAlignment = NSTextAlignment.Center
         label_locationCenter.text = "LONDON TRIP"
-        label_locationCenter.font = UIFont.boldSystemFontOfSize(25)
+        label_locationCenter.font = UIFont(name: "TwCenMT-CondensedBold", size: 30)
         label_locationCenter.textColor = UIColor.whiteColor()
         label_locationCenter.xAlignVertical(toView: refContentContainer)
         label_locationCenter.xAlignHorizontal(toView: refContentContainer, offset: 30)
+        label_locationCenter.alpha = 0.9
         
         //upper border displayed above the label in the center
-        
         view_borderTop.backgroundColor = UIColor.whiteColor()
         view_borderTop.xPinBottom(toTopOfView: label_locationCenter, offset: -10)
-        view_borderTop.xSize(width: 200, height: 3)
+        view_borderTop.xMatchWidth(toView: label_locationCenter, multiplier: 1.2)
+        view_borderTop.xSize(width: nil, height: 2)
         view_borderTop.xAlignVertical(toView: label_locationCenter)
         
         
         //lower border displayed below the label in the center
         view_borderBottom.backgroundColor = UIColor.whiteColor()
         view_borderBottom.xPinTop(toBottomOfView: label_locationCenter, offset: 10)
-        view_borderBottom.xSize(width: 200, height: 3)
-        view_borderBottom.xAlignVertical(toView: label_locationCenter)
+        view_borderBottom.xSameSize(toView: view_borderTop)
+        view_borderBottom.xAlignVertical(toView: view_borderTop)
     }
 
     func setupAvatar(){
@@ -101,10 +102,10 @@ extension NewsfeedTableViewCell {
         
         label_Username.textAlignment = NSTextAlignment.Center
         label_Username.text = "Lilly Carson"
-        label_Username.font = UIFont.boldSystemFontOfSize(13)
+        label_Username.font = UIFont(name: "TwCenMT-Regular", size: 17)
         label_Username.textColor = UIColor.whiteColor()
         self.addSubview(label_Username)
-        label_Username.xAlignHorizontal(toView: imageView_Avatar, offset: -5)
+        label_Username.xAlignHorizontal(toView: imageView_Avatar, offset: -7)
         label_Username.xAlignVertical(toView: imageView_Avatar, offset: 80)
     }
 
@@ -135,6 +136,7 @@ extension NewsfeedTableViewCell {
         //label around the location icon displayed
         label_Location.textAlignment = NSTextAlignment.Center
         label_Location.text = "8"
+        label_Location.font = UIFont(name: "TwCenMT-Regular", size: 18)
         label_Location.textColor = UIColor.whiteColor()
         
         label_Location.xAlignHorizontal(toView: imageView_LocationIcon, offset: -3)

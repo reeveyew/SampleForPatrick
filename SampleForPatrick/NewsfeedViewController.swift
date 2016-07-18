@@ -16,6 +16,8 @@ let y = UIScreen.mainScreen().bounds.size.height
 class NewsfeedViewController: UIViewController {
 
     var tableView_Newsfeed = UITableView()
+    var animatedCollectionCell:UICollectionViewCell!
+    var canCallScrollViewDidEndDragging = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
