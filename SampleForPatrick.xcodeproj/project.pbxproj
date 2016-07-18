@@ -31,7 +31,7 @@
 		EDE25AE21D35E6B2004B4E69 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE25AE11D35E6B2004B4E69 /* HomeTableView.swift */; };
 		EDE25AE41D35EA1D004B4E69 /* HomeCollectionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE25AE31D35EA1D004B4E69 /* HomeCollectionTableView.swift */; };
 		EDE25AED1D361B6C004B4E69 /* beach.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDE25AEC1D361B6C004B4E69 /* beach.jpg */; };
-		EDE25AEF1D3626A9004B4E69 /* DetailedTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE25AEE1D3626A9004B4E69 /* DetailedTimeline.swift */; };
+		EDE25AEF1D3626A9004B4E69 /* DetailedTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE25AEE1D3626A9004B4E69 /* DetailedTimelineViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,7 +63,7 @@
 		EDE25AE11D35E6B2004B4E69 /* HomeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
 		EDE25AE31D35EA1D004B4E69 /* HomeCollectionTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionTableView.swift; sourceTree = "<group>"; };
 		EDE25AEC1D361B6C004B4E69 /* beach.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beach.jpg; sourceTree = "<group>"; };
-		EDE25AEE1D3626A9004B4E69 /* DetailedTimeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTimeline.swift; sourceTree = "<group>"; };
+		EDE25AEE1D3626A9004B4E69 /* DetailedTimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTimelineViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,7 +168,7 @@
 		EDE25AE91D35F86F004B4E69 /* DetailTimeline */ = {
 			isa = PBXGroup;
 			children = (
-				EDE25AEE1D3626A9004B4E69 /* DetailedTimeline.swift */,
+				EDE25AEE1D3626A9004B4E69 /* DetailedTimelineViewController.swift */,
 				ED1976291D372FE6004496C4 /* DetailedTimelineCollectionView.swift */,
 				ED1976331D378007004496C4 /* DetailedTimelineCollectionViewCell.swift */,
 				ED19762B1D373B46004496C4 /* DetailedTimelineTableView.swift */,
@@ -325,7 +325,7 @@
 				ED19762C1D373B46004496C4 /* DetailedTimelineTableView.swift in Sources */,
 				ED19762E1D373D34004496C4 /* DetailedTimelineTableViewCell.swift in Sources */,
 				EDE25AE21D35E6B2004B4E69 /* HomeTableView.swift in Sources */,
-				EDE25AEF1D3626A9004B4E69 /* DetailedTimeline.swift in Sources */,
+				EDE25AEF1D3626A9004B4E69 /* DetailedTimelineViewController.swift in Sources */,
 				ED19762A1D372FE6004496C4 /* DetailedTimelineCollectionView.swift in Sources */,
 				EDE25AE41D35EA1D004B4E69 /* HomeCollectionTableView.swift in Sources */,
 			);

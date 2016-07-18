@@ -9,7 +9,7 @@
 
 import UIKit
 
-extension DetailedTimeline: UITableViewDataSource, UITableViewDelegate {
+extension DetailedTimelineViewController: UITableViewDataSource, UITableViewDelegate {
     
     func configureTableView(){
         tableView = UITableView(frame: CGRectMake(0, 0, x, y))

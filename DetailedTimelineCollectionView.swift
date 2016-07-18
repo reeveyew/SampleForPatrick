@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension DetailedTimeline: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+extension DetailedTimelineViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
 
     //number of collection view contents horizontally
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {

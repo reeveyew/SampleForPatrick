@@ -9,7 +9,7 @@
 import UIKit
 import PureLayout
 
-class DetailedTimeline: UIViewController{
+class DetailedTimelineViewController: UIViewController{
     let imageView_BackgroundPhoto = UIImageView()
     let view_UpperRightContainer = UIView()
     let view_UpperLeftContainer = UIView()
