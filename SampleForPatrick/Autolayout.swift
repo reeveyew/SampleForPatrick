@@ -13,7 +13,6 @@ extension UIView {
     
     //MARK:- EDGES
     //auto pin edges in relation to superview
-    
     public func xPinEdgesToSuperview(top top: CGFloat?, right: CGFloat?, bottom:CGFloat?, left: CGFloat?){
         
         if let top = top {
@@ -93,7 +92,7 @@ extension UIView {
     }
  
     //same size
-    public func xSameSize(toView: UIView){
+    public func xSameSize(toView toView: UIView){
         self.autoMatchDimension(.Height, toDimension: .Height, ofView: toView)
         self.autoMatchDimension(.Width, toDimension: .Width, ofView: toView)
     }
@@ -102,28 +101,6 @@ extension UIView {
     public func xAlignTop(toView toView: UIView){
         self.autoPinEdge(.Top, toEdge: .Top, ofView: toView)
     }
-    
-    public func xAlignHorizontal(toView toView: UIView, offset: CGFloat?){
-        
-        if let offset = offset {
-            self.autoAlignAxis(.Horizontal, toSameAxisOfView: toView, withOffset: offset)
-        }
-        else {
-            self.autoAlignAxis(.Horizontal, toSameAxisOfView: toView)
-        }
-    }
-    
-    public func xAlignVertical(toView toView: UIView, offset: CGFloat?){
-        
-        if let offset = offset {
-            self.autoAlignAxis(.Vertical, toSameAxisOfView: toView, withOffset: offset)
-        }
-        else {
-            self.autoAlignAxis(.Vertical, toSameAxisOfView: toView)
-        }
-    }
-    
-    
     
 }
 

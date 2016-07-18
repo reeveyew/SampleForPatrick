@@ -15,16 +15,17 @@ class DetailedTimelineViewController: UIViewController{
     let view_UpperLeftContainer = UIView()
     let view_LowerRightContainer = UIView()
     let view_LowerLeftContainer = UIView()
-    var imageArray = [UIImage(named: "paris.jpg")!, UIImage(named: "mountain.jpg")!, UIImage(named: "beach.jpg")!]
     var collectionView : UICollectionView!
-    var tableView = UITableView()
+    var tableView_DetailedTimeline = UITableView()
     //MARK: halo
     //MARK:- COLLECTION VIEW
     //TODO: put in pictures for imageview
     //FIXME: collection delegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         display()
+        
     }
     
     func display(){
@@ -38,45 +39,44 @@ class DetailedTimelineViewController: UIViewController{
         setupUpperLeftContainer()
         setupLowerRightContainer()
         setupLowerLeftContainer()
+        
     }
     
+    
     func setupBackgroundPhoto(){
+        //setup the background picture for detaled timeline
         imageView_BackgroundPhoto.image = UIImage(named: "beach.jpg")
         imageView_BackgroundPhoto.autoSetDimension(.Height, toSize: 300)
-//        imageView_BackgroundPhoto.autoPinEdgeToSuperviewEdge(.Left, withInset: 0)
-//        imageView_BackgroundPhoto.autoPinEdgeToSuperviewEdge(.Right, withInset: 0)
-//        imageView_BackgroundPhoto.autoPinEdgeToSuperviewEdge(.Top, withInset: 0)
         imageView_BackgroundPhoto.autoPinEdge(.Bottom, toEdge: .Top, ofView: view_UpperLeftContainer)
-        
         imageView_BackgroundPhoto.xPinEdgesToSuperview(top: 0, right: 0, bottom: nil, left: 0)
         
         
-        let back_button : UIButton
-        back_button = UIButton(frame: CGRectMake(x,y,x,y))
-        back_button.setImage(UIImage(named:"back-button.png"), forState: .Normal)
-        self.view .addSubview(back_button)
-        back_button.autoPinEdgeToSuperviewEdge(.Left, withInset: 20)
-        back_button.autoPinEdgeToSuperviewEdge(.Top, withInset: 20)
-        back_button.autoSetDimension(.Height, toSize: 25)
-        back_button.autoSetDimension(.Width, toSize: 25)
+        let button_back = UIButton.newAutoLayoutView()
+        button_back.setImage(UIImage(named:"back-button.png"), forState: .Normal)
+        self.view .addSubview(button_back)
+        button_back.xPinEdgesToSuperview(top: 20, right: nil, bottom: nil, left: 20)
+        button_back.autoSetDimension(.Height, toSize: 25)
+        button_back.autoSetDimension(.Width, toSize: 25)
         
-        let edit_button : UIButton
-        edit_button = UIButton(frame: CGRectMake(x,y,x,y))
-        edit_button.setImage(UIImage(named:"edit-button.png"), forState: .Normal)
-        self.view .addSubview(edit_button)
-        edit_button.autoPinEdgeToSuperviewEdge(.Right, withInset: 20)
-        edit_button.autoPinEdgeToSuperviewEdge(.Top, withInset: 20)
-        edit_button.autoSetDimension(.Height, toSize: 25)
-        edit_button.autoSetDimension(.Width, toSize: 25)
         
-        let globe_button : UIButton
-        globe_button = UIButton(frame: CGRectMake(x,y,x,y))
-        globe_button.setImage(UIImage(named:"world.png"), forState: .Normal)
-        self.view .addSubview(globe_button)
-        globe_button.autoPinEdgeToSuperviewEdge(.Left, withInset: 22)
-        globe_button.autoAlignAxis(.Horizontal, toSameAxisOfView: back_button, withOffset: 220)
-        globe_button.autoSetDimension(.Height, toSize: 25)
-        globe_button.autoSetDimension(.Width, toSize: 25)
+        //setup the edit button for detalied timeline page
+        let button_edit = UIButton.newAutoLayoutView()
+        button_edit.setImage(UIImage(named:"edit-button.png"), forState: .Normal)
+        self.view .addSubview(button_edit)
+        button_edit.xPinEdgesToSuperview(top: 20, right: 20, bottom: nil, left: nil)
+        button_edit.autoSetDimension(.Height, toSize: 25)
+        button_edit.autoSetDimension(.Width, toSize: 25)
+        
+        
+        //setup the globe
+        let button_globe : UIButton
+        button_globe = UIButton.newAutoLayoutView()
+        button_globe.setImage(UIImage(named:"world.png"), forState: .Normal)
+        self.view .addSubview(button_globe)
+        button_globe.xPinEdgesToSuperview(top: nil, right: nil, bottom: nil, left: 22)
+        button_globe.autoAlignAxis(.Horizontal, toSameAxisOfView: button_back, withOffset: 220)
+        button_globe.autoSetDimension(.Height, toSize: 25)
+        button_globe.autoSetDimension(.Width, toSize: 25)
     }
     
    func setupUpperRightContainer(){
@@ -122,27 +122,27 @@ class DetailedTimelineViewController: UIViewController{
     
     
     func Content_UpperRightContainer(){
-        let label_Location = UILabel(frame: CGRectMake(x,y,x,y))
+        let label_Location = UILabel.newAutoLayoutView()
         self.view .addSubview(label_Location)
         label_Location.textAlignment = NSTextAlignment.Center
-        label_Location.text = "PARIS, France"
+        label_Location.text = "TRAVELING MALAYSIA"
         label_Location.font = UIFont.boldSystemFontOfSize(15)
         label_Location.textColor = UIColor.blackColor()
-        label_Location.autoAlignAxis(.Horizontal, toSameAxisOfView: view_UpperRightContainer, withOffset: -15)
-        label_Location.autoAlignAxis(.Vertical, toSameAxisOfView: view_UpperRightContainer, withOffset: -52)
+        label_Location.autoAlignAxis(.Horizontal, toSameAxisOfView: view_UpperRightContainer, withOffset: -8)
+        label_Location.autoAlignAxis(.Vertical, toSameAxisOfView: view_UpperRightContainer, withOffset: -22)
         
-        let textfield_Caption = UITextField(frame: CGRectMake(x,y,x,y))
+        let textfield_Caption = UITextField.newAutoLayoutView()
         self.view .addSubview(textfield_Caption)
         textfield_Caption.textAlignment = NSTextAlignment.Left
         textfield_Caption.font = UIFont.systemFontOfSize(10)
         textfield_Caption.attributedPlaceholder = NSAttributedString(string:"Caption goes here...",attributes:[NSForegroundColorAttributeName: UIColor.blackColor()])
-        textfield_Caption.autoAlignAxis(.Horizontal, toSameAxisOfView: view_UpperRightContainer, withOffset: 5)
+        textfield_Caption.autoAlignAxis(.Horizontal, toSameAxisOfView: view_UpperRightContainer, withOffset: 8)
         textfield_Caption.autoAlignAxis(.Vertical, toSameAxisOfView: view_UpperRightContainer, withOffset: -52)
 }
     
     
     func Content_UpperLeftContainer(){
-        let label_Day = UILabel(frame: CGRectMake(x,y,x,y))
+        let label_Day = UILabel.newAutoLayoutView()
         self.view .addSubview(label_Day)
         label_Day.textAlignment = NSTextAlignment.Center
         label_Day.text = "day"
@@ -152,7 +152,7 @@ class DetailedTimelineViewController: UIViewController{
         label_Day.autoAlignAxis(.Vertical, toSameAxisOfView: view_UpperLeftContainer)
         
         
-        let label_Number = UILabel(frame: CGRectMake(x,y,x,y))
+        let label_Number = UILabel.newAutoLayoutView()
         self.view .addSubview(label_Number)
         label_Number.textAlignment = NSTextAlignment.Center
         label_Number.text = "5"
@@ -160,6 +160,7 @@ class DetailedTimelineViewController: UIViewController{
         label_Number.textColor = UIColor.blackColor()
         label_Number.autoAlignAxis(.Horizontal, toSameAxisOfView: view_UpperLeftContainer, withOffset: 5)
         label_Number.autoAlignAxis(.Vertical, toSameAxisOfView: view_UpperLeftContainer)
+        
     }
     
     func content_LowerRightContainer()

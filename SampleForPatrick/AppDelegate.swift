@@ -15,16 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     //test slack
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
-        let rootView = DatePickerViewController()
-        
-        window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        
-        if let window = self.window {
-            window.rootViewController = rootView
-            window.makeKeyAndVisible()
-        }
-        
+        // Override point for customization after application launch.
         return true
     }
 

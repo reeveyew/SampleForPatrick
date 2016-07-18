@@ -10,12 +10,11 @@
 		0159FC02F3ECBA2768675EAC /* Pods_SampleForPatrick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A574BD0A9B88FF9E8C2CA588 /* Pods_SampleForPatrick.framework */; };
 		CAFCD9B11D3383650089315E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFCD9B01D3383650089315E /* AppDelegate.swift */; };
 		CAFCD9B31D3383650089315E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFCD9B21D3383650089315E /* HomeViewController.swift */; };
+		CAFCD9B61D3383650089315E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAFCD9B41D3383650089315E /* Main.storyboard */; };
 		CAFCD9B81D3383650089315E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAFCD9B71D3383650089315E /* Assets.xcassets */; };
 		CAFCD9BB1D3383650089315E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAFCD9B91D3383650089315E /* LaunchScreen.storyboard */; };
 		CAFCD9C51D3384130089315E /* NewsfeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFCD9C41D3384130089315E /* NewsfeedTableViewCell.swift */; };
 		CAFCF7641D3C825F00350464 /* Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFCF7631D3C825F00350464 /* Autolayout.swift */; };
-		CAFCF7661D3C91A200350464 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFCF7651D3C91A200350464 /* DatePickerViewController.swift */; };
-		CAFCF7681D3C99FD00350464 /* FxDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFCF7671D3C99FD00350464 /* FxDatePicker.swift */; };
 		ED19762A1D372FE6004496C4 /* DetailedTimelineCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1976291D372FE6004496C4 /* DetailedTimelineCollectionView.swift */; };
 		ED19762C1D373B46004496C4 /* DetailedTimelineTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED19762B1D373B46004496C4 /* DetailedTimelineTableView.swift */; };
 		ED19762E1D373D34004496C4 /* DetailedTimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED19762D1D373D34004496C4 /* DetailedTimelineTableViewCell.swift */; };
@@ -29,10 +28,11 @@
 		EDC3D35A1D3C615100BB9A84 /* back-button.png in Resources */ = {isa = PBXBuildFile; fileRef = EDC3D3591D3C615100BB9A84 /* back-button.png */; };
 		EDC3D35E1D3C6DBC00BB9A84 /* location-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EDC3D35D1D3C6DBC00BB9A84 /* location-icon.png */; };
 		EDC3D3601D3C76F000BB9A84 /* avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDC3D35F1D3C76F000BB9A84 /* avatar.jpg */; };
+		EDC5F8DB1D3CA8BF00CBF488 /* beach.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDC5F8DA1D3CA8BF00CBF488 /* beach.jpg */; };
+		EDC5F8DD1D3CABF700CBF488 /* beach1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDC5F8DC1D3CABF700CBF488 /* beach1.jpg */; };
 		EDE25ADC1D35E2B3004B4E69 /* mountain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDE25ADB1D35E2B3004B4E69 /* mountain.jpg */; };
 		EDE25AE21D35E6B2004B4E69 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE25AE11D35E6B2004B4E69 /* HomeTableView.swift */; };
 		EDE25AE41D35EA1D004B4E69 /* HomeCollectionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE25AE31D35EA1D004B4E69 /* HomeCollectionTableView.swift */; };
-		EDE25AED1D361B6C004B4E69 /* beach.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDE25AEC1D361B6C004B4E69 /* beach.jpg */; };
 		EDE25AEF1D3626A9004B4E69 /* DetailedTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE25AEE1D3626A9004B4E69 /* DetailedTimelineViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,13 +43,12 @@
 		CAFCD9AD1D3383650089315E /* SampleForPatrick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleForPatrick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAFCD9B01D3383650089315E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAFCD9B21D3383650089315E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CAFCD9B51D3383650089315E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CAFCD9B71D3383650089315E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAFCD9BA1D3383650089315E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAFCD9BC1D3383650089315E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAFCD9C41D3384130089315E /* NewsfeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsfeedTableViewCell.swift; path = ../NewsfeedTableViewCell.swift; sourceTree = "<group>"; };
 		CAFCF7631D3C825F00350464 /* Autolayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Autolayout.swift; sourceTree = "<group>"; };
-		CAFCF7651D3C91A200350464 /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
-		CAFCF7671D3C99FD00350464 /* FxDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FxDatePicker.swift; sourceTree = "<group>"; };
 		ED1976291D372FE6004496C4 /* DetailedTimelineCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTimelineCollectionView.swift; sourceTree = "<group>"; };
 		ED19762B1D373B46004496C4 /* DetailedTimelineTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTimelineTableView.swift; sourceTree = "<group>"; };
 		ED19762D1D373D34004496C4 /* DetailedTimelineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTimelineTableViewCell.swift; sourceTree = "<group>"; };
@@ -63,10 +62,11 @@
 		EDC3D3591D3C615100BB9A84 /* back-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-button.png"; sourceTree = "<group>"; };
 		EDC3D35D1D3C6DBC00BB9A84 /* location-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location-icon.png"; sourceTree = "<group>"; };
 		EDC3D35F1D3C76F000BB9A84 /* avatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatar.jpg; sourceTree = "<group>"; };
+		EDC5F8DA1D3CA8BF00CBF488 /* beach.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beach.jpg; sourceTree = "<group>"; };
+		EDC5F8DC1D3CABF700CBF488 /* beach1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beach1.jpg; sourceTree = "<group>"; };
 		EDE25ADB1D35E2B3004B4E69 /* mountain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mountain.jpg; sourceTree = "<group>"; };
 		EDE25AE11D35E6B2004B4E69 /* HomeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
 		EDE25AE31D35EA1D004B4E69 /* HomeCollectionTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionTableView.swift; sourceTree = "<group>"; };
-		EDE25AEC1D361B6C004B4E69 /* beach.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beach.jpg; sourceTree = "<group>"; };
 		EDE25AEE1D3626A9004B4E69 /* DetailedTimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTimelineViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,7 +108,7 @@
 				EDE25AE91D35F86F004B4E69 /* DetailedTimeline */,
 				EDE25AE51D35EF40004B4E69 /* HomeViewController */,
 				EDE25AE61D35EF4E004B4E69 /* HomeTableViewCell */,
-				CAFCF7691D3C9A0100350464 /* Date Picker */,
+				CAFCD9B41D3383650089315E /* Main.storyboard */,
 				CAFCD9B71D3383650089315E /* Assets.xcassets */,
 				CAFCD9B91D3383650089315E /* LaunchScreen.storyboard */,
 				CAFCD9BC1D3383650089315E /* Info.plist */,
@@ -116,15 +116,6 @@
 				CAFCF7631D3C825F00350464 /* Autolayout.swift */,
 			);
 			path = SampleForPatrick;
-			sourceTree = "<group>";
-		};
-		CAFCF7691D3C9A0100350464 /* Date Picker */ = {
-			isa = PBXGroup;
-			children = (
-				CAFCF7651D3C91A200350464 /* DatePickerViewController.swift */,
-				CAFCF7671D3C99FD00350464 /* FxDatePicker.swift */,
-			);
-			name = "Date Picker";
 			sourceTree = "<group>";
 		};
 		E9FD128FD500B8ECC6570827 /* Pods */ = {
@@ -160,12 +151,13 @@
 				ED19762F1D37667A004496C4 /* world.png */,
 				EDC3D35F1D3C76F000BB9A84 /* avatar.jpg */,
 				EDC3D3531D3C611A00BB9A84 /* like-button.png */,
+				EDC5F8DC1D3CABF700CBF488 /* beach1.jpg */,
 				EDC3D35D1D3C6DBC00BB9A84 /* location-icon.png */,
 				EDC3D3551D3C612900BB9A84 /* newsfeed-pic.png */,
 				EDC3D3571D3C613800BB9A84 /* edit-button.png */,
 				EDC3D3591D3C615100BB9A84 /* back-button.png */,
+				EDC5F8DA1D3CA8BF00CBF488 /* beach.jpg */,
 				EDE25ADB1D35E2B3004B4E69 /* mountain.jpg */,
-				EDE25AEC1D361B6C004B4E69 /* beach.jpg */,
 				ED8D5E441D357161002D60FD /* paris.jpg */,
 			);
 			name = Pictures;
@@ -207,15 +199,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CAFCD9BF1D3383650089315E /* Build configuration list for PBXNativeTarget "SampleForPatrick" */;
 			buildPhases = (
-				72DCE161DEA0C18D1DF5FD6D /* 📦 Check Pods Manifest.lock */,
 				C842F462BD1A1C5C32291613 /* [CP] Check Pods Manifest.lock */,
 				CAFCD9A91D3383650089315E /* Sources */,
 				CAFCD9AA1D3383650089315E /* Frameworks */,
 				CAFCD9AB1D3383650089315E /* Resources */,
 				C29D39EBC7CEF57A9EEB5F70 /* [CP] Embed Pods Frameworks */,
 				70A758C6DBE11567E1691B74 /* [CP] Copy Pods Resources */,
-				20807EEB16B6CDA2D81F72A5 /* 📦 Embed Pods Frameworks */,
-				5CAD494B5456DC3724CE3769 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,16 +254,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAFCD9BB1D3383650089315E /* LaunchScreen.storyboard in Resources */,
-				EDE25AED1D361B6C004B4E69 /* beach.jpg in Resources */,
+				EDC5F8DD1D3CABF700CBF488 /* beach1.jpg in Resources */,
 				EDC3D3561D3C612900BB9A84 /* newsfeed-pic.png in Resources */,
 				ED1976301D37667A004496C4 /* world.png in Resources */,
 				CAFCD9B81D3383650089315E /* Assets.xcassets in Resources */,
+				CAFCD9B61D3383650089315E /* Main.storyboard in Resources */,
 				EDC3D35A1D3C615100BB9A84 /* back-button.png in Resources */,
 				EDE25ADC1D35E2B3004B4E69 /* mountain.jpg in Resources */,
 				EDC3D35E1D3C6DBC00BB9A84 /* location-icon.png in Resources */,
 				ED8D5E451D357161002D60FD /* paris.jpg in Resources */,
 				EDC3D3541D3C611A00BB9A84 /* like-button.png in Resources */,
 				EDC3D3601D3C76F000BB9A84 /* avatar.jpg in Resources */,
+				EDC5F8DB1D3CA8BF00CBF488 /* beach.jpg in Resources */,
 				EDC3D3581D3C613800BB9A84 /* edit-button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,36 +273,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		20807EEB16B6CDA2D81F72A5 /* 📦 Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SampleForPatrick/Pods-SampleForPatrick-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5CAD494B5456DC3724CE3769 /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SampleForPatrick/Pods-SampleForPatrick-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		70A758C6DBE11567E1691B74 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -325,21 +286,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SampleForPatrick/Pods-SampleForPatrick-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		72DCE161DEA0C18D1DF5FD6D /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		C29D39EBC7CEF57A9EEB5F70 /* [CP] Embed Pods Frameworks */ = {
@@ -379,10 +325,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAFCF7661D3C91A200350464 /* DatePickerViewController.swift in Sources */,
 				ED1976341D378007004496C4 /* DetailedTimelineCollectionViewCell.swift in Sources */,
 				CAFCD9B31D3383650089315E /* HomeViewController.swift in Sources */,
-				CAFCF7681D3C99FD00350464 /* FxDatePicker.swift in Sources */,
 				CAFCF7641D3C825F00350464 /* Autolayout.swift in Sources */,
 				CAFCD9B11D3383650089315E /* AppDelegate.swift in Sources */,
 				ED2B7E811D34A67400361B6A /* NewsfeedViewController.swift in Sources */,
@@ -399,6 +343,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		CAFCD9B41D3383650089315E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAFCD9B51D3383650089315E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		CAFCD9B91D3383650089315E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -499,7 +451,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SampleForPatrick/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reeveyew.SampleForPatrick;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -512,7 +463,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SampleForPatrick/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reeveyew.SampleForPatrick;
 				PRODUCT_NAME = "$(TARGET_NAME)";

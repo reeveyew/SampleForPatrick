@@ -11,19 +11,21 @@ import UIKit
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
+    //setup the tablew view to be displayed
     func configureTableView(){
-        tableView = UITableView(frame: CGRectMake(0, 0, x, y))
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.registerClass(NewsfeedTableViewCell.self, forCellReuseIdentifier: "NewsfeedCell")
-        self.view.addSubview(tableView)
-        tableView.estimatedRowHeight = 60
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView_Newsfeed.delegate = self
+        tableView_Newsfeed.dataSource = self
+        tableView_Newsfeed.registerClass(NewsfeedTableViewCell.self, forCellReuseIdentifier: "NewsfeedCell")
+        self.view.addSubview(tableView_Newsfeed)
+        tableView_Newsfeed.xPinEdgesToSuperview(top: 0, right: 0, bottom: 0, left: 0)
+        tableView_Newsfeed.estimatedRowHeight = 60
+        tableView_Newsfeed.rowHeight = UITableViewAutomaticDimension
         self.automaticallyAdjustsScrollViewInsets = false
-        tableView.allowsSelection = false
-        self.tableView.reloadData()
+        tableView_Newsfeed.allowsSelection = false
+        self.tableView_Newsfeed.reloadData()
     }
     
+    //the number of user's post in the home page displayed
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
@@ -34,7 +36,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         cell.collectionView.delegate = self
         cell.collectionView.dataSource = self
         cell.collectionView.backgroundColor = UIColor.clearColor()
-        
+
         
         return cell
     }
