@@ -34,7 +34,7 @@ extension DetailedTimelineViewController: UICollectionViewDataSource, UICollecti
         let image:UIImage = UIImage(named:"beach1.jpg")!
         imageview.image = image
         
-        cell.backgroundColor = UIColor.blueColor()
+        cell.backgroundColor = UIColor.clearColor()
         
         return cell
     
