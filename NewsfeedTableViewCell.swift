@@ -35,7 +35,7 @@ class NewsfeedTableViewCell: UITableViewCell {
         //setup cover photo
         imageView_CoverPhoto.backgroundColor = UIColor.clearColor()
         self.addSubview(imageView_CoverPhoto)
-        imageView_CoverPhoto.image = UIImage(named:"mountain.jpg")
+        imageView_CoverPhoto.image = UIImage(named:"newsfeed-pic.png")
         imageView_CoverPhoto.autoSetDimension(.Height, toSize: 500)
         imageView_CoverPhoto.autoPinEdgeToSuperviewEdge(.Left, withInset: 0)
         imageView_CoverPhoto.autoPinEdgeToSuperviewEdge(.Top, withInset: 0)
@@ -75,8 +75,8 @@ class NewsfeedTableViewCell: UITableViewCell {
     {
         let Label_Location = UILabel(frame: CGRectMake(x,y,x,y))
         Label_Location.textAlignment = NSTextAlignment.Center
-        Label_Location.text = "HIKING TIME"
-        Label_Location.font = UIFont.boldSystemFontOfSize(22)
+        Label_Location.text = "KUALA LUMPUR"
+        Label_Location.font = UIFont.boldSystemFontOfSize(25    )
         Label_Location.textColor = UIColor.whiteColor()
         self.addSubview(Label_Location)
         Label_Location.autoCenterInSuperviewMargins()
@@ -86,11 +86,10 @@ class NewsfeedTableViewCell: UITableViewCell {
         imageView_Avatar = UIImageView(frame: CGRectMake(0,0,100,100));
         imageView_Avatar.image = UIImage(named:"avatar.jpg")
         self.addSubview(imageView_Avatar)
-//        self.addSubview(imageView_Avatar)
         imageView_Avatar.autoPinEdgeToSuperviewEdge(.Left, withInset: 20)
         imageView_Avatar.autoPinEdgeToSuperviewEdge(.Top, withInset: 35)
-        imageView_Avatar.autoSetDimension(.Height, toSize: 70)
-        imageView_Avatar.autoSetDimension(.Width, toSize: 60)
+        imageView_Avatar.autoSetDimension(.Height, toSize: 60)
+        imageView_Avatar.autoSetDimension(.Width, toSize: 50)
         imageView_Avatar.layer.borderWidth = 0.5
         imageView_Avatar.layer.masksToBounds = true
         imageView_Avatar.layer.borderColor = UIColor.clearColor().CGColor
@@ -101,7 +100,7 @@ class NewsfeedTableViewCell: UITableViewCell {
         let upper_border = UIView()
         upper_border.backgroundColor = UIColor.whiteColor()
         self.addSubview(upper_border)
-        upper_border.autoPinEdge(.Bottom, toEdge: .Top, ofView: Label_Location)
+        upper_border.autoPinEdge(.Bottom, toEdge: .Top, ofView: Label_Location, withOffset: -10)
         upper_border.autoSetDimension(.Width, toSize: 200)
         upper_border.autoSetDimension(.Height, toSize: 3)
         upper_border.autoAlignAxis(.Vertical, toSameAxisOfView: Label_Location)
@@ -110,7 +109,7 @@ class NewsfeedTableViewCell: UITableViewCell {
         let lower_border = UIView()
         lower_border.backgroundColor = UIColor.whiteColor()
         self.addSubview(lower_border)
-        lower_border.autoPinEdge(.Top, toEdge: .Bottom, ofView: Label_Location)
+        lower_border.autoPinEdge(.Top, toEdge: .Bottom, ofView: Label_Location, withOffset: 10)
         lower_border.autoSetDimension(.Width, toSize: 200)
         lower_border.autoSetDimension(.Height, toSize: 3)
         lower_border.autoAlignAxis(.Vertical, toSameAxisOfView: Label_Location)
@@ -120,8 +119,8 @@ class NewsfeedTableViewCell: UITableViewCell {
         let label_Username = UILabel(frame: CGRectMake(x,y,x,y))
         label_Username.textAlignment = NSTextAlignment.Center
         label_Username.text = "Stephanie Chong"
-        label_Username.font = UIFont.systemFontOfSize(12)
-        label_Username.textColor = UIColor.whiteColor()
+        label_Username.font = UIFont.boldSystemFontOfSize(13)
+        label_Username.textColor = UIColor.blackColor()
         self.addSubview(label_Username)
         label_Username.autoAlignAxis(.Horizontal, toSameAxisOfView: imageView_Avatar, withOffset: -5)
         label_Username.autoAlignAxis(.Vertical, toSameAxisOfView: imageView_Avatar, withOffset: 80)
@@ -129,12 +128,13 @@ class NewsfeedTableViewCell: UITableViewCell {
         
         let buttonView_Like : UIButton
         buttonView_Like = UIButton(frame: CGRectMake(x,y,x,y))
-        buttonView_Like.setTitle ("Like", forState: .Normal)
-        buttonView_Like.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        buttonView_Like.setImage(UIImage(named:"like-button.png"), forState: .Normal)
         buttonView_Like.frame = CGRectMake(x,y,x,y)
         self.addSubview(buttonView_Like)
         buttonView_Like.autoAlignAxis(.Horizontal, toSameAxisOfView: label_Username)
         buttonView_Like.autoPinEdgeToSuperviewEdge(.Right, withInset: 20)
+        buttonView_Like.autoSetDimension(.Height, toSize: 25)
+        buttonView_Like.autoSetDimension(.Width, toSize: 25)
         
         
         let imageView_LocationIcon : UIImageView
@@ -150,7 +150,7 @@ class NewsfeedTableViewCell: UITableViewCell {
         let label_Location = UILabel(frame: CGRectMake(x,y,x,y))
         label_Location.textAlignment = NSTextAlignment.Center
         label_Location.text = "10"
-        label_Location.textColor = UIColor.whiteColor()
+        label_Location.textColor = UIColor.blackColor()
         self.addSubview(label_Location)
         label_Location.autoAlignAxis(.Horizontal, toSameAxisOfView: imageView_LocationIcon, withOffset: -10)
         label_Location.autoAlignAxis(.Vertical, toSameAxisOfView: imageView_LocationIcon, withOffset: -1)
