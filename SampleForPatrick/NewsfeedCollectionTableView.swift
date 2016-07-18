@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension NewsfeedViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
