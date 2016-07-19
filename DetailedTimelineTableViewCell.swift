@@ -28,9 +28,9 @@ class DetailedTimelineTableViewCell: UITableViewCell {
     }
     
     
+    //setup small icon in the tableview
     func setupSmallIcon()
     {
-        //setup cover photo
         imageView_SmallIcon.backgroundColor = UIColor.clearColor()
         self.addSubview(imageView_SmallIcon)
         imageView_SmallIcon.image = UIImage(named:"world.png")
@@ -39,7 +39,7 @@ class DetailedTimelineTableViewCell: UITableViewCell {
     }
     
     
-    
+    //setup label "location name" in the tableview next to the small icons
     func setupLabel()
     {
         label_Location.textAlignment = NSTextAlignment.Center

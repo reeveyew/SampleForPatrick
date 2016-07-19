@@ -23,63 +23,21 @@ extension SelectPhotoViewController: UICollectionViewDataSource, UICollectionVie
     
 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("selectphotocell", forIndexPath: indexPath)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("selectphotocell", forIndexPath: indexPath) as! SelectPhotoCollectionViewCell
         cell .backgroundColor = UIColor.clearColor()
-        
-        
-        let imageview = UIImageView()
-        cell.contentView.addSubview(imageview)
-        imageview.xPinEdgesToSuperview(top: 0, right: 0, bottom: 0, left: 0)
-        imageview.backgroundColor = UIColor.greenColor()
-        let image = UIImage(named:"beach1.jpg")!
-        imageview.image = image
-//        imageview.layer.borderColor = UIColor.yellowColor().CGColor
-        imageview.layer.borderWidth = 5
-        cell.contentView.layer.borderColor = UIColor.greenColor().CGColor
-        
-//        if (cell.selected)
-//        {
-//            cell.layer.borderColor = UIColor.yellowColor().CGColor
-//        }
-//        else
-//        {
-//            cell.layer.borderColor = UIColor.blackColor().CGColor
-//        }
-        //        if (imageview.selected){
-        
-        
-        //        if(imageview.selected){
-        //            imageview.layer.borderWidth = 10;
-        //            imageview.layer.borderColor = UIColor.darkGrayColor().CGColor
-        //        }
-        //        else
-        //        {
-        //            imageview.layer.borderColor = UIColor .clearColor().CGColor;
-        //        }
-//        if (imageview.selected){
-        
-        
-//        if(imageview.selected){
-//            imageview.layer.borderWidth = 10;
-//            imageview.layer.borderColor = UIColor.darkGrayColor().CGColor
-//        }
-//        else
-//        {
-//            imageview.layer.borderColor = UIColor .clearColor().CGColor;
-//        }
-        
-
         return cell
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let selectedCell:UICollectionViewCell = colletionView_SelectPhoto.cellForItemAtIndexPath(indexPath)!
-        selectedCell.contentView.layer.borderColor = UIColor.yellowColor().CGColor
+        let selectedCell = colletionView_SelectPhoto.cellForItemAtIndexPath(indexPath)! as! SelectPhotoCollectionViewCell
+        selectedCell.imageview.layer.borderColor = UIColor.clearColor().CGColor
+        print("selected")
     }
     
     func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
-        let cellToDeselect:UICollectionViewCell = colletionView_SelectPhoto.cellForItemAtIndexPath(indexPath)!
-        cellToDeselect.contentView.layer.borderColor = UIColor.blueColor().CGColor
+        let selectedCell = colletionView_SelectPhoto.cellForItemAtIndexPath(indexPath)! as! SelectPhotoCollectionViewCell
+        selectedCell.imageview.layer.borderColor = UIColor.darkTextColor().CGColor
+        print("deselecte")
     }
     
     
@@ -98,7 +56,7 @@ extension SelectPhotoViewController: UICollectionViewDataSource, UICollectionVie
     func collectionView(collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                                minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return x/100
+        return -34
     }
     
     func collectionView(collectionView: UICollectionView, layout
