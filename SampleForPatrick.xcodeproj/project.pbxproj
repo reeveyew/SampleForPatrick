@@ -38,7 +38,7 @@
 		EDF62EB61D3DFEAE0072CAA8 /* world.png in Resources */ = {isa = PBXBuildFile; fileRef = EDF62EB51D3DFEAE0072CAA8 /* world.png */; };
 		EDF62EB81D3DFEB70072CAA8 /* back-button.png in Resources */ = {isa = PBXBuildFile; fileRef = EDF62EB71D3DFEB70072CAA8 /* back-button.png */; };
 		EDF62EBA1D3E14A50072CAA8 /* small-location.png in Resources */ = {isa = PBXBuildFile; fileRef = EDF62EB91D3E14A50072CAA8 /* small-location.png */; };
-		EDF62EBC1D3E34AE0072CAA8 /* DetailedTimelineViewControllerBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF62EBB1D3E34AE0072CAA8 /* DetailedTimelineViewControllerBasic.swift */; };
+		EDF62EBC1D3E34AE0072CAA8 /* DetailedTimelineViewSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF62EBB1D3E34AE0072CAA8 /* DetailedTimelineViewSetup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,7 +77,7 @@
 		EDF62EB51D3DFEAE0072CAA8 /* world.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = world.png; sourceTree = "<group>"; };
 		EDF62EB71D3DFEB70072CAA8 /* back-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-button.png"; sourceTree = "<group>"; };
 		EDF62EB91D3E14A50072CAA8 /* small-location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "small-location.png"; sourceTree = "<group>"; };
-		EDF62EBB1D3E34AE0072CAA8 /* DetailedTimelineViewControllerBasic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTimelineViewControllerBasic.swift; sourceTree = "<group>"; };
+		EDF62EBB1D3E34AE0072CAA8 /* DetailedTimelineViewSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTimelineViewSetup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +182,14 @@
 			name = "Select Date";
 			sourceTree = "<group>";
 		};
+		ED8E3E581D3E739000E1DF55 /* View Setup */ = {
+			isa = PBXGroup;
+			children = (
+				EDF62EBB1D3E34AE0072CAA8 /* DetailedTimelineViewSetup.swift */,
+			);
+			name = "View Setup";
+			sourceTree = "<group>";
+		};
 		EDB9C5BE1D3DBCF500C89A1D /* Detailed Timeline Table Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,7 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				EDE25AEE1D3626A9004B4E69 /* DetailedTimelineViewController.swift */,
-				EDF62EBB1D3E34AE0072CAA8 /* DetailedTimelineViewControllerBasic.swift */,
+				ED8E3E581D3E739000E1DF55 /* View Setup */,
 				EDB9C5BE1D3DBCF500C89A1D /* Detailed Timeline Table Cell */,
 				EDB9C5C11D3DBDEC00C89A1D /* Detailed Timeline Collection Cell */,
 			);
@@ -399,7 +407,7 @@
 				CAFCD9B11D3383650089315E /* AppDelegate.swift in Sources */,
 				CAFCD9C51D3384130089315E /* NewsfeedTableViewCell.swift in Sources */,
 				EDF62EAC1D3DE9F00072CAA8 /* NewsfeedCollectionViewCell.swift in Sources */,
-				EDF62EBC1D3E34AE0072CAA8 /* DetailedTimelineViewControllerBasic.swift in Sources */,
+				EDF62EBC1D3E34AE0072CAA8 /* DetailedTimelineViewSetup.swift in Sources */,
 				EDF62EAA1D3DE9A50072CAA8 /* SelectPhotoCollectionViewCell.swift in Sources */,
 				ED0798541D3DC9710009A73C /* SelectDateViewController.swift in Sources */,
 				ED19762C1D373B46004496C4 /* DetailedTimelineTableView.swift in Sources */,

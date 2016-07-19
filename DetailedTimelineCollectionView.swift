@@ -33,7 +33,7 @@ extension DetailedTimelineViewController: UICollectionViewDataSource, UICollecti
     //size of one cell
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         
-        return CGSize(width: 95, height: 95)    }
+        return CGSize(width: 100, height: 95)    }
     
     override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.All
