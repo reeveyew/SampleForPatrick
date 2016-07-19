@@ -19,10 +19,29 @@ class NewsfeedViewController: UIViewController {
     var animatedCollectionCell:UICollectionViewCell!
     var canCallScrollViewDidEndDragging = true
     
+    var array_Images = [UIImage]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        array_Images = self.generateImages(["Layer 87", "Layer 89", "Layer 90", "Layer 91", "Layer 92", "Layer 87", "Layer 89", "Layer 90", "Layer 91", "Layer 92"])
+        
+        
         configureTableView()
         
+        
+        
+
+        
+    }
+    
+    func generateImages(imageStringArray:[String]) -> [UIImage]{
+        var imageArray = [UIImage]()
+        for string in imageStringArray {
+            let image = UIImage(named: string)
+            imageArray.append(image!)
+        }
+        return imageArray
     }
     
     override func viewDidLayoutSubviews() {

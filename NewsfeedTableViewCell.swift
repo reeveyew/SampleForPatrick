@@ -31,9 +31,11 @@ class NewsfeedTableViewCell: UITableViewCell {
     let buttonView_Like = UIButton(type: .Custom)
     
     //album header
-    let label_locationCenter = UILabel()
-    let view_borderTop = UIView()
-    let view_borderBottom = UIView()
+    let label_AlbumHeader = UILabel()
+    let view_BorderTop = UIView()
+    let view_BorderBottom = UIView()
+    let label_PreviousLocation = UILabel()
+    let label_NextLocation = UILabel()
     
     //MARK:- COLLECTION VIEW
     let imageSlider = UISlider()
@@ -42,10 +44,13 @@ class NewsfeedTableViewCell: UITableViewCell {
     //reference to container
     var refContentContainer: UIView!
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String!) {
+       override init(style: UITableViewCellStyle, reuseIdentifier: String!) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
+        
+        
         refContentContainer = imageView_CoverPhoto
+        
         setupContentView()
         setupCollectionView()
 

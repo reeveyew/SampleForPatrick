@@ -48,31 +48,51 @@ extension NewsfeedTableViewCell {
     func setupAlbumHeader(){
         //setup the label that's placed in the center of the page
         
-        self.addSubview(label_locationCenter)
-        self.addSubview(view_borderTop)
-        self.addSubview(view_borderBottom)
+        self.addSubview(label_AlbumHeader)
+        self.addSubview(view_BorderTop)
+        self.addSubview(view_BorderBottom)
         
-        label_locationCenter.textAlignment = NSTextAlignment.Center
-        label_locationCenter.text = "LONDON TRIP"
-        label_locationCenter.font = UIFont(name: "TwCenMT-CondensedBold", size: 30)
-        label_locationCenter.textColor = UIColor.whiteColor()
-        label_locationCenter.xAlignVertical(toView: refContentContainer)
-        label_locationCenter.xAlignHorizontal(toView: refContentContainer, offset: 30)
-        label_locationCenter.alpha = 0.9
+        self.addSubview(label_PreviousLocation)
+        self.addSubview(label_NextLocation)
+        
+        label_AlbumHeader.textAlignment = NSTextAlignment.Center
+        label_AlbumHeader.text = "LONDON TRIP"
+        label_AlbumHeader.font = UIFont(name: "TwCenMT-CondensedBold", size: 30)
+        label_AlbumHeader.textColor = UIColor.whiteColor()
+        label_AlbumHeader.xAlignVertical(toView: refContentContainer)
+        label_AlbumHeader.xAlignHorizontal(toView: refContentContainer, offset: 30)
+        label_AlbumHeader.alpha = 0.9
         
         //upper border displayed above the label in the center
-        view_borderTop.backgroundColor = UIColor.whiteColor()
-        view_borderTop.xPinBottom(toTopOfView: label_locationCenter, offset: -10)
-        view_borderTop.xMatchWidth(toView: label_locationCenter, multiplier: 1.2)
-        view_borderTop.xSize(width: nil, height: 2)
-        view_borderTop.xAlignVertical(toView: label_locationCenter)
+        view_BorderTop.backgroundColor = UIColor.whiteColor()
+        view_BorderTop.xPinBottom(toTopOfView: label_AlbumHeader, offset: -10)
+        view_BorderTop.xMatchWidth(toView: label_AlbumHeader, multiplier: 1.2)
+        view_BorderTop.xSize(width: nil, height: 2)
+        view_BorderTop.xAlignVertical(toView: label_AlbumHeader)
         
         
         //lower border displayed below the label in the center
-        view_borderBottom.backgroundColor = UIColor.whiteColor()
-        view_borderBottom.xPinTop(toBottomOfView: label_locationCenter, offset: 10)
-        view_borderBottom.xSameSize(toView: view_borderTop)
-        view_borderBottom.xAlignVertical(toView: view_borderTop)
+        view_BorderBottom.backgroundColor = UIColor.whiteColor()
+        view_BorderBottom.xPinTop(toBottomOfView: label_AlbumHeader, offset: 10)
+        view_BorderBottom.xSameSize(toView: view_BorderTop)
+        view_BorderBottom.xAlignVertical(toView: view_BorderTop)
+        
+        label_PreviousLocation.textAlignment = NSTextAlignment.Center
+        label_PreviousLocation.text = "HARRODS"
+        label_PreviousLocation.font = UIFont(name: "TwCenMT-Condensed", size: 15)
+        label_PreviousLocation.textColor = UIColor.whiteColor()
+        label_PreviousLocation.xAlignVertical(toView: refContentContainer)
+        label_PreviousLocation.alpha = 0.9
+        label_PreviousLocation.xPinBottom(toTopOfView: label_AlbumHeader, offset: -20)
+        
+        label_NextLocation.textAlignment = NSTextAlignment.Center
+        label_NextLocation.text = "BIG BEN"
+        label_NextLocation.font = UIFont(name: "TwCenMT-Condensed", size: 15)
+        label_NextLocation.textColor = UIColor.whiteColor()
+        label_NextLocation.xAlignVertical(toView: refContentContainer)
+        label_NextLocation.alpha = 0.9
+        label_NextLocation.xPinTop(toBottomOfView: label_AlbumHeader, offset: 20)
+        
     }
 
     func setupAvatar(){
@@ -128,7 +148,7 @@ extension NewsfeedTableViewCell {
         //location icon displayed in the lower left corner
         imageView_LocationIcon.image = UIImage(named:"location pin")
         imageView_LocationIcon.xPinEdgesToSuperview(top: nil, right: nil, bottom: nil, left: 20)
-        imageView_LocationIcon.autoPinEdge(.Bottom, toEdge: .Bottom, ofView: refContentContainer, withOffset: -20)
+        imageView_LocationIcon.autoPinEdge(.Bottom, toEdge: .Bottom, ofView: refContentContainer, withOffset: -35)
         imageView_LocationIcon.xSize(width: 50, height: 50)
         imageView_LocationIcon.contentMode = .ScaleAspectFit
         
