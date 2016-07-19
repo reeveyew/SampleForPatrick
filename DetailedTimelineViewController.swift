@@ -10,13 +10,15 @@ import UIKit
 import PureLayout
 
 class DetailedTimelineViewController: UIViewController{
-    let imageView_BackgroundPhoto = UIImageView()
-    let view_UpperRightContainer = UIView()
-    let view_UpperLeftContainer = UIView()
-    let view_LowerRightContainer = UIView()
-    let view_LowerLeftContainer = UIView()
     var collectionView : UICollectionView!
     var tableView_DetailedTimeline = UITableView()
+    let view_LeftContainer = UIView()
+    let view_RightContainer = UIView()
+    let view_LeftTopContainer = UIView()
+    let view_LeftBottomContainer = UIView()
+    let view_RightBottomContainer = UIView()
+    let view_RightTopContainer = UIView()
+    let imageView_Background = UIImageView()
     let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
     //MARK: halo
     //MARK:- COLLECTION VIEW

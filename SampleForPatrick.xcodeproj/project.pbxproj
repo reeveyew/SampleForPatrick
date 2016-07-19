@@ -21,11 +21,6 @@
 		CAFCF77D1D3CE20200350464 /* tw-cen-mt-condensed-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAFCF77A1D3CE20200350464 /* tw-cen-mt-condensed-bold.ttf */; };
 		CAFCF77E1D3CE20200350464 /* tw-cen-mt-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAFCF77B1D3CE20200350464 /* tw-cen-mt-regular.ttf */; };
 		ED0798541D3DC9710009A73C /* SelectDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0798531D3DC9710009A73C /* SelectDateViewController.swift */; };
-		ED0798571D3DDA3C0009A73C /* DetailedTimelineUpperLeftContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0798561D3DDA3C0009A73C /* DetailedTimelineUpperLeftContainer.swift */; };
-		ED0798591D3DDA7E0009A73C /* DetailedTimelineUpperRightContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0798581D3DDA7E0009A73C /* DetailedTimelineUpperRightContainer.swift */; };
-		ED07985B1D3DDAF30009A73C /* DetailedTimelineLowerLeftContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED07985A1D3DDAF30009A73C /* DetailedTimelineLowerLeftContainer.swift */; };
-		ED07985D1D3DDB3F0009A73C /* DetailedTimelineLowerRightContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED07985C1D3DDB3F0009A73C /* DetailedTimelineLowerRightContainer.swift */; };
-		ED07985F1D3DDB940009A73C /* DetailedTimelineBackgroundPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED07985E1D3DDB940009A73C /* DetailedTimelineBackgroundPhoto.swift */; };
 		ED19762A1D372FE6004496C4 /* DetailedTimelineCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1976291D372FE6004496C4 /* DetailedTimelineCollectionView.swift */; };
 		ED19762C1D373B46004496C4 /* DetailedTimelineTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED19762B1D373B46004496C4 /* DetailedTimelineTableView.swift */; };
 		ED19762E1D373D34004496C4 /* DetailedTimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED19762D1D373D34004496C4 /* DetailedTimelineTableViewCell.swift */; };
@@ -39,6 +34,12 @@
 		EDF62EAC1D3DE9F00072CAA8 /* NewsfeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF62EAB1D3DE9F00072CAA8 /* NewsfeedCollectionViewCell.swift */; };
 		EDF62EAE1D3DEA9D0072CAA8 /* DetailedTimelineContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF62EAD1D3DEA9D0072CAA8 /* DetailedTimelineContainerView.swift */; };
 		EDF62EB01D3DEE150072CAA8 /* beach.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDF62EAF1D3DEE150072CAA8 /* beach.jpg */; };
+		EDF62EB21D3DFE400072CAA8 /* small-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EDF62EB11D3DFE400072CAA8 /* small-icon.png */; };
+		EDF62EB41D3DFE860072CAA8 /* edit-button.png in Resources */ = {isa = PBXBuildFile; fileRef = EDF62EB31D3DFE860072CAA8 /* edit-button.png */; };
+		EDF62EB61D3DFEAE0072CAA8 /* world.png in Resources */ = {isa = PBXBuildFile; fileRef = EDF62EB51D3DFEAE0072CAA8 /* world.png */; };
+		EDF62EB81D3DFEB70072CAA8 /* back-button.png in Resources */ = {isa = PBXBuildFile; fileRef = EDF62EB71D3DFEB70072CAA8 /* back-button.png */; };
+		EDF62EBA1D3E14A50072CAA8 /* small-location.png in Resources */ = {isa = PBXBuildFile; fileRef = EDF62EB91D3E14A50072CAA8 /* small-location.png */; };
+		EDF62EBC1D3E34AE0072CAA8 /* DetailedTimelineViewControllerBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF62EBB1D3E34AE0072CAA8 /* DetailedTimelineViewControllerBasic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,11 +61,6 @@
 		CAFCF77A1D3CE20200350464 /* tw-cen-mt-condensed-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tw-cen-mt-condensed-bold.ttf"; sourceTree = "<group>"; };
 		CAFCF77B1D3CE20200350464 /* tw-cen-mt-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tw-cen-mt-regular.ttf"; sourceTree = "<group>"; };
 		ED0798531D3DC9710009A73C /* SelectDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectDateViewController.swift; sourceTree = "<group>"; };
-		ED0798561D3DDA3C0009A73C /* DetailedTimelineUpperLeftContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTimelineUpperLeftContainer.swift; sourceTree = "<group>"; };
-		ED0798581D3DDA7E0009A73C /* DetailedTimelineUpperRightContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTimelineUpperRightContainer.swift; sourceTree = "<group>"; };
-		ED07985A1D3DDAF30009A73C /* DetailedTimelineLowerLeftContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTimelineLowerLeftContainer.swift; sourceTree = "<group>"; };
-		ED07985C1D3DDB3F0009A73C /* DetailedTimelineLowerRightContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTimelineLowerRightContainer.swift; sourceTree = "<group>"; };
-		ED07985E1D3DDB940009A73C /* DetailedTimelineBackgroundPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTimelineBackgroundPhoto.swift; sourceTree = "<group>"; };
 		ED1976291D372FE6004496C4 /* DetailedTimelineCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTimelineCollectionView.swift; sourceTree = "<group>"; };
 		ED19762B1D373B46004496C4 /* DetailedTimelineTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTimelineTableView.swift; sourceTree = "<group>"; };
 		ED19762D1D373D34004496C4 /* DetailedTimelineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTimelineTableViewCell.swift; sourceTree = "<group>"; };
@@ -78,6 +74,12 @@
 		EDF62EAB1D3DE9F00072CAA8 /* NewsfeedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsfeedCollectionViewCell.swift; sourceTree = "<group>"; };
 		EDF62EAD1D3DEA9D0072CAA8 /* DetailedTimelineContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTimelineContainerView.swift; sourceTree = "<group>"; };
 		EDF62EAF1D3DEE150072CAA8 /* beach.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beach.jpg; sourceTree = "<group>"; };
+		EDF62EB11D3DFE400072CAA8 /* small-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "small-icon.png"; sourceTree = "<group>"; };
+		EDF62EB31D3DFE860072CAA8 /* edit-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "edit-button.png"; sourceTree = "<group>"; };
+		EDF62EB51D3DFEAE0072CAA8 /* world.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = world.png; sourceTree = "<group>"; };
+		EDF62EB71D3DFEB70072CAA8 /* back-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-button.png"; sourceTree = "<group>"; };
+		EDF62EB91D3E14A50072CAA8 /* small-location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "small-location.png"; sourceTree = "<group>"; };
+		EDF62EBB1D3E34AE0072CAA8 /* DetailedTimelineViewControllerBasic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTimelineViewControllerBasic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,18 +184,6 @@
 			name = "Select Date";
 			sourceTree = "<group>";
 		};
-		ED0798551D3DD9A00009A73C /* Containers' Content */ = {
-			isa = PBXGroup;
-			children = (
-				ED07985E1D3DDB940009A73C /* DetailedTimelineBackgroundPhoto.swift */,
-				ED0798561D3DDA3C0009A73C /* DetailedTimelineUpperLeftContainer.swift */,
-				ED0798581D3DDA7E0009A73C /* DetailedTimelineUpperRightContainer.swift */,
-				ED07985A1D3DDAF30009A73C /* DetailedTimelineLowerLeftContainer.swift */,
-				ED07985C1D3DDB3F0009A73C /* DetailedTimelineLowerRightContainer.swift */,
-			);
-			name = "Containers' Content";
-			sourceTree = "<group>";
-		};
 		EDB9C5BE1D3DBCF500C89A1D /* Detailed Timeline Table Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,7 +206,6 @@
 			isa = PBXGroup;
 			children = (
 				EDF62EAD1D3DEA9D0072CAA8 /* DetailedTimelineContainerView.swift */,
-				ED0798551D3DD9A00009A73C /* Containers' Content */,
 			);
 			name = "View Setup";
 			sourceTree = "<group>";
@@ -244,6 +233,11 @@
 		EDE25AE71D35EF69004B4E69 /* Images Asset */ = {
 			isa = PBXGroup;
 			children = (
+				EDF62EB11D3DFE400072CAA8 /* small-icon.png */,
+				EDF62EB91D3E14A50072CAA8 /* small-location.png */,
+				EDF62EB51D3DFEAE0072CAA8 /* world.png */,
+				EDF62EB71D3DFEB70072CAA8 /* back-button.png */,
+				EDF62EB31D3DFE860072CAA8 /* edit-button.png */,
 				CAFCF7791D3CE20200350464 /* tw-cen-mt-condensed.ttf */,
 				CAFCF77A1D3CE20200350464 /* tw-cen-mt-condensed-bold.ttf */,
 				CAFCF77B1D3CE20200350464 /* tw-cen-mt-regular.ttf */,
@@ -263,9 +257,10 @@
 			isa = PBXGroup;
 			children = (
 				EDE25AEE1D3626A9004B4E69 /* DetailedTimelineViewController.swift */,
+				EDF62EBB1D3E34AE0072CAA8 /* DetailedTimelineViewControllerBasic.swift */,
 				EDB9C5C51D3DC01200C89A1D /* View Setup */,
-				EDB9C5C11D3DBDEC00C89A1D /* Detailed Timeline Collection Cell */,
 				EDB9C5BE1D3DBCF500C89A1D /* Detailed Timeline Table Cell */,
+				EDB9C5C11D3DBDEC00C89A1D /* Detailed Timeline Collection Cell */,
 			);
 			name = "Detailed Timeline";
 			path = ..;
@@ -340,12 +335,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDF62EB21D3DFE400072CAA8 /* small-icon.png in Resources */,
 				CAFCD9BB1D3383650089315E /* LaunchScreen.storyboard in Resources */,
 				CAFCF77C1D3CE20200350464 /* tw-cen-mt-condensed.ttf in Resources */,
 				CAFCD9B81D3383650089315E /* Assets.xcassets in Resources */,
+				EDF62EB61D3DFEAE0072CAA8 /* world.png in Resources */,
 				EDF62EB01D3DEE150072CAA8 /* beach.jpg in Resources */,
 				CAFCF77E1D3CE20200350464 /* tw-cen-mt-regular.ttf in Resources */,
 				CAFCF77D1D3CE20200350464 /* tw-cen-mt-condensed-bold.ttf in Resources */,
+				EDF62EB81D3DFEB70072CAA8 /* back-button.png in Resources */,
+				EDF62EBA1D3E14A50072CAA8 /* small-location.png in Resources */,
+				EDF62EB41D3DFE860072CAA8 /* edit-button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,12 +407,11 @@
 				ED1976341D378007004496C4 /* DetailedTimelineCollectionViewCell.swift in Sources */,
 				CAFCD9B31D3383650089315E /* NewsfeedViewController.swift in Sources */,
 				CAFCF7641D3C825F00350464 /* Autolayout.swift in Sources */,
-				ED07985B1D3DDAF30009A73C /* DetailedTimelineLowerLeftContainer.swift in Sources */,
 				CAFCD9B11D3383650089315E /* AppDelegate.swift in Sources */,
 				CAFCD9C51D3384130089315E /* NewsfeedTableViewCell.swift in Sources */,
 				EDF62EAC1D3DE9F00072CAA8 /* NewsfeedCollectionViewCell.swift in Sources */,
 				EDF62EAE1D3DEA9D0072CAA8 /* DetailedTimelineContainerView.swift in Sources */,
-				ED0798591D3DDA7E0009A73C /* DetailedTimelineUpperRightContainer.swift in Sources */,
+				EDF62EBC1D3E34AE0072CAA8 /* DetailedTimelineViewControllerBasic.swift in Sources */,
 				EDF62EAA1D3DE9A50072CAA8 /* SelectPhotoCollectionViewCell.swift in Sources */,
 				ED0798541D3DC9710009A73C /* SelectDateViewController.swift in Sources */,
 				ED19762C1D373B46004496C4 /* DetailedTimelineTableView.swift in Sources */,
@@ -424,11 +423,8 @@
 				CAFCF7701D3CC95700350464 /* NewsfeedSetupContentView.swift in Sources */,
 				EDE25AEF1D3626A9004B4E69 /* DetailedTimelineViewController.swift in Sources */,
 				ED19762A1D372FE6004496C4 /* DetailedTimelineCollectionView.swift in Sources */,
-				ED0798571D3DDA3C0009A73C /* DetailedTimelineUpperLeftContainer.swift in Sources */,
 				EDE25AE41D35EA1D004B4E69 /* NewsfeedCollectionView.swift in Sources */,
-				ED07985F1D3DDB940009A73C /* DetailedTimelineBackgroundPhoto.swift in Sources */,
 				CAFCF7721D3CC96300350464 /* NewsfeedSetupCollectionView.swift in Sources */,
-				ED07985D1D3DDB3F0009A73C /* DetailedTimelineLowerRightContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
