@@ -288,5 +288,5 @@ extension NewsfeedViewController: UICollectionViewDataSource, UICollectionViewDe
         return tableView_Newsfeed.cellForRowAtIndexPath(tableIndexPath) as! NewsfeedTableViewCell
     }
 
-}
 
+}
