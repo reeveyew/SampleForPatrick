@@ -27,6 +27,7 @@ extension DetailedTimelineViewController: UITableViewDataSource, UITableViewDele
         self.tableView_DetailedTimeline.reloadData()
     }
     
+    //number of rows in the table view
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
     }

@@ -17,21 +17,36 @@ extension SelectPhotoViewController: UICollectionViewDataSource, UICollectionVie
     
     //number of collection view contents vertically
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        return 10
+        return 3
     }
     
     
+
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath)
-        cell .backgroundColor = UIColor.randomColor()
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("selectphotocell", forIndexPath: indexPath) as! SelectPhotoCollectionViewCell
+        cell .backgroundColor = UIColor.clearColor()
         return cell
     }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let selectedCell = colletionView_SelectPhoto.cellForItemAtIndexPath(indexPath)! as! SelectPhotoCollectionViewCell
+        selectedCell.imageview.layer.borderColor = UIColor.clearColor().CGColor
+        print("selected")
+    }
+    
+    func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
+        let selectedCell = colletionView_SelectPhoto.cellForItemAtIndexPath(indexPath)! as! SelectPhotoCollectionViewCell
+        selectedCell.imageview.layer.borderColor = UIColor.darkTextColor().CGColor
+        print("deselecte")
+    }
+    
+    
     
     
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-    
-        return CGSize(width: 80, height: 80)// The size of one cell
+        
+        return CGSize(width: 120, height: 120)// The size of one cell
     }
     
     override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
@@ -41,13 +56,13 @@ extension SelectPhotoViewController: UICollectionViewDataSource, UICollectionVie
     func collectionView(collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                                minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return 2
+        return -34
     }
     
     func collectionView(collectionView: UICollectionView, layout
         collectionViewLayout: UICollectionViewLayout,
         minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return 2
+        return x/25
     }
 
 }

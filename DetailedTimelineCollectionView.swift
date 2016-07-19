@@ -24,39 +24,30 @@ extension DetailedTimelineViewController: UICollectionViewDataSource, UICollecti
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! DetailedTimelineCollectionViewCell
-        cell.backgroundColor = UIColor.clearColor()
-    
-        let imageview = UIImageView()
-        cell.contentView.addSubview(imageview)
-        
-        imageview.xPinEdgesToSuperview(top: 0, right: 0, bottom: 0, left: 0)
-        imageview.backgroundColor = UIColor.greenColor()
-        let image:UIImage = UIImage(named:"beach1.jpg")!
-        imageview.image = image
-        
-        cell.backgroundColor = UIColor.blueColor()
-        
         return cell
-    
     }
     
     
     
+    //size of one cell
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         
-        return CGSize(width: 80, height: 80)// The size of one cell
-    }
+        return CGSize(width: 80, height: 80)    }
     
     override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.All
     }
     
+    
+    //size of spacing between columns
     func collectionView(collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return 2
+        return -15
     }
     
+    
+    //size of spacing between rows
     func collectionView(collectionView: UICollectionView, layout
         collectionViewLayout: UICollectionViewLayout,
         minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
