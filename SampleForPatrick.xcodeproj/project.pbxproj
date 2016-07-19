@@ -38,6 +38,7 @@
 		EDF62EAA1D3DE9A50072CAA8 /* SelectPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF62EA91D3DE9A50072CAA8 /* SelectPhotoCollectionViewCell.swift */; };
 		EDF62EAC1D3DE9F00072CAA8 /* NewsfeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF62EAB1D3DE9F00072CAA8 /* NewsfeedCollectionViewCell.swift */; };
 		EDF62EAE1D3DEA9D0072CAA8 /* DetailedTimelineContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF62EAD1D3DEA9D0072CAA8 /* DetailedTimelineContainerView.swift */; };
+		EDF62EB01D3DEE150072CAA8 /* beach.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDF62EAF1D3DEE150072CAA8 /* beach.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		EDF62EA91D3DE9A50072CAA8 /* SelectPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		EDF62EAB1D3DE9F00072CAA8 /* NewsfeedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsfeedCollectionViewCell.swift; sourceTree = "<group>"; };
 		EDF62EAD1D3DEA9D0072CAA8 /* DetailedTimelineContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTimelineContainerView.swift; sourceTree = "<group>"; };
+		EDF62EAF1D3DEE150072CAA8 /* beach.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beach.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +247,7 @@
 				CAFCF7791D3CE20200350464 /* tw-cen-mt-condensed.ttf */,
 				CAFCF77A1D3CE20200350464 /* tw-cen-mt-condensed-bold.ttf */,
 				CAFCF77B1D3CE20200350464 /* tw-cen-mt-regular.ttf */,
+				EDF62EAF1D3DEE150072CAA8 /* beach.jpg */,
 			);
 			name = "Images Asset";
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				CAFCD9BB1D3383650089315E /* LaunchScreen.storyboard in Resources */,
 				CAFCF77C1D3CE20200350464 /* tw-cen-mt-condensed.ttf in Resources */,
 				CAFCD9B81D3383650089315E /* Assets.xcassets in Resources */,
+				EDF62EB01D3DEE150072CAA8 /* beach.jpg in Resources */,
 				CAFCF77E1D3CE20200350464 /* tw-cen-mt-regular.ttf in Resources */,
 				CAFCF77D1D3CE20200350464 /* tw-cen-mt-condensed-bold.ttf in Resources */,
 			);
