@@ -26,8 +26,14 @@ extension NewsfeedViewController: UICollectionViewDataSource, UICollectionViewDe
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("NewsfeedCollectionViewCell", forIndexPath: indexPath) as! NewsfeedCollectionViewCell
         
-        cell.imageView_LocationPhoto.image = self.array_Images[indexPath.row]
+            cell.imageView_LocationPhoto.image = self.array_Images[indexPath.row]
         
+        cell.imageView_LocationPhoto.layer.shadowColor = UIColor.grayColor().CGColor
+        cell.imageView_LocationPhoto.layer.shadowOffset = CGSizeMake(0, 1)
+        cell.imageView_LocationPhoto.layer.shadowOpacity = 1
+        cell.imageView_LocationPhoto.layer.shadowRadius = 3
+        cell.imageView_LocationPhoto.layer.shouldRasterize = true
+        cell.imageView_LocationPhoto.layer.rasterizationScale = UIScreen.mainScreen().scale
         return cell
     }
     
@@ -39,20 +45,11 @@ extension NewsfeedViewController: UICollectionViewDataSource, UICollectionViewDe
         return true
     }
     
-    
-    
-    
-    
+
     //MARK:- HIGHLIGHT IMAGE
     func animateCollectionCellToCenter(scrollView: UIScrollView){
         print("animateCollectionCellToCenter")
-//        print(scrollView.contentOffset)
-        
-        let touchPoint: CGPoint = scrollView.convertPoint(CGPointMake(scrollView.contentOffset.x, 0), toView: self.tableView_Newsfeed)
-        let indexPath: NSIndexPath = self.tableView_Newsfeed.indexPathForRowAtPoint(touchPoint)!
-        
-        //get current table cell
-        let tableCell = tableView_Newsfeed.cellForRowAtIndexPath(indexPath) as! NewsfeedTableViewCell
+        let tableCell = self.getCurrentTableCell(scrollView: scrollView)
         let indexArray = tableCell.collectionView.indexPathsForVisibleItems()
         let sortedIndexArray = indexArray.sort {$0.row < $1.row}
         
@@ -74,7 +71,6 @@ extension NewsfeedViewController: UICollectionViewDataSource, UICollectionViewDe
                 centerImageCell = imageCell
             }
             
-//            print("cellFromCenterX: \(cellFromCenterX)")
             if cellFromCenterX <= 0 && closestX >= 0 {
                 if (closestX + cellFromCenterX <= 0){
                     closestX = cellFromCenterX
@@ -102,26 +98,23 @@ extension NewsfeedViewController: UICollectionViewDataSource, UICollectionViewDe
                     centerImageCell = imageCell
                 }
             }
-//            print("closestX: \(closestX)")
+
             lastIndex = i
             self.animatedCollectionCell = centerImageCell
             
             if lastIndex == sortedIndexArray.count - 1 {
                 
-                
-                
                 UIView.animateWithDuration(0.5) {
                     tableCell.collectionView.contentOffset.x = CGRectGetMinX(centerImageCell.frame) - (x/5*2)
-                    let scale = CGAffineTransformMakeScale(1.1, 1.1)
-                    centerImageCell.transform = CGAffineTransformTranslate(scale, 0, -2)
-                    centerImageCell.backgroundColor = UIColor.blackColor()
-                    tableCell.collectionView.bringSubviewToFront(centerImageCell)
-                    tableCell.imageView_CoverPhoto.image = centerImageCell.imageView_LocationPhoto.image
-                    
-                    
-                    
-                    
                 }
+                
+                animateCollectionViewAndCoverPhoto(tableCell: tableCell, selectedCollectionCell: centerImageCell, completion: { (finished) in
+                    
+                    print("didClickAnimationForFirstTime")
+                    tableCell.didClickAnimationForFirstTime = true
+                    
+                    self.albumHeaderAnimateDownCompletion(tableCell)
+                })
             }
         } //end loop
         
@@ -153,48 +146,57 @@ extension NewsfeedViewController: UICollectionViewDataSource, UICollectionViewDe
         }
     }
     
+    
+    
+    //MARK:- CORE ANIMATION
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
-        let touchPoint: CGPoint = collectionView.convertPoint(CGPointMake(collectionView.contentOffset.x, 0), toView: self.tableView_Newsfeed)
-        let tableIndexPath: NSIndexPath = self.tableView_Newsfeed.indexPathForRowAtPoint(touchPoint)!
+        let tableCell = getCurrentTableCell(collectionView: collectionView)
+        let selectedCollectionCell = collectionView.cellForItemAtIndexPath(indexPath)! as! NewsfeedCollectionViewCell
         
-        //get current table cell
-        let tableCell = tableView_Newsfeed.cellForRowAtIndexPath(tableIndexPath) as! NewsfeedTableViewCell
+        self.animatedCollectionCell = selectedCollectionCell
         
-        let selectedCell = collectionView.cellForItemAtIndexPath(indexPath)! as! NewsfeedCollectionViewCell
         
-        self.animatedCollectionCell = selectedCell
-       
-        
-        UIView.animateWithDuration(0.5, animations: {
+        self.animateCollectionViewAndCoverPhoto(tableCell: tableCell, selectedCollectionCell: selectedCollectionCell) { (finished) in
             
-            let scale = CGAffineTransformMakeScale(1.1, 1.1)
-            selectedCell.transform = CGAffineTransformTranslate(scale, 0, -2)
-            tableCell.collectionView.bringSubviewToFront(selectedCell)
-            tableCell.imageView_CoverPhoto.image = selectedCell.imageView_LocationPhoto.image
-            
-            
-            //testing album header
-            self.albumHeaderAnimateDown(tableCell)
-   
-            
-        }) { (done) in
-            
+            print("didClickAnimationForFirstTime")
+            tableCell.didClickAnimationForFirstTime = true
             
             self.albumHeaderAnimateDownCompletion(tableCell)
             
             
         }
     }
+
+    //
+    func animateCollectionViewAndCoverPhoto(tableCell tableCell: NewsfeedTableViewCell, selectedCollectionCell: NewsfeedCollectionViewCell, completion: (finished:Bool) -> Void){
+        
+        tableCell.imageView_CoverPhoto.alpha = 0.5
+        
+        UIView.animateWithDuration(0.5, animations: {
+            
+            self.albumHeaderAnimateDown(tableCell)
+            
+            let scale = CGAffineTransformMakeScale(1.1, 1.1)
+            selectedCollectionCell.transform = CGAffineTransformTranslate(scale, 0, -2)
+            tableCell.collectionView.bringSubviewToFront(selectedCollectionCell)
+            tableCell.imageView_CoverPhoto.image = selectedCollectionCell.imageView_LocationPhoto.image
+            tableCell.imageView_CoverPhoto.alpha = 1
+            
+        }) { (done) in
+            completion(finished: true)
+        }
+    }
     
+    //MARK:- ANIMATE ALBUM HEADER
     func albumHeaderAnimateDown(tableCell: NewsfeedTableViewCell){
         tableCell.label_HiddenLocation.alpha = 0.8
         tableCell.label_HiddenLocation.transform = CGAffineTransformIdentity
         
-        tableCell.label_AlbumHeader.transform = CGAffineTransformScale(CGAffineTransformMakeTranslation(0, 45), 0.5, 0.5)
+        tableCell.label_AlbumHeader.transform = CGAffineTransformScale(CGAffineTransformMakeTranslation(0, 40), 0.5, 0.5)
         tableCell.label_AlbumHeader.alpha = 0.8
     
-        tableCell.label_NextLocation.transform =  CGAffineTransformScale(CGAffineTransformMakeTranslation(0, 45), 0.5, 0.5)
+        tableCell.label_NextLocation.transform =  CGAffineTransformScale(CGAffineTransformMakeTranslation(0, 20), 0.5, 0.5)
         tableCell.label_NextLocation.alpha = 0
         //
         tableCell.label_PreviousLocation.transform = CGAffineTransformIdentity
@@ -202,21 +204,47 @@ extension NewsfeedViewController: UICollectionViewDataSource, UICollectionViewDe
     
     }
     
+    func albumHeaderCompletionSetup(tableCell: NewsfeedTableViewCell, label: UILabel){
+        let lastLocationIndex = tableCell.locations.count - 1
+        let locationsArray = tableCell.locations
+        
+        //label_NextLocation
+        if label.tag - 1 >= 0 {
+            //next index
+            let newIndex = label.tag - 1
+            label.tag = newIndex
+            label.text = locationsArray[newIndex]
+        } else {
+            //go to last count
+            label.tag = lastLocationIndex
+            label.text = locationsArray[lastLocationIndex]
+        }
+
+    }
+    
     func albumHeaderAnimateDownCompletion(tableCell: NewsfeedTableViewCell){
         
-        tableCell.label_NextLocation.transform = CGAffineTransformIdentity
-        tableCell.label_NextLocation.text = "LONDON TRIP"
-        tableCell.label_NextLocation.alpha = 0.8
-
-        tableCell.label_AlbumHeader.transform = CGAffineTransformIdentity
-        tableCell.label_AlbumHeader.text = "HARRODS"
-        tableCell.label_AlbumHeader.alpha = 0.9
+        let label_NextLocation = tableCell.label_NextLocation
+        self.albumHeaderCompletionSetup(tableCell, label: label_NextLocation)
+        label_NextLocation.transform = CGAffineTransformIdentity
+        label_NextLocation.alpha = 0.8
         
-        tableCell.label_PreviousLocation.transform = CGAffineTransformScale(CGAffineTransformMakeTranslation(0, -45), 0.5, 0.5)
-        tableCell.label_PreviousLocation.text = "ZOO"
-        tableCell.label_PreviousLocation.alpha = 0.8
+        let label_AlbumHeader = tableCell.label_AlbumHeader
+        self.albumHeaderCompletionSetup(tableCell, label: label_AlbumHeader)
+        label_AlbumHeader.transform = CGAffineTransformIdentity
+        label_AlbumHeader.alpha = 0.9
         
-        tableCell.label_HiddenLocation.alpha = 0
+        let label_PreviousLocation = tableCell.label_PreviousLocation
+        self.albumHeaderCompletionSetup(tableCell, label: label_PreviousLocation)
+        label_PreviousLocation.transform = CGAffineTransformScale(CGAffineTransformMakeTranslation(0, -40), 0.5, 0.5)
+        label_PreviousLocation.alpha = 0.8
+        
+        let label_HiddenLocation = tableCell.label_HiddenLocation
+        self.albumHeaderCompletionSetup(tableCell, label: label_HiddenLocation)
+        label_HiddenLocation.alpha = 0
+        label_HiddenLocation.transform = CGAffineTransformMakeTranslation(0, -15)
+        
+        tableCell.headerWidth = tableCell.label_PreviousLocation.frame.size.width
 
     }
     
@@ -242,4 +270,23 @@ extension NewsfeedViewController: UICollectionViewDataSource, UICollectionViewDe
         self.lastContentOffset = scrollView.contentOffset
         unHighlightImage()
     }
+    
+    func getCurrentTableCell(collectionView collectionView: UICollectionView?=nil, scrollView: UIScrollView?=nil) -> NewsfeedTableViewCell {
+
+        var touchPoint = CGPoint()
+        
+        if let collectionView = collectionView {
+            touchPoint = collectionView.convertPoint(CGPointMake(collectionView.contentOffset.x, 0), toView: self.tableView_Newsfeed)
+        }
+        if let scrollView = scrollView {
+            touchPoint = scrollView.convertPoint(CGPointMake(scrollView.contentOffset.x, 0), toView: self.tableView_Newsfeed)
+        }
+        
+        let tableIndexPath: NSIndexPath = self.tableView_Newsfeed.indexPathForRowAtPoint(touchPoint)!
+        
+        //get current table cell
+        return tableView_Newsfeed.cellForRowAtIndexPath(tableIndexPath) as! NewsfeedTableViewCell
+    }
+
 }
+

@@ -20,20 +20,27 @@ extension NewsfeedTableViewCell {
         layout.minimumInteritemSpacing = 0
         
         //setup collectionview
-        let frame = CGRectMake(0, 100, x, 100)
+        let frame = CGRectMake(0, 0, 0, 0)
         collectionView = UICollectionView(frame: frame, collectionViewLayout: layout)
         self.addSubview(collectionView)
         self.collectionView.registerClass(NewsfeedCollectionViewCell.self, forCellWithReuseIdentifier: "NewsfeedCollectionViewCell")
         
-        collectionView.xSize(width: nil, height: 100)
+        collectionView.xSize(width: x, height: 100)
         collectionView.xPinEdgesToSuperview(top: nil, right: 0, bottom: 40, left: 0)
-        collectionView.xPinTop(toBottomOfView: refContentContainer, offset: -30)
+        collectionView.xPinTop(toBottomOfView: imageView_CoverPhoto, offset: -30)
         
         self.collectionView.backgroundColor = UIColor.clearColor()
         self.collectionView.collectionViewLayout = layout
         self.collectionView.userInteractionEnabled = true
         self.collectionView.showsHorizontalScrollIndicator = false
         self.collectionView.allowsSelection = true
+        
+        self.collectionView.contentInset = UIEdgeInsetsZero
+        self.collectionView.scrollIndicatorInsets = UIEdgeInsetsZero
+        self.collectionView.contentOffset = CGPointZero
+        
+        
+        
 
     }
 

@@ -46,20 +46,58 @@ class NewsfeedTableViewCell: UITableViewCell {
     var refContentContainer: UIView!
 
     //transformation
-    var transform2: CGAffineTransform!
-    var nextLocationConstraint: NSLayoutConstraint!
-    var borderWidthConstraint: NSLayoutConstraint!
+    var locations = ["HARRODS", "BIG BEN", "LONDON BRIDGE", "TOWER BRIDGE", "HEAVEN"]
+    var headerWidth:CGFloat = 0
+    var didClickAnimationForFirstTime = false
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String!) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         
+        self.prepareForReuse()
         
         refContentContainer = imageView_CoverPhoto
         
         setupContentView()
         setupCollectionView()
 
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        self.view_BorderTop.frame.size.height = 2
+        
+        UIView.animateWithDuration(0.3, delay: 0.2, options: .CurveEaseOut, animations: {
+            
+            var scaledWidth:CGFloat
+            
+            if self.headerWidth == 0 && self.didClickAnimationForFirstTime == false {
+                
+                scaledWidth = self.label_AlbumHeader.frame.width * 1.1
+                
+            } else {
+                
+                if self.headerWidth < 100 {
+                    scaledWidth = self.headerWidth * 2.7
+                } else {
+                    scaledWidth = self.headerWidth * 2.5
+                }
+                
+            }
+            
+            self.view_BorderTop.frame.size.width = scaledWidth
+            self.view_BorderTop.center = CGPointMake(self.label_AlbumHeader.center.x, self.label_AlbumHeader.center.y - 25)
+            
+            self.view_BorderBottom.frame.size = self.view_BorderTop.frame.size
+            self.view_BorderBottom.center = CGPointMake(self.label_AlbumHeader.center.x, self.label_AlbumHeader.center.y + 25)
+            
+         
+            
+            }, completion: nil)
+        
+        
+        
     }
     
     

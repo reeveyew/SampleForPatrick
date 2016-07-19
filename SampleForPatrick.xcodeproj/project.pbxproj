@@ -20,6 +20,7 @@
 		CAFCF77C1D3CE20200350464 /* tw-cen-mt-condensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAFCF7791D3CE20200350464 /* tw-cen-mt-condensed.ttf */; };
 		CAFCF77D1D3CE20200350464 /* tw-cen-mt-condensed-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAFCF77A1D3CE20200350464 /* tw-cen-mt-condensed-bold.ttf */; };
 		CAFCF77E1D3CE20200350464 /* tw-cen-mt-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAFCF77B1D3CE20200350464 /* tw-cen-mt-regular.ttf */; };
+		CAFCF7821D3E315A00350464 /* Bobbleboddy_light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAFCF7811D3E315A00350464 /* Bobbleboddy_light.ttf */; };
 		ED0798541D3DC9710009A73C /* SelectDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0798531D3DC9710009A73C /* SelectDateViewController.swift */; };
 		ED19762A1D372FE6004496C4 /* DetailedTimelineCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1976291D372FE6004496C4 /* DetailedTimelineCollectionView.swift */; };
 		ED19762C1D373B46004496C4 /* DetailedTimelineTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED19762B1D373B46004496C4 /* DetailedTimelineTableView.swift */; };
@@ -60,6 +61,7 @@
 		CAFCF7791D3CE20200350464 /* tw-cen-mt-condensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tw-cen-mt-condensed.ttf"; sourceTree = "<group>"; };
 		CAFCF77A1D3CE20200350464 /* tw-cen-mt-condensed-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tw-cen-mt-condensed-bold.ttf"; sourceTree = "<group>"; };
 		CAFCF77B1D3CE20200350464 /* tw-cen-mt-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tw-cen-mt-regular.ttf"; sourceTree = "<group>"; };
+		CAFCF7811D3E315A00350464 /* Bobbleboddy_light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bobbleboddy_light.ttf; sourceTree = "<group>"; };
 		ED0798531D3DC9710009A73C /* SelectDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectDateViewController.swift; sourceTree = "<group>"; };
 		ED1976291D372FE6004496C4 /* DetailedTimelineCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTimelineCollectionView.swift; sourceTree = "<group>"; };
 		ED19762B1D373B46004496C4 /* DetailedTimelineTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTimelineTableView.swift; sourceTree = "<group>"; };
