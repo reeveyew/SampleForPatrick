@@ -107,6 +107,9 @@ extension NewsfeedViewController: UICollectionViewDataSource, UICollectionViewDe
             self.animatedCollectionCell = centerImageCell
             
             if lastIndex == sortedIndexArray.count - 1 {
+                
+                
+                
                 UIView.animateWithDuration(0.5) {
                     tableCell.collectionView.contentOffset.x = CGRectGetMinX(centerImageCell.frame) - (x/5*2)
                     let scale = CGAffineTransformMakeScale(1.1, 1.1)
@@ -114,6 +117,10 @@ extension NewsfeedViewController: UICollectionViewDataSource, UICollectionViewDe
                     centerImageCell.backgroundColor = UIColor.blackColor()
                     tableCell.collectionView.bringSubviewToFront(centerImageCell)
                     tableCell.imageView_CoverPhoto.image = centerImageCell.imageView_LocationPhoto.image
+                    
+                    
+                    
+                    
                 }
             }
         } //end loop
@@ -122,13 +129,26 @@ extension NewsfeedViewController: UICollectionViewDataSource, UICollectionViewDe
     }
     
     func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        if decelerate == false && self.canCallScrollViewDidEndDragging == true {
+        
+        //check scroling direction
+        if (self.lastContentOffset.x > scrollView.contentOffset.x || self.lastContentOffset.x < scrollView.contentOffset.x){
+            self.scrollDirection = .Horizontal;
+        }
+            
+        else if self.lastContentOffset.y < scrollView.contentOffset.y || self.lastContentOffset.y >  scrollView.contentOffset.y {
+            self.scrollDirection = .Vertical
+        }
+
+        
+        if decelerate == false && self.canCallScrollViewDidEndDragging == true && self.scrollDirection == .Horizontal {
+            print("scrollViewDidEndDragging")
             animateCollectionCellToCenter(scrollView)
         }
     }
     
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-        if self.canCallScrollViewDidEndDragging == true {
+        if self.canCallScrollViewDidEndDragging == true && self.scrollDirection == .Horizontal {
+            print("scrollViewDidEndDecelerating")
             animateCollectionCellToCenter(scrollView)
         }
     }
@@ -144,14 +164,62 @@ extension NewsfeedViewController: UICollectionViewDataSource, UICollectionViewDe
         let selectedCell = collectionView.cellForItemAtIndexPath(indexPath)! as! NewsfeedCollectionViewCell
         
         self.animatedCollectionCell = selectedCell
+       
         
-        UIView.animateWithDuration(0.5) {
+        UIView.animateWithDuration(0.5, animations: {
+            
             let scale = CGAffineTransformMakeScale(1.1, 1.1)
             selectedCell.transform = CGAffineTransformTranslate(scale, 0, -2)
             tableCell.collectionView.bringSubviewToFront(selectedCell)
             tableCell.imageView_CoverPhoto.image = selectedCell.imageView_LocationPhoto.image
+            
+            
+            //testing album header
+            self.albumHeaderAnimateDown(tableCell)
+   
+            
+        }) { (done) in
+            
+            
+            self.albumHeaderAnimateDownCompletion(tableCell)
+            
+            
         }
     }
+    
+    func albumHeaderAnimateDown(tableCell: NewsfeedTableViewCell){
+        tableCell.label_HiddenLocation.alpha = 0.8
+        tableCell.label_HiddenLocation.transform = CGAffineTransformIdentity
+        
+        tableCell.label_AlbumHeader.transform = CGAffineTransformScale(CGAffineTransformMakeTranslation(0, 45), 0.5, 0.5)
+        tableCell.label_AlbumHeader.alpha = 0.8
+    
+        tableCell.label_NextLocation.transform =  CGAffineTransformScale(CGAffineTransformMakeTranslation(0, 45), 0.5, 0.5)
+        tableCell.label_NextLocation.alpha = 0
+        //
+        tableCell.label_PreviousLocation.transform = CGAffineTransformIdentity
+        tableCell.label_PreviousLocation.alpha = 0.9
+    
+    }
+    
+    func albumHeaderAnimateDownCompletion(tableCell: NewsfeedTableViewCell){
+        
+        tableCell.label_NextLocation.transform = CGAffineTransformIdentity
+        tableCell.label_NextLocation.text = "LONDON TRIP"
+        tableCell.label_NextLocation.alpha = 0.8
+
+        tableCell.label_AlbumHeader.transform = CGAffineTransformIdentity
+        tableCell.label_AlbumHeader.text = "HARRODS"
+        tableCell.label_AlbumHeader.alpha = 0.9
+        
+        tableCell.label_PreviousLocation.transform = CGAffineTransformScale(CGAffineTransformMakeTranslation(0, -45), 0.5, 0.5)
+        tableCell.label_PreviousLocation.text = "ZOO"
+        tableCell.label_PreviousLocation.alpha = 0.8
+        
+        tableCell.label_HiddenLocation.alpha = 0
+
+    }
+    
     
     //MARK:- UNHIGHLIGHT IMAGE
     func unHighlightImage(){
@@ -170,6 +238,8 @@ extension NewsfeedViewController: UICollectionViewDataSource, UICollectionViewDe
     }
     
     func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+        
+        self.lastContentOffset = scrollView.contentOffset
         unHighlightImage()
     }
 }

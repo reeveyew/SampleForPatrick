@@ -19,7 +19,20 @@ class NewsfeedViewController: UIViewController {
     var animatedCollectionCell:UICollectionViewCell!
     var canCallScrollViewDidEndDragging = true
     
+    //scroll view
+    var scrollDirection = ScrollDirection.None
+    
+    enum ScrollDirection {
+        case None
+        case Horizontal
+        case Vertical
+    }
+    
+    var lastContentOffset:CGPoint!
+    
     var array_Images = [UIImage]()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

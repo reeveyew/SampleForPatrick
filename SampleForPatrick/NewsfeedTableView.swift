@@ -27,7 +27,7 @@ extension NewsfeedViewController: UITableViewDataSource, UITableViewDelegate {
     
     //the number of user's post in the home page displayed
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 10
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

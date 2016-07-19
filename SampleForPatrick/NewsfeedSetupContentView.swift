@@ -54,6 +54,7 @@ extension NewsfeedTableViewCell {
         
         self.addSubview(label_PreviousLocation)
         self.addSubview(label_NextLocation)
+        self.addSubview(label_HiddenLocation)
         
         label_AlbumHeader.textAlignment = NSTextAlignment.Center
         label_AlbumHeader.text = "LONDON TRIP"
@@ -66,8 +67,8 @@ extension NewsfeedTableViewCell {
         //upper border displayed above the label in the center
         view_BorderTop.backgroundColor = UIColor.whiteColor()
         view_BorderTop.xPinBottom(toTopOfView: label_AlbumHeader, offset: -10)
-        view_BorderTop.xMatchWidth(toView: label_AlbumHeader, multiplier: 1.2)
-        view_BorderTop.xSize(width: nil, height: 2)
+//        self.borderWidthConstraint = view_BorderTop.xMatchWidth(toView: label_AlbumHeader, multiplier: 1.2)
+        view_BorderTop.xSize(width: 160, height: 2)
         view_BorderTop.xAlignVertical(toView: label_AlbumHeader)
         
         
@@ -79,20 +80,33 @@ extension NewsfeedTableViewCell {
         
         label_PreviousLocation.textAlignment = NSTextAlignment.Center
         label_PreviousLocation.text = "HARRODS"
-        label_PreviousLocation.font = UIFont(name: "TwCenMT-Condensed", size: 15)
+        label_PreviousLocation.font = UIFont(name: "TwCenMT-CondensedBold", size: 30)
         label_PreviousLocation.textColor = UIColor.whiteColor()
+        label_PreviousLocation.alpha = 0.8
         label_PreviousLocation.xAlignVertical(toView: refContentContainer)
-        label_PreviousLocation.alpha = 0.9
-        label_PreviousLocation.xPinBottom(toTopOfView: label_AlbumHeader, offset: -20)
+        label_PreviousLocation.xAlignHorizontal(toView: refContentContainer, offset: 30)
         
         label_NextLocation.textAlignment = NSTextAlignment.Center
         label_NextLocation.text = "BIG BEN"
-        label_NextLocation.font = UIFont(name: "TwCenMT-Condensed", size: 15)
+        label_NextLocation.font = UIFont(name: "TwCenMT-CondensedBold", size: 15)
         label_NextLocation.textColor = UIColor.whiteColor()
+        label_NextLocation.alpha = 0.8
         label_NextLocation.xAlignVertical(toView: refContentContainer)
-        label_NextLocation.alpha = 0.9
-        label_NextLocation.xPinTop(toBottomOfView: label_AlbumHeader, offset: 20)
+            label_NextLocation.xAlignHorizontal(toView: refContentContainer, offset: 30 + 45)
         
+        label_HiddenLocation.textAlignment = NSTextAlignment.Center
+        label_HiddenLocation.text = "ZOO"
+        label_HiddenLocation.font = UIFont(name: "TwCenMT-CondensedBold", size: 15)
+        label_HiddenLocation.textColor = UIColor.whiteColor()
+        label_HiddenLocation.alpha = 0.8
+        label_HiddenLocation.xAlignVertical(toView: refContentContainer)
+        label_HiddenLocation.xAlignHorizontal(toView: refContentContainer, offset: -15)
+        label_HiddenLocation.alpha = 0
+        
+        
+        //transform
+        label_PreviousLocation.transform = CGAffineTransformScale(CGAffineTransformMakeTranslation(0, -45), 0.5, 0.5)
+        label_HiddenLocation.transform = CGAffineTransformMakeTranslation(0, -45)
     }
 
     func setupAvatar(){
