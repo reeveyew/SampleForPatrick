@@ -204,16 +204,50 @@ extension NewsfeedViewController: UICollectionViewDataSource, UICollectionViewDe
     
     func albumHeaderAnimateDownCompletion(tableCell: NewsfeedTableViewCell){
         
+        let locationsCount = tableCell.locations.count
+        let locationsArray = tableCell.locations
+        
+        //label_NextLocation
+        if tableCell.label_NextLocation.tag + 1 < locationsCount {
+            //next index
+            let newIndex = tableCell.label_NextLocation.tag + 1
+            tableCell.label_NextLocation.tag = newIndex
+            tableCell.label_NextLocation.text = locationsArray[newIndex]
+        } else {
+            //back to 1
+            tableCell.label_NextLocation.tag = 0
+            tableCell.label_NextLocation.text = locationsArray[0]
+        }
         tableCell.label_NextLocation.transform = CGAffineTransformIdentity
-        tableCell.label_NextLocation.text = "LONDON TRIP"
         tableCell.label_NextLocation.alpha = 0.8
-
+        
+        //label_NextLocation
+        
+        if tableCell.label_AlbumHeader.tag + 1 < locationsCount {
+            //next index
+            let newIndex = tableCell.label_AlbumHeader.tag + 1
+            tableCell.label_AlbumHeader.tag = newIndex
+            tableCell.label_AlbumHeader.text = locationsArray[newIndex]
+        } else {
+            //back to 1
+            tableCell.label_AlbumHeader.tag = 0
+            tableCell.label_AlbumHeader.text = locationsArray[0]
+        }
         tableCell.label_AlbumHeader.transform = CGAffineTransformIdentity
-        tableCell.label_AlbumHeader.text = "HARRODS"
         tableCell.label_AlbumHeader.alpha = 0.9
         
+        
+        if tableCell.label_PreviousLocation.tag + 1 < locationsCount {
+            //next index
+            let newIndex = tableCell.label_PreviousLocation.tag + 1
+            tableCell.label_PreviousLocation.tag = newIndex
+            tableCell.label_PreviousLocation.text = locationsArray[newIndex]
+        } else {
+            //back to 1
+            tableCell.label_PreviousLocation.tag = 0
+            tableCell.label_PreviousLocation.text = locationsArray[0]
+        }
         tableCell.label_PreviousLocation.transform = CGAffineTransformScale(CGAffineTransformMakeTranslation(0, -45), 0.5, 0.5)
-        tableCell.label_PreviousLocation.text = "ZOO"
         tableCell.label_PreviousLocation.alpha = 0.8
         
         tableCell.label_HiddenLocation.alpha = 0

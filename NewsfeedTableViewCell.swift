@@ -46,9 +46,7 @@ class NewsfeedTableViewCell: UITableViewCell {
     var refContentContainer: UIView!
 
     //transformation
-    var transform2: CGAffineTransform!
-    var nextLocationConstraint: NSLayoutConstraint!
-    var borderWidthConstraint: NSLayoutConstraint!
+    var locations = ["HARRODS", "BIG BEN", "LONDON BRIDGE", "TOWER BRIDGE", "HEAVEN"]
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String!) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

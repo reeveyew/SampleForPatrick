@@ -57,7 +57,8 @@ extension NewsfeedTableViewCell {
         self.addSubview(label_HiddenLocation)
         
         label_AlbumHeader.textAlignment = NSTextAlignment.Center
-        label_AlbumHeader.text = "LONDON TRIP"
+        label_AlbumHeader.text = locations[0]
+        label_AlbumHeader.tag = 0
         label_AlbumHeader.font = UIFont(name: "TwCenMT-CondensedBold", size: 30)
         label_AlbumHeader.textColor = UIColor.whiteColor()
         label_AlbumHeader.xAlignVertical(toView: refContentContainer)
@@ -79,7 +80,8 @@ extension NewsfeedTableViewCell {
         view_BorderBottom.xAlignVertical(toView: view_BorderTop)
         
         label_PreviousLocation.textAlignment = NSTextAlignment.Center
-        label_PreviousLocation.text = "HARRODS"
+        label_PreviousLocation.text = locations[1]
+        label_PreviousLocation.tag = 1
         label_PreviousLocation.font = UIFont(name: "TwCenMT-CondensedBold", size: 30)
         label_PreviousLocation.textColor = UIColor.whiteColor()
         label_PreviousLocation.alpha = 0.8
@@ -87,7 +89,8 @@ extension NewsfeedTableViewCell {
         label_PreviousLocation.xAlignHorizontal(toView: refContentContainer, offset: 30)
         
         label_NextLocation.textAlignment = NSTextAlignment.Center
-        label_NextLocation.text = "BIG BEN"
+        label_NextLocation.text = locations[2]
+        label_NextLocation.tag = 2
         label_NextLocation.font = UIFont(name: "TwCenMT-CondensedBold", size: 15)
         label_NextLocation.textColor = UIColor.whiteColor()
         label_NextLocation.alpha = 0.8
@@ -95,7 +98,8 @@ extension NewsfeedTableViewCell {
             label_NextLocation.xAlignHorizontal(toView: refContentContainer, offset: 30 + 45)
         
         label_HiddenLocation.textAlignment = NSTextAlignment.Center
-        label_HiddenLocation.text = "ZOO"
+        label_HiddenLocation.text = locations[3]
+        label_HiddenLocation.tag = 3
         label_HiddenLocation.font = UIFont(name: "TwCenMT-CondensedBold", size: 15)
         label_HiddenLocation.textColor = UIColor.whiteColor()
         label_HiddenLocation.alpha = 0.8
