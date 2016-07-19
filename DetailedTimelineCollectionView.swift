@@ -17,7 +17,7 @@ extension DetailedTimelineViewController: UICollectionViewDataSource, UICollecti
     
     //number of collection view contents vertically
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        return 10
+        return 4
     }
     
     
@@ -43,7 +43,7 @@ extension DetailedTimelineViewController: UICollectionViewDataSource, UICollecti
     func collectionView(collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return -15
+        return x/100
     }
     
     
@@ -51,7 +51,7 @@ extension DetailedTimelineViewController: UICollectionViewDataSource, UICollecti
     func collectionView(collectionView: UICollectionView, layout
         collectionViewLayout: UICollectionViewLayout,
         minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return 2
+        return 5
     }
 
 
