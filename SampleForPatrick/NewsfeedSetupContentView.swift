@@ -43,7 +43,6 @@ extension NewsfeedTableViewCell {
         imageView_CoverPhotoFilter.xPinEdges(toView: imageView_CoverPhoto)
         
     }
-
     
     func setupAlbumHeader(){
         //setup the label that's placed in the center of the page
@@ -52,13 +51,14 @@ extension NewsfeedTableViewCell {
         self.addSubview(view_BorderTop)
         self.addSubview(view_BorderBottom)
         
+        
         self.addSubview(label_PreviousLocation)
         self.addSubview(label_NextLocation)
         self.addSubview(label_HiddenLocation)
         
         label_AlbumHeader.textAlignment = NSTextAlignment.Center
-        label_AlbumHeader.text = locations[0]
-        label_AlbumHeader.tag = 0
+        label_AlbumHeader.text = locations[2]
+        label_AlbumHeader.tag = 2
         label_AlbumHeader.font = UIFont(name: "TwCenMT-CondensedBold", size: 30)
         label_AlbumHeader.textColor = UIColor.whiteColor()
         label_AlbumHeader.xAlignVertical(toView: refContentContainer)
@@ -67,17 +67,20 @@ extension NewsfeedTableViewCell {
         
         //upper border displayed above the label in the center
         view_BorderTop.backgroundColor = UIColor.whiteColor()
-        view_BorderTop.xPinBottom(toTopOfView: label_AlbumHeader, offset: -10)
-//        self.borderWidthConstraint = view_BorderTop.xMatchWidth(toView: label_AlbumHeader, multiplier: 1.2)
-        view_BorderTop.xSize(width: 160, height: 2)
-        view_BorderTop.xAlignVertical(toView: label_AlbumHeader)
-        
-        
+//        view_BorderTop.xPinBottom(toTopOfView: label_AlbumHeader, offset: -10)
+//        self.matchWidthConstraint = view_BorderTop.xMatchWidth(toView: label_AlbumHeader, multiplier: 1.2)
+//        view_BorderTop.xSize(width: nil, height: 2)
+//        view_BorderTop.xAlignVertical(toView: label_AlbumHeader)
+//        
+//        view_BorderTop.frame = CGRectMake(0, 0, 160, 2)
+//        view_BorderTop.center.y = refContentContainer.center.y + 30
         //lower border displayed below the label in the center
         view_BorderBottom.backgroundColor = UIColor.whiteColor()
-        view_BorderBottom.xPinTop(toBottomOfView: label_AlbumHeader, offset: 10)
-        view_BorderBottom.xSameSize(toView: view_BorderTop)
-        view_BorderBottom.xAlignVertical(toView: view_BorderTop)
+//        view_BorderBottom.xPinTop(toBottomOfView: label_AlbumHeader, offset: 10)
+//        view_BorderBottom.xSameSize(toView: view_BorderTop)
+//        view_BorderBottom.xAlignVertical(toView: view_BorderTop)
+        
+        
         
         label_PreviousLocation.textAlignment = NSTextAlignment.Center
         label_PreviousLocation.text = locations[1]
@@ -89,28 +92,28 @@ extension NewsfeedTableViewCell {
         label_PreviousLocation.xAlignHorizontal(toView: refContentContainer, offset: 30)
         
         label_NextLocation.textAlignment = NSTextAlignment.Center
-        label_NextLocation.text = locations[2]
-        label_NextLocation.tag = 2
+        label_NextLocation.text = locations[3]
+        label_NextLocation.tag = 3
         label_NextLocation.font = UIFont(name: "TwCenMT-CondensedBold", size: 15)
         label_NextLocation.textColor = UIColor.whiteColor()
         label_NextLocation.alpha = 0.8
         label_NextLocation.xAlignVertical(toView: refContentContainer)
-            label_NextLocation.xAlignHorizontal(toView: refContentContainer, offset: 30 + 45)
+            label_NextLocation.xAlignHorizontal(toView: refContentContainer, offset: 30 + 40)
         
         label_HiddenLocation.textAlignment = NSTextAlignment.Center
-        label_HiddenLocation.text = locations[3]
-        label_HiddenLocation.tag = 3
+        label_HiddenLocation.text = locations[0]
+        label_HiddenLocation.tag = 0
         label_HiddenLocation.font = UIFont(name: "TwCenMT-CondensedBold", size: 15)
         label_HiddenLocation.textColor = UIColor.whiteColor()
         label_HiddenLocation.alpha = 0.8
         label_HiddenLocation.xAlignVertical(toView: refContentContainer)
-        label_HiddenLocation.xAlignHorizontal(toView: refContentContainer, offset: -15)
+        label_HiddenLocation.xAlignHorizontal(toView: refContentContainer, offset: -10)
         label_HiddenLocation.alpha = 0
         
         
         //transform
-        label_PreviousLocation.transform = CGAffineTransformScale(CGAffineTransformMakeTranslation(0, -45), 0.5, 0.5)
-        label_HiddenLocation.transform = CGAffineTransformMakeTranslation(0, -45)
+        label_PreviousLocation.transform = CGAffineTransformScale(CGAffineTransformMakeTranslation(0, -40), 0.5, 0.5)
+        label_HiddenLocation.transform = CGAffineTransformMakeTranslation(0, -15)
     }
 
     func setupAvatar(){
