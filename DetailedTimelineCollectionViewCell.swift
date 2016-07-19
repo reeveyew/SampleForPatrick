@@ -17,8 +17,8 @@ class DetailedTimelineCollectionViewCell: UICollectionViewCell {
         
         imageView_Photo.xPinEdgesToSuperview(top: 0, right: 0, bottom: 0, left: 0)
         imageView_Photo.backgroundColor = UIColor.greenColor()
-        let image = UIImage(named:"beach1.jpg")!
-        imageView_Photo.image = image
+//        let image = UIImage(named:"beach1.jpg")!
+//        imageView_Photo.image = image
     }
     
     required init?(coder aDecoder: NSCoder) {
