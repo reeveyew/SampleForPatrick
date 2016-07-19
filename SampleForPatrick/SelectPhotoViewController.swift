@@ -23,19 +23,19 @@ class SelectPhotoViewController: UIViewController {
         //setup uislider
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.scrollDirection = UICollectionViewScrollDirection.Vertical
-//        layout.itemSize = CGSize(width: 100, height: 100)
+        layout.itemSize = CGSize(width: 100, height: 100)
         //setup collectionview
         let frame = CGRectMake(0, 100, x, 100)
         colletionView_SelectPhoto = UICollectionView(frame: frame, collectionViewLayout: layout)
-        self.view .addSubview(colletionView_SelectPhoto)
+        self.view.addSubview(colletionView_SelectPhoto)
         colletionView_SelectPhoto.xPinEdgesToSuperview(top: 0, right: 0, bottom: nil, left: 0)
         colletionView_SelectPhoto.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "selectphotocell")
         colletionView_SelectPhoto.backgroundColor = UIColor.whiteColor()
+        colletionView_SelectPhoto.layer.borderColor = UIColor.redColor().CGColor
         colletionView_SelectPhoto.dataSource = self
         colletionView_SelectPhoto.delegate = self
         self.colletionView_SelectPhoto.collectionViewLayout = layout
         self.colletionView_SelectPhoto.userInteractionEnabled = true
-//        colletionView_SelectPhoto.autoPinEdge(.Bottom, toEdge: .Top, ofView: view_bottom)
         print(colletionView_SelectPhoto.frame)
     }
     
