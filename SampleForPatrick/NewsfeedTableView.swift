@@ -17,12 +17,17 @@ extension NewsfeedViewController: UITableViewDataSource, UITableViewDelegate {
         tableView_Newsfeed.dataSource = self
         tableView_Newsfeed.registerClass(NewsfeedTableViewCell.self, forCellReuseIdentifier: "NewsfeedTableViewCell")
         self.view.addSubview(tableView_Newsfeed)
-        tableView_Newsfeed.xPinEdgesToSuperview(top: 0, right: 0, bottom: 0, left: 0)
+        tableView_Newsfeed.xPinEdgesToSuperview(top: 64, right: 0, bottom: 0, left: 0)
         tableView_Newsfeed.estimatedRowHeight = 60
         tableView_Newsfeed.rowHeight = UITableViewAutomaticDimension
         self.automaticallyAdjustsScrollViewInsets = false
+        self.tableView_Newsfeed.contentInset = UIEdgeInsetsZero
+        self.tableView_Newsfeed.scrollIndicatorInsets = UIEdgeInsetsZero
+        self.tableView_Newsfeed.contentOffset = CGPointZero
         tableView_Newsfeed.allowsSelection = false
         self.tableView_Newsfeed.reloadData()
+        
+
     }
     
     //the number of user's post in the home page displayed
@@ -31,7 +36,11 @@ extension NewsfeedViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("NewsfeedTableViewCell", forIndexPath: indexPath) as! NewsfeedTableViewCell
+        
         
         cell.collectionView.delegate = self
         cell.collectionView.dataSource = self

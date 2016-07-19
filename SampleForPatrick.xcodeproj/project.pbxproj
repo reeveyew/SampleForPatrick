@@ -20,6 +20,7 @@
 		CAFCF77C1D3CE20200350464 /* tw-cen-mt-condensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAFCF7791D3CE20200350464 /* tw-cen-mt-condensed.ttf */; };
 		CAFCF77D1D3CE20200350464 /* tw-cen-mt-condensed-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAFCF77A1D3CE20200350464 /* tw-cen-mt-condensed-bold.ttf */; };
 		CAFCF77E1D3CE20200350464 /* tw-cen-mt-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAFCF77B1D3CE20200350464 /* tw-cen-mt-regular.ttf */; };
+		CAFCF7821D3E315A00350464 /* Bobbleboddy_light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAFCF7811D3E315A00350464 /* Bobbleboddy_light.ttf */; };
 		ED0798541D3DC9710009A73C /* SelectDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0798531D3DC9710009A73C /* SelectDateViewController.swift */; };
 		ED0798571D3DDA3C0009A73C /* DetailedTimelineUpperLeftContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0798561D3DDA3C0009A73C /* DetailedTimelineUpperLeftContainer.swift */; };
 		ED0798591D3DDA7E0009A73C /* DetailedTimelineUpperRightContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0798581D3DDA7E0009A73C /* DetailedTimelineUpperRightContainer.swift */; };
@@ -59,6 +60,7 @@
 		CAFCF7791D3CE20200350464 /* tw-cen-mt-condensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tw-cen-mt-condensed.ttf"; sourceTree = "<group>"; };
 		CAFCF77A1D3CE20200350464 /* tw-cen-mt-condensed-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tw-cen-mt-condensed-bold.ttf"; sourceTree = "<group>"; };
 		CAFCF77B1D3CE20200350464 /* tw-cen-mt-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tw-cen-mt-regular.ttf"; sourceTree = "<group>"; };
+		CAFCF7811D3E315A00350464 /* Bobbleboddy_light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bobbleboddy_light.ttf; sourceTree = "<group>"; };
 		ED0798531D3DC9710009A73C /* SelectDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectDateViewController.swift; sourceTree = "<group>"; };
 		ED0798561D3DDA3C0009A73C /* DetailedTimelineUpperLeftContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTimelineUpperLeftContainer.swift; sourceTree = "<group>"; };
 		ED0798581D3DDA7E0009A73C /* DetailedTimelineUpperRightContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTimelineUpperRightContainer.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 		EDE25AE71D35EF69004B4E69 /* Images Asset */ = {
 			isa = PBXGroup;
 			children = (
+				CAFCF7811D3E315A00350464 /* Bobbleboddy_light.ttf */,
 				CAFCF7791D3CE20200350464 /* tw-cen-mt-condensed.ttf */,
 				CAFCF77A1D3CE20200350464 /* tw-cen-mt-condensed-bold.ttf */,
 				CAFCF77B1D3CE20200350464 /* tw-cen-mt-regular.ttf */,
@@ -346,6 +349,7 @@
 				EDF62EB01D3DEE150072CAA8 /* beach.jpg in Resources */,
 				CAFCF77E1D3CE20200350464 /* tw-cen-mt-regular.ttf in Resources */,
 				CAFCF77D1D3CE20200350464 /* tw-cen-mt-condensed-bold.ttf in Resources */,
+				CAFCF7821D3E315A00350464 /* Bobbleboddy_light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

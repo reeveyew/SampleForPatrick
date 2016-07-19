@@ -27,14 +27,13 @@ extension NewsfeedViewController: UICollectionViewDataSource, UICollectionViewDe
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("NewsfeedCollectionViewCell", forIndexPath: indexPath) as! NewsfeedCollectionViewCell
         
             cell.imageView_LocationPhoto.image = self.array_Images[indexPath.row]
-
-            cell.imageView_LocationPhoto.layer.shadowColor = UIColor.grayColor().CGColor
-            cell.imageView_LocationPhoto.layer.shadowOffset = CGSizeMake(0, 1)
-            cell.imageView_LocationPhoto.layer.shadowOpacity = 1
-            cell.imageView_LocationPhoto.layer.shadowRadius = 3
-        cell.imageView_LocationPhoto.layer.shouldRasterize = true
-
         
+        cell.imageView_LocationPhoto.layer.shadowColor = UIColor.grayColor().CGColor
+        cell.imageView_LocationPhoto.layer.shadowOffset = CGSizeMake(0, 1)
+        cell.imageView_LocationPhoto.layer.shadowOpacity = 1
+        cell.imageView_LocationPhoto.layer.shadowRadius = 3
+        cell.imageView_LocationPhoto.layer.shouldRasterize = true
+        cell.imageView_LocationPhoto.layer.rasterizationScale = UIScreen.mainScreen().scale
         return cell
     }
     

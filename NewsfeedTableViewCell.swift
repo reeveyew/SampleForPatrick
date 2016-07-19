@@ -54,6 +54,7 @@ class NewsfeedTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         
+        self.prepareForReuse()
         
         refContentContainer = imageView_CoverPhoto
         
