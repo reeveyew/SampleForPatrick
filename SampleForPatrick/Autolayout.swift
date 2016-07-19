@@ -109,20 +109,21 @@ extension UIView {
     }
     
     //match width, default multiplier 1, with optional offset
-    public func xMatchWidth(toView toView: UIView, multiplier:CGFloat?=nil, offset: CGFloat? = nil){
+    public func xMatchWidth(toView toView: UIView, multiplier:CGFloat?=nil, offset: CGFloat? = nil) -> NSLayoutConstraint? {
         if let offset = offset {
-            self.autoMatchDimension(.Width, toDimension: .Height, ofView: toView, withOffset: offset)
+           return self.autoMatchDimension(.Width, toDimension: .Width, ofView: toView, withOffset: offset)
         }
         
         else if let multiplier = multiplier {
-            self.autoMatchDimension(.Width, toDimension: .Width, ofView: toView, withMultiplier: multiplier)
+            return self.autoMatchDimension(.Width, toDimension: .Width, ofView: toView, withMultiplier: multiplier)
         }
             
         else {
-            self.autoMatchDimension(.Width, toDimension: .Width, ofView: toView, withMultiplier: 1)
+           return self.autoMatchDimension(.Width, toDimension: .Width, ofView: toView, withMultiplier: 1)
             
         }
-
+    
+        
     }
  
     //same size
@@ -136,13 +137,13 @@ extension UIView {
         self.autoPinEdge(.Top, toEdge: .Top, ofView: toView)
     }
     
-    public func xAlignHorizontal(toView toView: UIView, offset: CGFloat?=nil){
+    public func xAlignHorizontal(toView toView: UIView, offset: CGFloat?=nil) -> NSLayoutConstraint? {
         if let offset = offset {
-            self.autoAlignAxis(.Horizontal, toSameAxisOfView: toView, withOffset: offset)
+            return self.autoAlignAxis(.Horizontal, toSameAxisOfView: toView, withOffset: offset)
         }
             
         else {
-            self.autoAlignAxis(.Horizontal, toSameAxisOfView: toView)
+            return self.autoAlignAxis(.Horizontal, toSameAxisOfView: toView)
         }
     }
     
