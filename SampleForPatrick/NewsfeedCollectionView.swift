@@ -18,7 +18,7 @@ extension NewsfeedViewController: UICollectionViewDataSource, UICollectionViewDe
     //number of collection view contents
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
         
-        return 10//tableCell.array_Images.count
+        return self.array_Images.count
     }
     
     
@@ -106,6 +106,7 @@ extension NewsfeedViewController: UICollectionViewDataSource, UICollectionViewDe
                 
                 UIView.animateWithDuration(0.5) {
                     tableCell.collectionView.contentOffset.x = CGRectGetMinX(centerImageCell.frame) - (x/5*2)
+                    self.view.layoutIfNeeded()
                 }
                 
                 animateCollectionViewAndCoverPhoto(tableCell: tableCell, selectedCollectionCell: centerImageCell, completion: { (finished) in
@@ -157,7 +158,33 @@ extension NewsfeedViewController: UICollectionViewDataSource, UICollectionViewDe
         self.animatedCollectionCell = selectedCollectionCell
         
         
-        self.animateCollectionViewAndCoverPhoto(tableCell: tableCell, selectedCollectionCell: selectedCollectionCell) { (finished) in
+        let lastPoint = CGPointMake(collectionView.contentOffset.x + x - (x/5/2), selectedCollectionCell.center.y)
+        let firstPoint = CGPointMake(collectionView.contentOffset.x + (x/5/2), selectedCollectionCell.center.y)
+        var contentOffset:CGFloat = 0
+        if CGRectContainsPoint(selectedCollectionCell.frame, lastPoint) && indexPath.row + 2 < self.array_Images.count {
+            //animate to center if tapped right most
+            print("did tap right most")
+            contentOffset += (x/5 * 2)
+        }
+            
+        else if CGRectContainsPoint(selectedCollectionCell.frame, firstPoint) && indexPath.row - 2 >= 0 {
+//            animate to center if tapped left most
+            print("did tap left most")
+            contentOffset -= (x/5 * 2)
+        }
+
+        else {
+            print("dont animate contentoffset")
+            contentOffset = 0
+        }
+        
+        UIView.animateWithDuration(0.5) {
+            if contentOffset != 0 {
+                collectionView.contentOffset.x += contentOffset
+                self.view.layoutIfNeeded()
+            }
+        }
+        self.animateCollectionViewAndCoverPhoto(tableCell: tableCell, selectedCollectionCell: selectedCollectionCell ) { (finished) in
             
             print("didClickAnimationForFirstTime")
             tableCell.didClickAnimationForFirstTime = true
@@ -173,6 +200,7 @@ extension NewsfeedViewController: UICollectionViewDataSource, UICollectionViewDe
         
         tableCell.imageView_CoverPhoto.alpha = 0.5
         
+        
         UIView.animateWithDuration(0.5, animations: {
             
             self.albumHeaderAnimateDown(tableCell)
@@ -182,6 +210,9 @@ extension NewsfeedViewController: UICollectionViewDataSource, UICollectionViewDe
             tableCell.collectionView.bringSubviewToFront(selectedCollectionCell)
             tableCell.imageView_CoverPhoto.image = selectedCollectionCell.imageView_LocationPhoto.image
             tableCell.imageView_CoverPhoto.alpha = 1
+            
+            
+            
             
         }) { (done) in
             completion(finished: true)

@@ -26,8 +26,6 @@ extension NewsfeedViewController: UITableViewDataSource, UITableViewDelegate {
         self.tableView_Newsfeed.contentOffset = CGPointZero
         tableView_Newsfeed.allowsSelection = false
         self.tableView_Newsfeed.reloadData()
-        
-
     }
     
     //the number of user's post in the home page displayed
