@@ -116,6 +116,7 @@
 				CAFCD9B01D3383650089315E /* AppDelegate.swift */,
 				EDE25AE51D35EF40004B4E69 /* Newsfeed */,
 				EDE25AE91D35F86F004B4E69 /* Detailed Timeline */,
+				EDC5F8E01D3CB9F100CBF488 /* Select Photo */,
 				ED0798521D3DC9500009A73C /* Select Date */,
 				EDE25AE71D35EF69004B4E69 /* Images Asset */,
 				CAFCD9B71D3383650089315E /* Assets.xcassets */,
@@ -123,7 +124,6 @@
 				CAFCD9BC1D3383650089315E /* Info.plist */,
 				EDE25AE81D35EF87004B4E69 /* Obsolete */,
 				CAFCF76A1D3CC15C00350464 /* Helper */,
-				EDC5F8E01D3CB9F100CBF488 /* Select Photo */,
 			);
 			path = SampleForPatrick;
 			sourceTree = "<group>";

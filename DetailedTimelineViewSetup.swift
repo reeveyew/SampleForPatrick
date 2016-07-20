@@ -51,6 +51,7 @@ extension DetailedTimelineViewController {
     }
 
     func setupLeftContainer(){
+        //setup the left side container which holds left top & left bottom containers
         view_LeftContainer.backgroundColor = UIColor.whiteColor()
         self.view.addSubview(view_LeftContainer)
         view_LeftContainer.addSubview(view_LeftTopContainer)
@@ -60,10 +61,12 @@ extension DetailedTimelineViewController {
         view_LeftContainer.xPinTop(toBottomOfView: imageView_Background, offset: 0)
         
         
+        //setup the left top container which holds label 'day' and its number
         view_LeftTopContainer.backgroundColor = UIColor.clearColor()
         view_LeftTopContainer.autoMatchDimension(.Width, toDimension: .Width, ofView: view_LeftContainer)
         view_LeftTopContainer.autoMatchDimension(.Height, toDimension: .Height, ofView: view_LeftContainer, withMultiplier: 0.2)
         view_LeftTopContainer.xPinEdgesToSuperview(top: 0, right: 0, bottom: 0, left: nil)
+        
         let label_Day = UILabel.newAutoLayoutView()
         view_LeftTopContainer.addSubview(label_Day)
         label_Day.textAlignment = NSTextAlignment.Right
@@ -83,32 +86,34 @@ extension DetailedTimelineViewController {
         label_Number.autoAlignAxis(.Vertical, toSameAxisOfView: view_LeftTopContainer, withOffset: 30)
         
         
-        
-        
+    
+        //setup the left bottom container which holds the tableview, left-side border, and small location imageview
         view_LeftBottomContainer.backgroundColor = UIColor.clearColor()
         view_LeftBottomContainer.autoMatchDimension(.Width, toDimension: .Width, ofView: view_LeftContainer)
         view_LeftBottomContainer.xPinEdgesToSuperview(top: nil, right: 0, bottom: 0, left: 0)
         view_LeftBottomContainer.xPinTop(toBottomOfView: view_LeftTopContainer, offset: 0)
+        
         configureTableView()
         
-        let border_Line = UIView()
-        border_Line.backgroundColor = UIColor.lightGrayColor()
-        view_LeftBottomContainer.addSubview(border_Line)
-        border_Line.xSize(width: 0.5, height: nil)
-        border_Line.xPinEdgesToSuperview(top: -20, right: nil, bottom: 15, left: 35)
+        let border_Left = UIView()
+        border_Left.backgroundColor = UIColor.lightGrayColor()
+        view_LeftBottomContainer.addSubview(border_Left)
+        border_Left.xSize(width: 0.5, height: nil)
+        border_Left.xPinEdgesToSuperview(top: -20, right: nil, bottom: 15, left: 35)
         
-        let imageView_Location = UIImageView()
-        imageView_Location.image = UIImage(named:"small-location.png")
-        view_LeftBottomContainer.addSubview(imageView_Location)
-        imageView_Location.xSize(width: 20, height: 20)
-        imageView_Location.xPinEdgesToSuperview(top: nil, right: nil, bottom: nil, left: 25)
-        imageView_Location.xPinBottom(toTopOfView: border_Line, offset: 0)
+        let imageView_SmallLocation = UIImageView()
+        imageView_SmallLocation.image = UIImage(named:"small-location.png")
+        view_LeftBottomContainer.addSubview(imageView_SmallLocation)
+        imageView_SmallLocation.xSize(width: 20, height: 20)
+        imageView_SmallLocation.xPinEdgesToSuperview(top: nil, right: nil, bottom: nil, left: 25)
+        imageView_SmallLocation.xPinBottom(toTopOfView: border_Left, offset: 0)
     }
     
     
     
     
     func setupRightContainer(){
+        //setup the right container which holds the right top and right bottom containers
         view_RightContainer.backgroundColor = UIColor.whiteColor()
         self.view.addSubview(view_RightContainer)
         view_RightContainer.layer.shadowColor = UIColor.lightGrayColor().CGColor
@@ -122,10 +127,12 @@ extension DetailedTimelineViewController {
         view_RightContainer.xPinLeft(view_LeftContainer, offset: 0)
         
         
+        //setup right top container which holds a label and user's caption
         view_RightTopContainer.backgroundColor = UIColor.clearColor()
         view_RightTopContainer.autoMatchDimension(.Width, toDimension: .Width, ofView: view_RightContainer)
         view_RightTopContainer.autoMatchDimension(.Height, toDimension: .Height, ofView: view_LeftTopContainer)
         view_RightTopContainer.xPinEdgesToSuperview(top: 0, right: 0, bottom: nil, left: 0)
+        
         let label_Location = UILabel.newAutoLayoutView()
         view_RightTopContainer.addSubview(label_Location)
         label_Location.textAlignment = NSTextAlignment.Center
@@ -146,11 +153,13 @@ extension DetailedTimelineViewController {
         
         
         
+        //setup right bottom container whcih holds the collection view (user's posted pictures)
         view_RightBottomContainer.backgroundColor = UIColor.clearColor()
         view_RightBottomContainer.autoMatchDimension(.Width, toDimension: .Width, ofView: view_RightContainer)
         view_RightBottomContainer.autoMatchDimension(.Height, toDimension: .Height, ofView: view_LeftBottomContainer)
         view_RightBottomContainer.xPinEdgesToSuperview(top: nil, right: 0, bottom: 0, left: 0)
-        //setup uislider
+       
+        //setup uislider for collectionview
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.scrollDirection = UICollectionViewScrollDirection.Vertical
         layout.itemSize = CGSize(width: 100, height: 100)

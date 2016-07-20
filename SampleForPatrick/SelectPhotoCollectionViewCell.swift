@@ -20,7 +20,7 @@ class SelectPhotoCollectionViewCell: UICollectionViewCell {
         imageview.backgroundColor = UIColor.greenColor()
         let image = UIImage(named:"beach.jpg")!
         imageview.image = image
-        imageview.layer.borderColor = UIColor.darkTextColor().CGColor
+        imageview.layer.borderColor = UIColor.blackColor().CGColor
         imageview.layer.borderWidth = 5
     }
     
