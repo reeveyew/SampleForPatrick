@@ -27,6 +27,8 @@ class DetailedTimelineViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        display()
+        setupBackgroundPhoto()
+        setupLeftContainer()
+        setupRightContainer()
     }
-       }
+}

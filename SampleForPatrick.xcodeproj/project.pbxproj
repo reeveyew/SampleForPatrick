@@ -25,6 +25,9 @@
 		ED19762C1D373B46004496C4 /* DetailedTimelineTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED19762B1D373B46004496C4 /* DetailedTimelineTableView.swift */; };
 		ED19762E1D373D34004496C4 /* DetailedTimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED19762D1D373D34004496C4 /* DetailedTimelineTableViewCell.swift */; };
 		ED1976341D378007004496C4 /* DetailedTimelineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1976331D378007004496C4 /* DetailedTimelineCollectionViewCell.swift */; };
+		ED477E951D3F0DDA00796F94 /* DetailedTimelineBackgroundPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED477E941D3F0DDA00796F94 /* DetailedTimelineBackgroundPhoto.swift */; };
+		ED477E971D3F0E3000796F94 /* DetailedTimelineLeftContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED477E961D3F0E3000796F94 /* DetailedTimelineLeftContainer.swift */; };
+		ED477E991D3F0E5F00796F94 /* DetailedTimelineRightContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED477E981D3F0E5F00796F94 /* DetailedTimelineRightContainer.swift */; };
 		EDC5F8DF1D3CB9EB00CBF488 /* SelectPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC5F8DE1D3CB9EB00CBF488 /* SelectPhotoViewController.swift */; };
 		EDC5F8E21D3CBC2400CBF488 /* SelectPhotoCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC5F8E11D3CBC2400CBF488 /* SelectPhotoCollectionView.swift */; };
 		EDE25AE21D35E6B2004B4E69 /* NewsfeedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE25AE11D35E6B2004B4E69 /* NewsfeedTableView.swift */; };
@@ -38,7 +41,6 @@
 		EDF62EB61D3DFEAE0072CAA8 /* world.png in Resources */ = {isa = PBXBuildFile; fileRef = EDF62EB51D3DFEAE0072CAA8 /* world.png */; };
 		EDF62EB81D3DFEB70072CAA8 /* back-button.png in Resources */ = {isa = PBXBuildFile; fileRef = EDF62EB71D3DFEB70072CAA8 /* back-button.png */; };
 		EDF62EBA1D3E14A50072CAA8 /* small-location.png in Resources */ = {isa = PBXBuildFile; fileRef = EDF62EB91D3E14A50072CAA8 /* small-location.png */; };
-		EDF62EBC1D3E34AE0072CAA8 /* DetailedTimelineViewSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF62EBB1D3E34AE0072CAA8 /* DetailedTimelineViewSetup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,9 @@
 		ED19762B1D373B46004496C4 /* DetailedTimelineTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTimelineTableView.swift; sourceTree = "<group>"; };
 		ED19762D1D373D34004496C4 /* DetailedTimelineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTimelineTableViewCell.swift; sourceTree = "<group>"; };
 		ED1976331D378007004496C4 /* DetailedTimelineCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTimelineCollectionViewCell.swift; sourceTree = "<group>"; };
+		ED477E941D3F0DDA00796F94 /* DetailedTimelineBackgroundPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTimelineBackgroundPhoto.swift; sourceTree = "<group>"; };
+		ED477E961D3F0E3000796F94 /* DetailedTimelineLeftContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTimelineLeftContainer.swift; sourceTree = "<group>"; };
+		ED477E981D3F0E5F00796F94 /* DetailedTimelineRightContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTimelineRightContainer.swift; sourceTree = "<group>"; };
 		EDC5F8DE1D3CB9EB00CBF488 /* SelectPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPhotoViewController.swift; sourceTree = "<group>"; };
 		EDC5F8E11D3CBC2400CBF488 /* SelectPhotoCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectPhotoCollectionView.swift; path = ../SelectPhotoCollectionView.swift; sourceTree = "<group>"; };
 		EDE25AE11D35E6B2004B4E69 /* NewsfeedTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsfeedTableView.swift; sourceTree = "<group>"; };
@@ -77,7 +82,6 @@
 		EDF62EB51D3DFEAE0072CAA8 /* world.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = world.png; sourceTree = "<group>"; };
 		EDF62EB71D3DFEB70072CAA8 /* back-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-button.png"; sourceTree = "<group>"; };
 		EDF62EB91D3E14A50072CAA8 /* small-location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "small-location.png"; sourceTree = "<group>"; };
-		EDF62EBB1D3E34AE0072CAA8 /* DetailedTimelineViewSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTimelineViewSetup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,7 +189,9 @@
 		ED8E3E581D3E739000E1DF55 /* View Setup */ = {
 			isa = PBXGroup;
 			children = (
-				EDF62EBB1D3E34AE0072CAA8 /* DetailedTimelineViewSetup.swift */,
+				ED477E941D3F0DDA00796F94 /* DetailedTimelineBackgroundPhoto.swift */,
+				ED477E961D3F0E3000796F94 /* DetailedTimelineLeftContainer.swift */,
+				ED477E981D3F0E5F00796F94 /* DetailedTimelineRightContainer.swift */,
 			);
 			name = "View Setup";
 			sourceTree = "<group>";
@@ -407,7 +413,6 @@
 				CAFCD9B11D3383650089315E /* AppDelegate.swift in Sources */,
 				CAFCD9C51D3384130089315E /* NewsfeedTableViewCell.swift in Sources */,
 				EDF62EAC1D3DE9F00072CAA8 /* NewsfeedCollectionViewCell.swift in Sources */,
-				EDF62EBC1D3E34AE0072CAA8 /* DetailedTimelineViewSetup.swift in Sources */,
 				EDF62EAA1D3DE9A50072CAA8 /* SelectPhotoCollectionViewCell.swift in Sources */,
 				ED0798541D3DC9710009A73C /* SelectDateViewController.swift in Sources */,
 				ED19762C1D373B46004496C4 /* DetailedTimelineTableView.swift in Sources */,
@@ -416,7 +421,10 @@
 				ED19762E1D373D34004496C4 /* DetailedTimelineTableViewCell.swift in Sources */,
 				EDC5F8DF1D3CB9EB00CBF488 /* SelectPhotoViewController.swift in Sources */,
 				EDE25AE21D35E6B2004B4E69 /* NewsfeedTableView.swift in Sources */,
+				ED477E951D3F0DDA00796F94 /* DetailedTimelineBackgroundPhoto.swift in Sources */,
+				ED477E991D3F0E5F00796F94 /* DetailedTimelineRightContainer.swift in Sources */,
 				CAFCF7701D3CC95700350464 /* NewsfeedSetupContentView.swift in Sources */,
+				ED477E971D3F0E3000796F94 /* DetailedTimelineLeftContainer.swift in Sources */,
 				EDE25AEF1D3626A9004B4E69 /* DetailedTimelineViewController.swift in Sources */,
 				ED19762A1D372FE6004496C4 /* DetailedTimelineCollectionView.swift in Sources */,
 				EDE25AE41D35EA1D004B4E69 /* NewsfeedCollectionView.swift in Sources */,
