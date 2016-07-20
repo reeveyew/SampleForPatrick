@@ -33,7 +33,7 @@ class NewsfeedViewController: UIViewController {
     var array_Images = [UIImage]()
     
     let navbarView = UIView()
-    let navTitleLabel2 = UILabel()
+    let navbarTitle = UIImageView()
     
     
     override func viewDidLoad() {
@@ -45,19 +45,24 @@ class NewsfeedViewController: UIViewController {
         
         
         configureTableView()
-        
-        
+        setupNavbar()
+       
+    }
+    
+    func setupNavbar(){
         self.view.addSubview(navbarView)
-        navbarView.addSubview(navTitleLabel2)
+        navbarView.addSubview(navbarTitle)
         
         navbarView.layer.shadowColor = UIColor.grayColor().CGColor
         navbarView.layer.shadowOffset = CGSizeMake(0, 1)
         navbarView.layer.shadowOpacity = 0.7
         navbarView.layer.shadowRadius = 2
-    
+        navbarView.backgroundColor = UIColor.whiteColor()
+        
+        navbarTitle.image = UIImage(named: "TRIPPY")
+        navbarTitle.contentMode = .ScaleAspectFit
         self.view.bringSubviewToFront(navbarView)
     }
-    
 
     
     func generateImages(imageStringArray:[String]) -> [UIImage]{
@@ -73,16 +78,12 @@ class NewsfeedViewController: UIViewController {
         super.viewDidLayoutSubviews()
         
         
-        navbarView.frame = CGRect(x: 0, y: 0, width: x, height: 64) //****
-        navbarView.backgroundColor = UIColor.whiteColor()
+        navbarView.frame = CGRect(x: 0, y: 0, width: x, height: 64)
+        
+        navbarTitle.sizeToFit()
+        navbarTitle.center = CGPointMake(navbarView.center.x, navbarView.center.y + 10)
         
         
-        
-        navTitleLabel2.frame = CGRect(x: 0, y: 0, width: x, height: 20)
-        navTitleLabel2.center = CGPointMake(navbarView.center.x, navbarView.center.y + 10)
-        navTitleLabel2.text = "TRIPPY"
-        navTitleLabel2.font = UIFont(name: "bubbleboddylight-Light", size: 30)
-        navTitleLabel2.textAlignment = NSTextAlignment.Center
         
     }
     
