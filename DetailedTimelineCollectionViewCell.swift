@@ -17,7 +17,10 @@ class DetailedTimelineCollectionViewCell: UICollectionViewCell {
         
         imageView_Photo.xPinEdgesToSuperview(top: 0, right: 0, bottom: 0, left: 0)
         imageView_Photo.backgroundColor = UIColor.greenColor()
+        
         let image = UIImage(named:"beach.jpg")!
+        imageView_Photo.layer.borderColor = UIColor.whiteColor().CGColor
+        imageView_Photo.layer.borderWidth = 2
         imageView_Photo.image = image
     }
     

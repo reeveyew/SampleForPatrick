@@ -15,7 +15,7 @@ extension DetailedTimelineViewController: UITableViewDataSource, UITableViewDele
         tableView_DetailedTimeline = UITableView.newAutoLayoutView()
         tableView_DetailedTimeline.delegate = self
         tableView_DetailedTimeline.dataSource = self
-        
+        tableView_DetailedTimeline.backgroundColor = UIColor.clearColor()
         tableView_DetailedTimeline.registerClass(DetailedTimelineTableViewCell.self, forCellReuseIdentifier: "DetailTimelineCell")
         self.view.addSubview(tableView_DetailedTimeline)
         tableView_DetailedTimeline.estimatedRowHeight = 15
@@ -36,7 +36,16 @@ extension DetailedTimelineViewController: UITableViewDataSource, UITableViewDele
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("DetailTimelineCell", forIndexPath: indexPath) as! DetailedTimelineTableViewCell
+       
         return cell
     }
     
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        if (indexPath.row % 2 == 0){
+            cell.backgroundColor = UIColor.clearColor()
+        }
+        else {
+            cell.backgroundColor = UIColor.clearColor()
+        }
+    }
 }

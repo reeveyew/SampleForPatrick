@@ -36,7 +36,7 @@ extension SelectPhotoViewController: UICollectionViewDataSource, UICollectionVie
     
     func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
         let selectedCell = colletionView_SelectPhoto.cellForItemAtIndexPath(indexPath)! as! SelectPhotoCollectionViewCell
-        selectedCell.imageview.layer.borderColor = UIColor.darkTextColor().CGColor
+        selectedCell.imageview.layer.borderColor = UIColor.blackColor().CGColor
         print("deselecte")
     }
     
@@ -46,7 +46,7 @@ extension SelectPhotoViewController: UICollectionViewDataSource, UICollectionVie
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         
-        return CGSize(width: 120, height: 120)// The size of one cell
+        return CGSize(width: 130, height: 130)// The size of one cell
     }
     
     override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
