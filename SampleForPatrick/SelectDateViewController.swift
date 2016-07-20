@@ -38,7 +38,7 @@ class SelectDateViewController: UIViewController, UIPickerViewDelegate {
     
     func datePickerValueChanged(sender: UIDatePicker){
         // Create date formatter
-        let dateFormatter: NSDateFormatter = NSDateFormatter()
+        let dateFormatter = NSDateFormatter()
         
         // Set date format
         dateFormatter.dateFormat = "MM/dd/yyyy hh:mm a"
